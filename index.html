@@ -1,14 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>?</title>
-    <style>
-
-    </style>
-</head>
-<body>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reihan Agam</title>
   
+  <link href="output.css" rel="stylesheet">
+
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <style>
+    /* Custom CSS for stack card effect */
+    .swiper-container.stack-card-swiper {
+      position: relative;
+      width: 100%;
+    }
+
+    .swiper-slide {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: all 0.3s ease;
+    }
+
+    .swiper-slide-active {
+      opacity: 1;
+    }
+
+    .swiper-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 12px; /* Adjust as needed */
+    }
+
+    /* Create the stacked card effect */
+    .swiper-wrapper {
+      display: flex;
+      flex-direction: row;
+    }
+
+    /* Optional: Pagination and navigation styles */
+    .swiper-pagination {
+      bottom: 10px;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: #000;
+    }
+  </style>
+
+  <!-- Swiper CSS -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/swiper/swiper-bundle.min.css"
+  />
+
+</head>
+<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+
+  <section id="bio" class="py-8 px-4">
+    <div class="max-w-4xl mx-auto bg-white shadow-md rounded-lg p-6">
+      <p class="text-gray-700">
+        Hello! My name is Reihan Agam. I am currently a <b>Mobile Developer</b> specializing in Flutter, but I am willing to become a <b>Fullstack Developer </b> with a tech stack including Node.js and Nest.js for the backend, and Codeigniter 4 for the frontend.
+      </p>
+    </div>
+  </section>
+
+  <section id="portfolio" class="py-8 px-4">
+    <div class="max-w-4xl mx-auto bg-white shadow-md rounded-lg p-6">
+      <h2 class="text-2xl font-bold mb-4">Self Project</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
+
+        <div class="bg-gray-200 p-4 rounded-lg shadow-md">
+          <h3 class="text-xl font-semibold mb-2">My Note</h3>
+          <p class="text-gray-700">Flutter Version 3.22.2</p>
+          <p class="text-gray-700 my-2">Features :</p>
+          <ul class="list-disc px-4">
+            <li>SQlite</li>
+            <li>Integrate Cloudinary to save media such as images and videos</li>
+            <li>Use WYSIWYG for content</li>
+            <li>Pin your content</li>
+            <li>Set Reminder</li>
+            <li>Search by Title</li>
+            <li>Authentication</li>
+          </ul>
+          <!-- Swiper -->
+          <div class="swiper-container stack-card-swiper mt-4">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="self-project/my_note_1.jpg" alt="My Note 1" class="w-full h-auto rounded-lg" /></div>
+              <div class="swiper-slide"><img src="self-project/my_note_2.jpg" alt="My Note 2" class="w-full h-auto rounded-lg" /></div>
+              <div class="swiper-slide"><img src="self-project/my_note_3.jpg" alt="My Note 3" class="w-full h-auto rounded-lg" /></div>
+              <div class="swiper-slide"><img src="self-project/my_note_4.jpg" alt="My Note 3" class="w-full h-auto rounded-lg" /></div>
+              <div class="swiper-slide"><img src="self-project/my_note_5.jpg" alt="My Note 4" class="w-full h-auto rounded-lg" /></div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Navigation -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio" class="py-8 px-4">
+    <div class="max-w-4xl mx-auto bg-white shadow-md rounded-lg p-6">
+        <h2 class="text-2xl font-bold mb-4">Portfolios</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="bg-gray-200 p-4 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold mb-2">Project 1</h3>
+                <p class="text-gray-700">Description of project 1.</p>
+            </div>
+
+            <div class="bg-gray-200 p-4 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold mb-2">Project 2</h3>
+                <p class="text-gray-700">Description of project 2.</p>
+            </div>
+
+            <div class="bg-gray-200 p-4 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold mb-2">Project 3</h3>
+                <p class="text-gray-700">Description of project 3.</p>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black text-white p-4 text-center">
+    <a href="mailto:reihanagam7@gmail.com" target="_blank"> reihanagam7@gmail.com</a>
+  </footer>
+  
+  <script>
+    var swiper = new Swiper('.stack-card-swiper', {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+  </script>
+
 </body>
 </html>
