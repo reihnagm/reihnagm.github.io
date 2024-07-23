@@ -15,6 +15,8 @@
     .swiper-container.stack-card-swiper {
       position: relative;
       width: 100%;
+      max-width: 100%; /* Ensure it does not exceed viewport width */
+      overflow: hidden; /* Hide overflow */
     }
 
     .swiper-slide {
@@ -34,6 +36,7 @@
       height: 100%;
       object-fit: cover;
       border-radius: 12px; /* Adjust as needed */
+      max-width: 100%; /* Ensure images scale down */
     }
 
     /* Create the stacked card effect */
@@ -50,6 +53,13 @@
     .swiper-button-next,
     .swiper-button-prev {
       color: #000;
+    }
+
+    @media (max-width: 768px) {
+      /* Adjust Swiper on smaller screens */
+      .swiper-slide img {
+        object-fit: contain; /* Ensure the image fits within the container */
+      }
     }
   </style>
 
@@ -97,16 +107,17 @@
             <li>Search by Title</li>
             <li>Authentication</li>
           </ul>
+          
           <!-- Swiper -->
           <div class="swiper-container stack-card-swiper mt-4">
             <div class="swiper-wrapper">
-              <div class="swiper-slide"><img src="self-project/mynote/my-note-1.jpg" alt="My Note 1" class="w-full h-auto rounded-lg" /></div>
-              <div class="swiper-slide"><img src="self-project/mynote/my-note-2.jpg" alt="My Note 2" class="w-full h-auto rounded-lg" /></div>
-              <div class="swiper-slide"><img src="self-project/mynote/my-note-3.jpg" alt="My Note 3" class="w-full h-auto rounded-lg" /></div>
-              <div class="swiper-slide"><img src="self-project/mynote/my-note-4.jpg" alt="My Note 4" class="w-full h-auto rounded-lg" /></div>
-              <div class="swiper-slide"><img src="self-project/mynote/my-note-5.jpg" alt="My Note 5" class="w-full h-auto rounded-lg" /></div>
-              <div class="swiper-slide"><img src="self-project/mynote/my-note-6.jpg" alt="My Note 6" class="w-full h-auto rounded-lg" /></div>
-              <div class="swiper-slide"><img src="self-project/mynote/my-note-7.jpg" alt="My Note 6" class="w-full h-auto rounded-lg" /></div>
+              <div class="swiper-slide"><img src="self-project/mynote/my-note-1.jpg" alt="My Note 1" class="h-auto rounded-lg" /></div>
+              <div class="swiper-slide"><img src="self-project/mynote/my-note-2.jpg" alt="My Note 2" class="h-auto rounded-lg" /></div>
+              <div class="swiper-slide"><img src="self-project/mynote/my-note-3.jpg" alt="My Note 3" class="h-auto rounded-lg" /></div>
+              <div class="swiper-slide"><img src="self-project/mynote/my-note-4.jpg" alt="My Note 4" class="h-auto rounded-lg" /></div>
+              <div class="swiper-slide"><img src="self-project/mynote/my-note-5.jpg" alt="My Note 5" class="h-auto rounded-lg" /></div>
+              <div class="swiper-slide"><img src="self-project/mynote/my-note-6.jpg" alt="My Note 6" class="h-auto rounded-lg" /></div>
+              <div class="swiper-slide"><img src="self-project/mynote/my-note-7.jpg" alt="My Note 6" class="h-auto rounded-lg" /></div>
             </div>
             <!-- Add Pagination -->
             <div class="swiper-pagination"></div>
