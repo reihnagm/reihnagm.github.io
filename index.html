@@ -7,14 +7,18 @@
 
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="favicon.png">
-  
-  <!-- Main CSS -->
-  <link href="output.css" rel="stylesheet">
 
   <!-- Swiper JS -->
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
+  <!-- CDN Tailwind -->
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
   <style>
+    body {
+      font-family: "Times New Roman", serif;
+    }
+
     /* Custom CSS for stack card effect */
     .swiper-container.stack-card-swiper {
       position: relative;
@@ -72,6 +76,7 @@
     rel="stylesheet"
     href="https://unpkg.com/swiper/swiper-bundle.min.css"
   />
+  
 
 </head>
 <body class="bg-gray-100 font-sans leading-normal tracking-normal">
@@ -110,9 +115,33 @@
       
     </div>
   </section>
-
-
-  <section id="portfolio" class="py-8 px-4">
+  
+  <section class="relative h-[300px] w-full flex justify-center items-start">
+    <div class="relative flex justify-center items-center w-full max-w-3xl">
+    <figure class="absolute top-0 left-10 bg-white p-3 pb-4 shadow-lg rounded-lg transform -rotate-6 hover:rotate-0 transition-all duration-300 border border-gray-300 max-w-xs w-fit">
+      <img src="me.png" alt="First Job" class="w-55 h-auto rounded-md mx-auto">
+      <!-- <figcaption class="text-center text-gray-700 mt-2 font-semibold">
+        First job! Learning and growing.
+      </figcaption> -->
+    </figure>
+  
+    <figure class="absolute top-10 left-70 bg-white p-3 pb-4 shadow-lg rounded-lg transform rotate-3 hover:rotate-0 transition-all duration-300 border border-gray-300 max-w-xs w-fit">
+      <img src="vacation.jpg" alt="Second Job" class="w-40 h-auto rounded-md mx-auto">
+      <!-- <figcaption class="text-center text-gray-700 mt-2 font-semibold">
+        Second job! Leveling up.
+      </figcaption> -->
+    </figure>
+  
+    <figure class="absolute top-20 left-110 bg-white p-3 pb-4 shadow-lg rounded-lg transform -rotate-6 hover:rotate-0 transition-all duration-300 border border-gray-300 max-w-xs w-fit">
+      <img src="farewell.jpg" alt="Third Job" class="w-70 h-auto rounded-md mx-auto">
+      <!-- <figcaption class="text-center text-gray-700 mt-2 font-semibold">
+        Third job! Keep going.
+      </figcaption> -->
+    </figure>
+    </div>
+  </section>
+  
+  <section id="portfolio" class="pt-20 pb-8 px-4">
     <div class="max-w-4xl mx-auto bg-white shadow-md rounded-lg p-6">
       <h2 class="text-2xl font-bold mb-4">EgoCraft</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
@@ -296,9 +325,15 @@
   </section>
 
   <!-- Footer -->
-  <footer class="bg-black text-white p-4 items-center text-center">
-    <a href="mailto:reihanagam7@gmail.com" target="_blank"> reihanagam7@gmail.com</a>
+  <footer class="bg-black grid grid-cols-2 justify-center text-white p-4 items-center text-center">
+    <div class="flex justify-end">
+      <img src="gmail.png" width="16" alt="ic-email">
+    </div>
+    <div class="flex justify-start">
+      <a href="mailto:reihanagam7@gmail.com" class="inline-block ml-2" target="_blank"> reihanagam7@gmail.com</a>
+    </div>
   </footer>
+
   
   <script>
     var swiper = new Swiper('.stack-card-swiper', {
