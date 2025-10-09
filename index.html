@@ -1,474 +1,972 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pinned by Reihan Agam</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pinned by Reihan Agam</title>
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="favicon.png">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.png" />
 
-  <!-- Swiper JS -->
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-  <!-- CDN Tailwind -->
-  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <!-- CDN Tailwind -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 
-  <style>
-    body {
-      font-family: "Times New Roman", serif;
-    }
-
-    /* Custom CSS for stack card effect */
-    .swiper-container.stack-card-swiper {
-      position: relative;
-      width: 100%;
-      max-width: 100%; /* Ensure it does not exceed viewport width */
-      overflow: hidden; /* Hide overflow */
-    }
-
-    .swiper-slide {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      opacity: 0;
-      transition: all 0.3s ease;
-    }
-
-    .swiper-slide-active {
-      opacity: 1;
-    }
-
-    .swiper-slide img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 12px; /* Adjust as needed */
-      max-width: 100%; /* Ensure images scale down */
-    }
-
-    /* Create the stacked card effect */
-    .swiper-wrapper {
-      display: flex;
-      flex-direction: row;
-    }
-
-    /* Optional: Pagination and navigation styles */
-    .swiper-pagination {
-      bottom: 10px;
-    }
-
-    .swiper-button-next,
-    .swiper-button-prev {
-      color: #000;
-    }
-
-    @media (max-width: 768px) {
-      /* Adjust Swiper on smaller screens */
-      .swiper-slide img {
-        object-fit: contain; /* Ensure the image fits within the container */
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
       }
-    }
-  </style>
 
-  <!-- Swiper CSS -->
-  <link
-    rel="stylesheet"
-    href="https://unpkg.com/swiper/swiper-bundle.min.css"
-  />
-  
+      /* Custom CSS for stack card effect */
+      .swiper-container.stack-card-swiper {
+        position: relative;
+        width: 100%;
+        max-width: 100%; /* Ensure it does not exceed viewport width */
+        overflow: hidden; /* Hide overflow */
+      }
 
-</head>
-<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+      .swiper-slide {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: all 0.3s ease;
+      }
 
-  <section id="bio" class="py-8 px-4">
-    <div class="max-w-4xl mx-auto bg-white shadow-md rounded-lg p-6">
-      <p class="text-gray-700">
-        Hello! My name is Reihan Agam. I am currently a <b>Mobile Developer</b> specializing in Flutter, but I am willing to become a <b>Fullstack Developer </b> with a tech stack including Node.js and Nest.js / Go for the backend, and Codeigniter 4 or Next JS for the frontend.
-      </p>
-    </div>
-  </section>
+      .swiper-slide-active {
+        opacity: 1;
+      }
 
-  <section id="bio" class="py-4 px-4">
-    <div class="max-w-4xl mx-auto bg-white shadow-md rounded-lg p-6">
-      <h2 class="text-2xl font-bold mb-4">Resume</h2>
-      <p class="text-gray-700">
-        In 2020, I began my career as a software developer, using <b> CodeIgniter 3 </b> and <b> Laravel 6 </b> to create a tax website for BPRD, including both the back office and user interface. I was guided by my senior and had a 9-month contract. After that, I attended a bootcamp at <b> Arkademy (Pijar Camp) </b> for a total of 1 month. During this bootcamp, I developed a job portal website and API using <b> React JS </b> and <b> Node JS</b>, employing the <b> Scrum </b> methodology. After the bootcamp, I worked at a software house for over 4 years as a <b> full-stack developer </b>, creating website and mobile applications, as well as APIs. I also have experience using third-party services such as <b> Midtrans, Xendit, OY, Raja Biller, Raja Ongkir, Finnet, and Qontak</b>.
-      </p>
-    </div>
-  </section>
+      .swiper-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 12px; /* Adjust as needed */
+        max-width: 100%; /* Ensure images scale down */
+      }
 
-  <!-- Certificate Section -->
-  <section id="certificates" class="pb-20 pb-8 px-4">
-    <div class="max-w-4xl mx-auto bg-white shadow-md rounded-lg p-6">
-      <h2 class="text-2xl font-bold mb-4 text-center md:text-left">Certificates</h2>
+      /* Create the stacked card effect */
+      .swiper-wrapper {
+        display: flex;
+        flex-direction: row;
+      }
 
-      <!-- <div class="border p-4 rounded-lg shadow-md mt-4">
+      /* Optional: Pagination and navigation styles */
+      .swiper-pagination {
+        bottom: 10px;
+      }
+
+      .swiper-button-next,
+      .swiper-button-prev {
+        color: #000;
+      }
+
+      @media (max-width: 768px) {
+        /* Adjust Swiper on smaller screens */
+        .swiper-slide img {
+          object-fit: contain; /* Ensure the image fits within the container */
+        }
+      }
+    </style>
+
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+  </head>
+  <body class="bg-gray-100 font-sans leading-normal tracking-normal">
+    <section id="bio" class="py-8 px-4">
+      <div class="max-w-4xl mx-auto bg-white shadow-md rounded-lg p-6">
+        <p class="text-gray-700">
+          Hello! My name is Reihan Agam. I am currently a
+          <b>Mobile Developer</b> specializing in Flutter, but I am willing to
+          become a <b>Fullstack Developer </b> with a tech stack including
+          Node.js and Nest.js / Go for the backend, and Codeigniter 4 or Next JS
+          for the frontend.
+        </p>
+      </div>
+    </section>
+
+    <section id="bio" class="py-4 px-4">
+      <div class="max-w-4xl mx-auto bg-white shadow-md rounded-lg p-6">
+        <h2 class="text-2xl font-bold mb-4">Resume</h2>
+        <p class="text-gray-700">
+          In 2020, I began my career as a software developer, using
+          <b> CodeIgniter 3 </b> and <b> Laravel 6 </b> to create a tax website
+          for BPRD, including both the back office and user interface. I was
+          guided by my senior and had a 9-month contract. After that, I attended
+          a bootcamp at <b> Arkademy (Pijar Camp) </b> for a total of 1 month.
+          During this bootcamp, I developed a job portal website and API using
+          <b> React JS </b> and <b> Node JS</b>, employing the
+          <b> Scrum </b> methodology. After the bootcamp, I worked at a software
+          house for over 4 years as a <b> full-stack developer </b>, creating
+          website and mobile applications, as well as APIs. I also have
+          experience using third-party services such as
+          <b>
+            Midtrans, Xendit, OY, Raja Biller, Raja Ongkir, Finnet, and
+            Qontak</b
+          >.
+        </p>
+      </div>
+    </section>
+
+    <!-- Certificate Section -->
+    <section id="certificates" class="pb-20 pb-8 px-4">
+      <div class="max-w-4xl mx-auto bg-white shadow-md rounded-lg p-6">
+        <h2 class="text-2xl font-bold mb-4 text-center md:text-left">
+          Certificates
+        </h2>
+
+        <!-- <div class="border p-4 rounded-lg shadow-md mt-4">
         <h3 class="text-lg md:text-xl font-semibold mb-2">Flutter & Dart - The Complete Guide [2020 - Edition]</h3>
         <embed src="certificates/flutter-2020.pdf" type="application/pdf" class="w-full" />
       </div> -->
 
-      <div class="border p-4 rounded-lg shadow-md mt-4">
-        <h3 class="text-lg md:text-xl font-semibold mb-2">Fullstack Software Developer Certificate</h3>
-        <embed src="certificates/arkademy.pdf" type="application/pdf" class="w-full" />
+        <div class="border p-4 rounded-lg shadow-md mt-4">
+          <h3 class="text-lg md:text-xl font-semibold mb-2">
+            Fullstack Software Developer Certificate
+          </h3>
+          <embed
+            src="certificates/arkademy.pdf"
+            type="application/pdf"
+            class="w-full"
+          />
+        </div>
       </div>
-      
-    </div>
-  </section>
-  
-  <section class="relative h-[300px] w-full hidden md:flex justify-center items-start">
-    <div class="relative flex justify-center items-center w-full max-w-3xl">
-      <figure class="absolute top-0 left-10 bg-white p-3 pb-4 shadow-lg rounded-lg transform -rotate-6 hover:rotate-0 transition-all duration-300 border border-gray-300 max-w-xs w-fit">
-        <img src="me.png" alt="First Job" class="w-55 h-auto rounded-md mx-auto">
-        <!-- <figcaption class="text-center text-gray-700 mt-2 font-semibold">
+    </section>
+
+    <section
+      class="relative h-[300px] w-full hidden md:flex justify-center items-start"
+    >
+      <div class="relative flex justify-center items-center w-full max-w-3xl">
+        <figure
+          class="absolute top-0 left-10 bg-white p-3 pb-4 shadow-lg rounded-lg transform -rotate-6 hover:rotate-0 transition-all duration-300 border border-gray-300 max-w-xs w-fit"
+        >
+          <img
+            src="me.png"
+            alt="First Job"
+            class="w-55 h-auto rounded-md mx-auto"
+          />
+          <!-- <figcaption class="text-center text-gray-700 mt-2 font-semibold">
           First job! Learning and growing.
         </figcaption> -->
-      </figure>
-    
-      <figure class="absolute top-10 left-70 bg-white p-3 pb-4 shadow-lg rounded-lg transform rotate-3 hover:rotate-0 transition-all duration-300 border border-gray-300 max-w-xs w-fit">
-        <img src="vacation.jpg" alt="Second Job" class="w-40 h-auto rounded-md mx-auto">
-        <!-- <figcaption class="text-center text-gray-700 mt-2 font-semibold">
+        </figure>
+
+        <figure
+          class="absolute top-10 left-70 bg-white p-3 pb-4 shadow-lg rounded-lg transform rotate-3 hover:rotate-0 transition-all duration-300 border border-gray-300 max-w-xs w-fit"
+        >
+          <img
+            src="vacation.jpg"
+            alt="Second Job"
+            class="w-40 h-auto rounded-md mx-auto"
+          />
+          <!-- <figcaption class="text-center text-gray-700 mt-2 font-semibold">
           Second job! Leveling up.
         </figcaption> -->
-      </figure>
-    
-      <figure class="absolute top-20 left-110 bg-white p-3 pb-4 shadow-lg rounded-lg transform -rotate-6 hover:rotate-0 transition-all duration-300 border border-gray-300 max-w-xs w-fit">
-        <img src="farewell.jpg" alt="Third Job" class="w-70 h-auto rounded-md mx-auto">
-        <!-- <figcaption class="text-center text-gray-700 mt-2 font-semibold">
+        </figure>
+
+        <figure
+          class="absolute top-20 left-110 bg-white p-3 pb-4 shadow-lg rounded-lg transform -rotate-6 hover:rotate-0 transition-all duration-300 border border-gray-300 max-w-xs w-fit"
+        >
+          <img
+            src="farewell.jpg"
+            alt="Third Job"
+            class="w-70 h-auto rounded-md mx-auto"
+          />
+          <!-- <figcaption class="text-center text-gray-700 mt-2 font-semibold">
           Third job! Keep going.
         </figcaption> -->
-      </figure>
-    </div>
-  </section>
-
-  <section class="relative h-[300px] w-full flex flex-col md:hidden justify-center items-start">
-    <div class="relative flex flex-col justify-center items-center w-full max-w-3xl">
-      <figure class="absolute top-[-200px] bg-white p-3 pb-4 shadow-lg rounded-lg transform -rotate-6 hover:rotate-0 transition-all duration-300 border border-gray-300 max-w-xs w-fit">
-        <img src="me.png" alt="First Job" class="w-35 h-auto rounded-md mx-auto">
-      </figure>
-    
-      <figure class="absolute top-[-80px] right-8 bg-white p-3 pb-4 shadow-lg rounded-lg transform rotate-3 hover:rotate-0 transition-all duration-300 border border-gray-300 max-w-xs w-fit">
-        <img src="vacation.jpg" alt="Second Job" class="w-30 h-auto rounded-md mx-auto">
-      </figure>
-    
-      <figure class="absolute top-[-20px] right-45 bg-white p-3 pb-4 shadow-lg rounded-lg transform -rotate-6 hover:rotate-0 transition-all duration-300 border border-gray-300 max-w-xs w-fit">
-        <img src="farewell.jpg" alt="Third Job" class="w-35 h-auto rounded-md mx-auto">
-      </figure>
-    </div>
-  </section>
-  
-  <section id="portfolio" class="md:pt-20 pb-8 px-4">
-    <div class="max-w-4xl mx-auto bg-white shadow-md rounded-lg p-6">
-      <h2 class="text-2xl font-bold mb-4">EgoCraft</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
-
-
-        <div class="bg-gray-200 p-4 rounded-lg shadow-md">
-          <h3 class="text-xl font-semibold mb-2">HTK Faucet (Web3 dApp)</h3>
-          <p class="text-gray-700 my-2">Tech :</p>
-          <ul class="list-disc px-4">
-            <li>Smart Contract: Solidity (Hardhat, OpenZeppelin v5)</li>
-            <li>Frontend: Next.js 14</li>
-            <li>Blockchain: Ethereum (Hardhat Local, Sepolia Testnet)</li>
-            <li>REST API dengan Node JS</li>
-          </ul>
-          <p class="text-gray-700 my-2">Features :</p>
-          <div class="bg-white shadow-md rounded-2xl p-6 max-w-xl mx-auto">
-            <h2 class="text-xl font-bold mb-4">Token Details</h2>
-            <ul class="list-disc space-y-2 pl-5 text-gray-700">
-              <li><span class="font-semibold">Total Supply:</span> 100,000,000 HTK <span class="text-sm text-gray-500">(cap enforced)</span></li>
-              <li><span class="font-semibold">Initial Supply:</span> 10,000,000 HTK <span class="text-sm text-gray-500">(minted to admin safe)</span></li>
-              <li><span class="font-semibold">Burnable:</span> tokens can be destroyed by users</li>
-              <li><span class="font-semibold">Permit (EIP-2612):</span> approve without gas <span class="text-sm text-gray-500">(gasless approvals)</span></li>
-              <li><span class="font-semibold">Pausable:</span> contract can be temporarily paused by the admin</li>
-              <li>
-                <span class="font-semibold">Role-based Access Control:</span>
-                <ul class="list-disc pl-6 mt-2 space-y-1 text-gray-600">
-                  <li><code class="bg-gray-100 px-2 py-1 rounded">MINTER_ROLE</code> → Faucet Contract</li>
-                  <li><code class="bg-gray-100 px-2 py-1 rounded">PAUSER_ROLE</code> → Multisig Safe</li>
-                  <li><code class="bg-gray-100 px-2 py-1 rounded">DEFAULT_ADMIN_ROLE</code> → Multisig Safe</li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-
-          
-          <!-- Swiper -->
-          <div class="swiper-container stack-card-swiper mt-4">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide"><img src="self-project/faucet/my-faucet-1.png" alt="Faucet 1" class="h-auto rounded-lg" /></div>
-              <div class="swiper-slide"><img src="self-project/faucet/my-faucet-2.png" alt="Faucet 2" class="h-auto rounded-lg" /></div>
-              <div class="swiper-slide"><img src="self-project/faucet/my-faucet-3.png" alt="Faucet 3" class="h-auto rounded-lg" /></div>
-              <div class="swiper-slide"><img src="self-project/faucet/my-faucet-4.png" alt="Faucet 4" class="h-auto rounded-lg" /></div>
-              <div class="swiper-slide"><img src="self-project/faucet/my-faucet-5.png" alt="Faucet 5" class="h-auto rounded-lg" /></div>
-            </div>
-            <!-- Add Pagination -->
-            <div class="swiper-pagination"></div>
-            <!-- Add Navigation -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-          </div>
-        </div>
-
-        <div class="bg-gray-200 p-4 rounded-lg shadow-md">
-          <h3 class="text-xl font-semibold mb-2">My Note</h3>
-          <p class="text-gray-700">Flutter Version 3.29.2</p>
-          <p class="text-gray-700 my-2">Tech :</p>
-          <ul class="list-disc px-4">
-            <li>Flutter</li>
-            <li>Backend - SQlite</li>
-          </ul>
-          <p class="text-gray-700 my-2">Features :</p>
-          <ul class="list-disc px-4">
-            <li>Integrate Cloudinary to save media such as images and videos</li>
-            <li>Use WYSIWYG for content</li>
-            <li>Pin your content</li>
-            <li>Set Reminder</li>
-            <li>Search by Title</li>
-            <li>Authentication</li>
-          </ul>
-          
-          <!-- Swiper -->
-          <div class="swiper-container stack-card-swiper mt-4">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide"><img src="self-project/mynote/my-note-1.png" alt="My Note 1" class="h-auto rounded-lg" /></div>
-              <div class="swiper-slide"><img src="self-project/mynote/my-note-2.png" alt="My Note 2" class="h-auto rounded-lg" /></div>
-              <div class="swiper-slide"><img src="self-project/mynote/my-note-3.png" alt="My Note 3" class="h-auto rounded-lg" /></div>
-              <div class="swiper-slide"><img src="self-project/mynote/my-note-4.png" alt="My Note 4" class="h-auto rounded-lg" /></div>
-              <div class="swiper-slide"><img src="self-project/mynote/my-note-5.png" alt="My Note 5" class="h-auto rounded-lg" /></div>
-              <div class="swiper-slide"><img src="self-project/mynote/my-note-6.png" alt="My Note 6" class="h-auto rounded-lg" /></div>
-              <div class="swiper-slide"><img src="self-project/mynote/my-note-7.png" alt="My Note 7" class="h-auto rounded-lg" /></div>
-              <div class="swiper-slide"><img src="self-project/mynote/my-note-8.png" alt="My Note 8" class="h-auto rounded-lg" /></div>
-              <div class="swiper-slide"><img src="self-project/mynote/my-note-9.png" alt="My Note 9" class="h-auto rounded-lg" /></div>
-            </div>
-            <!-- Add Pagination -->
-            <div class="swiper-pagination"></div>
-            <!-- Add Navigation -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-          </div>
-        </div>
-
-        <div class="bg-gray-200 p-4 rounded-lg shadow-md">
-          <h3 class="text-xl font-semibold mb-2">Chat</h3>
-          <p class="text-gray-700">Flutter Version 3.29.2</p>
-          <p class="text-gray-700">DDD-based Architecture</p>
-          <p class="text-gray-700 my-2">Tech :</p>
-          <ul class="list-disc px-4">
-            <li>Flutter</li>
-            <li>Backend - Node JS</li>
-            <li>MySQL</li>
-            <li>Socket IO</li>
-          </ul>
-          <p class="text-gray-700 my-2">Features :</p>
-          <ul class="list-disc px-4">
-            <li>Permission Notification</li>
-            <li>User Online Activity</li>
-            <li>Reply via notification</li>
-            <li>Unread Message Badge in Chats</li>
-            <li>Set Last Active when the user leaves</li>
-            <li>Mark as read and unread with color</li>
-            <li>Indicator showing when the user is typing</li>
-            <li>Animate to the latest chat when clicking on the detail</li>
-            <li>Type only text in the message</li>
-            <li>Dark Mode</li>
-          </ul>
-          
-          <!-- Swiper -->
-          <div class="swiper-container stack-card-swiper mt-4">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide"><img src="self-project/chat/chat-1.png" alt="Chat 1" class="h-auto rounded-lg" /></div>
-              <div class="swiper-slide"><img src="self-project/chat/chat-2.png" alt="Chat 2" class="h-auto rounded-lg" /></div>
-              <div class="swiper-slide"><img src="self-project/chat/chat-3.png" alt="Chat 3" class="h-auto rounded-lg" /></div>
-              <div class="swiper-slide"><img src="self-project/chat/chat-4.png" alt="Chat 4" class="h-auto rounded-lg" /></div>
-              <div class="swiper-slide"><img src="self-project/chat/chat-5.png" alt="Chat 5" class="h-auto rounded-lg" /></div>
-              <div class="swiper-slide"><img src="self-project/chat/chat-6.png" alt="Chat 6" class="h-auto rounded-lg" /></div>
-              <div class="swiper-slide"><img src="self-project/chat/chat-7.png" alt="Chat 7" class="h-auto rounded-lg" /></div>
-              <div class="swiper-slide"><img src="self-project/chat/chat-8.png" alt="Chat 8" class="h-auto rounded-lg" /></div>
-              <div class="swiper-slide"><img src="self-project/chat/chat-9.png" alt="Chat 9" class="h-auto rounded-lg" /></div>
-              <div class="swiper-slide"><img src="self-project/chat/chat-10.png" alt="Chat 10" class="h-auto rounded-lg" /></div>
-              <div class="swiper-slide"><img src="self-project/chat/chat-11.png" alt="Chat 11" class="h-auto rounded-lg" /></div>
-              <div class="swiper-slide"><img src="self-project/chat/chat-12.png" alt="Chat 12" class="h-auto rounded-lg" /></div>
-              <div class="swiper-slide"><img src="self-project/chat/chat-13.png" alt="Chat 13" class="h-auto rounded-lg" /></div>
-              <div class="swiper-slide"><img src="self-project/chat/chat-14.png" alt="Chat 14" class="h-auto rounded-lg" /></div>
-              <div class="swiper-slide"><img src="self-project/chat/chat-15.png" alt="Chat 15" class="h-auto rounded-lg" /></div>
-              <div class="swiper-slide"><img src="self-project/chat/chat-16.png" alt="Chat 16" class="h-auto rounded-lg" /></div>
-            </div>
-            <!-- Add Pagination -->
-            <div class="swiper-pagination"></div>
-            <!-- Add Navigation -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-          </div>
-        </div>
-
-        <div class="bg-gray-200 p-4 rounded-lg shadow-md">
-          <h3 class="text-xl font-semibold mb-2">My Event</h3>
-          <p class="text-gray-700">Flutter Version 3.29.2</p>
-          <p class="text-gray-700">DDD-based Architecture</p>
-          <p class="text-gray-700 my-2">Tech :</p>
-          <ul class="list-disc px-4">
-            <li>Flutter</li>
-            <li>Backend - Go Lang</li>
-            <li>MySQL</li>
-          </ul>
-          <p class="text-gray-700 my-2">Features :</p>
-          <ul class="list-disc px-4">
-            <li>Event Range Schedule</li>
-            <li>Use WYSIWYG for content</li>
-            <li>Multiple Image Banner</li>
-          </ul>
-          
-          <!-- Swiper -->
-          <div class="swiper-container stack-card-swiper mt-4">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide"><img src="self-project/myevent/my-event-1.png" alt="My Event 1" class="h-auto rounded-lg" /></div>
-              <div class="swiper-slide"><img src="self-project/myevent/my-event-2.png" alt="My Event 2" class="h-auto rounded-lg" /></div>
-              <div class="swiper-slide"><img src="self-project/myevent/my-event-3.png" alt="My Event 3" class="h-auto rounded-lg" /></div>
-              <div class="swiper-slide"><img src="self-project/myevent/my-event-4.png" alt="My Event 4" class="h-auto rounded-lg" /></div>
-              <div class="swiper-slide"><img src="self-project/myevent/my-event-5.png" alt="My Event 5" class="h-auto rounded-lg" /></div>
-              <div class="swiper-slide"><img src="self-project/myevent/my-event-6.png" alt="My Event 6" class="h-auto rounded-lg" /></div>
-              <div class="swiper-slide"><img src="self-project/myevent/my-event-7.png" alt="My Event 7" class="h-auto rounded-lg" /></div>
-              <div class="swiper-slide"><img src="self-project/myevent/my-event-8.png" alt="My Event 8" class="h-auto rounded-lg" /></div>
-              <div class="swiper-slide"><img src="self-project/myevent/my-event-9.png" alt="My Event 9" class="h-auto rounded-lg" /></div>
-              <div class="swiper-slide"><img src="self-project/myevent/my-event-10.png" alt="My Event 10" class="h-auto rounded-lg" /></div>
-              <div class="swiper-slide"><img src="self-project/myevent/my-event-11.png" alt="My Event 11" class="h-auto rounded-lg" /></div>
-              <div class="swiper-slide"><img src="self-project/myevent/my-event-12.png" alt="My Event 12" class="h-auto rounded-lg" /></div>
-              <div class="swiper-slide"><img src="self-project/myevent/my-event-13.png" alt="My Event 13" class="h-auto rounded-lg" /></div>
-              <div class="swiper-slide"><img src="self-project/myevent/my-event-14.png" alt="My Event 14" class="h-auto rounded-lg" /></div>
-            </div>
-            <!-- Add Pagination -->
-            <div class="swiper-pagination"></div>
-            <!-- Add Navigation -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-          </div>
-        </div>
-
+        </figure>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="portfolio" class="py-8 px-4">
-    <div class="max-w-4xl mx-auto bg-white shadow-md rounded-lg p-6">
-        
-      <h2 class="text-2xl font-bold mb-4">Portfolios</h2>
+    <section
+      class="relative h-[300px] w-full flex flex-col md:hidden justify-center items-start"
+    >
+      <div
+        class="relative flex flex-col justify-center items-center w-full max-w-3xl"
+      >
+        <figure
+          class="absolute top-[-200px] bg-white p-3 pb-4 shadow-lg rounded-lg transform -rotate-6 hover:rotate-0 transition-all duration-300 border border-gray-300 max-w-xs w-fit"
+        >
+          <img
+            src="me.png"
+            alt="First Job"
+            class="w-35 h-auto rounded-md mx-auto"
+          />
+        </figure>
+
+        <figure
+          class="absolute top-[-80px] right-8 bg-white p-3 pb-4 shadow-lg rounded-lg transform rotate-3 hover:rotate-0 transition-all duration-300 border border-gray-300 max-w-xs w-fit"
+        >
+          <img
+            src="vacation.jpg"
+            alt="Second Job"
+            class="w-30 h-auto rounded-md mx-auto"
+          />
+        </figure>
+
+        <figure
+          class="absolute top-[-20px] right-45 bg-white p-3 pb-4 shadow-lg rounded-lg transform -rotate-6 hover:rotate-0 transition-all duration-300 border border-gray-300 max-w-xs w-fit"
+        >
+          <img
+            src="farewell.jpg"
+            alt="Third Job"
+            class="w-35 h-auto rounded-md mx-auto"
+          />
+        </figure>
+      </div>
+    </section>
+
+    <section id="portfolio" class="py-8 px-4">
+      <div class="max-w-4xl mx-auto bg-white shadow-md rounded-lg p-6">
+        <h2 class="text-2xl font-bold mb-4">Portfolios</h2>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-
           <div class="bg-gray-200 p-4 rounded-lg shadow-md">
             <h3 class="text-xl font-semibold mb-2">Viniela Property</h3>
-            <p class="text-gray-700">Web : <a href="https://property.viniela.id" class="text-blue-500">Link</a> </p>
+            <p class="text-gray-700">
+              Web :
+              <a href="https://property.viniela.id" class="text-blue-500"
+                >Link</a
+              >
+            </p>
           </div>
 
           <div class="bg-gray-200 p-4 rounded-lg shadow-md">
             <h3 class="text-xl font-semibold mb-2">Marlinda</h3>
-            <p class="text-gray-700">Android : <a href="https://play.google.com/store/apps/details?id=com.inovatiftujuh8.rakhsa" class="text-blue-500">Link</a> </p>
+            <p class="text-gray-700">
+              Android :
+              <a
+                href="https://play.google.com/store/apps/details?id=com.inovatiftujuh8.rakhsa"
+                class="text-blue-500"
+                >Link</a
+              >
+            </p>
           </div>
 
           <div class="bg-gray-200 p-4 rounded-lg shadow-md">
             <h3 class="text-xl font-semibold mb-2">Fspmi</h3>
-            <p class="text-gray-700">Android : <a href="https://play.google.com/store/apps/details?id=com.inovatif78.fspmi" class="text-blue-500">Link</a> </p>
-            <p class="text-gray-700">Ios : <a href="https://apps.apple.com/id/app/fspmi/id1639982534" class="text-blue-500"> Link </a> </p>
+            <p class="text-gray-700">
+              Android :
+              <a
+                href="https://play.google.com/store/apps/details?id=com.inovatif78.fspmi"
+                class="text-blue-500"
+                >Link</a
+              >
+            </p>
+            <p class="text-gray-700">
+              Ios :
+              <a
+                href="https://apps.apple.com/id/app/fspmi/id1639982534"
+                class="text-blue-500"
+              >
+                Link
+              </a>
+            </p>
           </div>
 
           <div class="bg-gray-200 p-4 rounded-lg shadow-md">
             <h3 class="text-xl font-semibold mb-2">Saka</h3>
-            <p class="text-gray-700">Android : <a href="https://play.google.com/store/apps/details?id=com.inovasi78.saka" class="text-blue-500">Link</a> </p>
-            <p class="text-gray-700">Ios : <a href="https://apps.apple.com/id/app/saka-dirgantara/id1625616956" class="text-blue-500"> Link </a> </p>
+            <p class="text-gray-700">
+              Android :
+              <a
+                href="https://play.google.com/store/apps/details?id=com.inovasi78.saka"
+                class="text-blue-500"
+                >Link</a
+              >
+            </p>
+            <p class="text-gray-700">
+              Ios :
+              <a
+                href="https://apps.apple.com/id/app/saka-dirgantara/id1625616956"
+                class="text-blue-500"
+              >
+                Link
+              </a>
+            </p>
           </div>
 
           <div class="bg-gray-200 p-4 rounded-lg shadow-md">
             <h3 class="text-xl font-semibold mb-2">Fasi</h3>
-            <p class="text-gray-700">Android : <a href="https://play.google.com/store/apps/details?id=com.inovasi78.fasi" class="text-blue-500">Link</a> </p>
-            <p class="text-gray-700">Ios : <a href="https://apps.apple.com/id/app/fasi/id1625680381" class="text-blue-500">Link</a></p>
+            <p class="text-gray-700">
+              Android :
+              <a
+                href="https://play.google.com/store/apps/details?id=com.inovasi78.fasi"
+                class="text-blue-500"
+                >Link</a
+              >
+            </p>
+            <p class="text-gray-700">
+              Ios :
+              <a
+                href="https://apps.apple.com/id/app/fasi/id1625680381"
+                class="text-blue-500"
+                >Link</a
+              >
+            </p>
           </div>
 
           <div class="bg-gray-200 p-4 rounded-lg shadow-md">
             <h3 class="text-xl font-semibold mb-2">SMA 4 MEDAN</h3>
-            <p class="text-gray-700">Android : <a href="https://play.google.com/store/apps/details?id=com.inovatif78.sma_4_medan" class="text-blue-500">Link</a> </p>
+            <p class="text-gray-700">
+              Android :
+              <a
+                href="https://play.google.com/store/apps/details?id=com.inovatif78.sma_4_medan"
+                class="text-blue-500"
+                >Link</a
+              >
+            </p>
             <p class="text-gray-700">Ios : -</p>
           </div>
 
           <div class="bg-gray-200 p-4 rounded-lg shadow-md">
             <h3 class="text-xl font-semibold mb-2">HP3KI</h3>
-            <p class="text-gray-700">Android : <a href="https://play.google.com/store/apps/details?id=com.inovatif78.hp3ki" class="text-blue-500">Link</a> </p>
+            <p class="text-gray-700">
+              Android :
+              <a
+                href="https://play.google.com/store/apps/details?id=com.inovatif78.hp3ki"
+                class="text-blue-500"
+                >Link</a
+              >
+            </p>
             <p class="text-gray-700">Ios : -</p>
           </div>
 
           <div class="bg-gray-200 p-4 rounded-lg shadow-md">
             <h3 class="text-xl font-semibold mb-2">Starlet</h3>
-            <p class="text-gray-700">Android : <a href="https://play.google.com/store/apps/details?id=com.inovasi78.starlet" class="text-blue-500"> Link</a> </p>
-            <p class="text-gray-700">Ios : <a href="https://apps.apple.com/id/app/isc-mobile-21/id1624831544"  class="text-blue-500">Link</a></p>
+            <p class="text-gray-700">
+              Android :
+              <a
+                href="https://play.google.com/store/apps/details?id=com.inovasi78.starlet"
+                class="text-blue-500"
+              >
+                Link</a
+              >
+            </p>
+            <p class="text-gray-700">
+              Ios :
+              <a
+                href="https://apps.apple.com/id/app/isc-mobile-21/id1624831544"
+                class="text-blue-500"
+                >Link</a
+              >
+            </p>
           </div>
 
           <div class="bg-gray-200 p-4 rounded-lg shadow-md">
             <h3 class="text-xl font-semibold mb-2">HOG</h3>
-            <p class="text-gray-700">Android : <a href="https://play.google.com/store/apps/details?id=com.inovasi78.hog" class="text-blue-500"> Link </a> </p>
-            <p class="text-gray-700">Ios : <a href="https://apps.apple.com/id/app/hog-ae/id1620813377" class="text-blue-500">Link</a></p>
+            <p class="text-gray-700">
+              Android :
+              <a
+                href="https://play.google.com/store/apps/details?id=com.inovasi78.hog"
+                class="text-blue-500"
+              >
+                Link
+              </a>
+            </p>
+            <p class="text-gray-700">
+              Ios :
+              <a
+                href="https://apps.apple.com/id/app/hog-ae/id1620813377"
+                class="text-blue-500"
+                >Link</a
+              >
+            </p>
           </div>
 
           <div class="bg-gray-200 p-4 rounded-lg shadow-md">
             <h3 class="text-xl font-semibold mb-2">MB W204 CLUB INA</h3>
-            <p class="text-gray-700">Android : <a href="https://play.google.com/store/apps/details?id=com.inovasi78.mb_w204_club_ina" class="text-blue-500">Link</a> </p>
-            <p class="text-gray-700">Ios : <a href="https://apps.apple.com/id/app/mb-w204-club-ina/id1623624077" class="text-blue-500">Link</a> </p>
+            <p class="text-gray-700">
+              Android :
+              <a
+                href="https://play.google.com/store/apps/details?id=com.inovasi78.mb_w204_club_ina"
+                class="text-blue-500"
+                >Link</a
+              >
+            </p>
+            <p class="text-gray-700">
+              Ios :
+              <a
+                href="https://apps.apple.com/id/app/mb-w204-club-ina/id1623624077"
+                class="text-blue-500"
+                >Link</a
+              >
+            </p>
           </div>
 
           <div class="bg-gray-200 p-4 rounded-lg shadow-md">
             <h3 class="text-xl font-semibold mb-2">CHTC</h3>
-            <p class="text-gray-700">Android : <a href="https://play.google.com/store/apps/details?id=com.inovatif78.chtc" class="text-blue-500">Link</a> </p>
-            <p class="text-gray-700">Ios : - </p>
+            <p class="text-gray-700">
+              Android :
+              <a
+                href="https://play.google.com/store/apps/details?id=com.inovatif78.chtc"
+                class="text-blue-500"
+                >Link</a
+              >
+            </p>
+            <p class="text-gray-700">Ios : -</p>
           </div>
 
           <div class="bg-gray-200 p-4 rounded-lg shadow-md">
             <h3 class="text-xl font-semibold mb-2">Bank Al Barokah</h3>
-            <p class="text-gray-700">Web : <a href="https://bankalbarokah.id" class="text-blue-500">Link</a></p>
+            <p class="text-gray-700">
+              Web :
+              <a href="https://bankalbarokah.id" class="text-blue-500">Link</a>
+            </p>
           </div>
 
-          <div  class="bg-gray-200 p-4 rounded-lg shadow-md">
+          <div class="bg-gray-200 p-4 rounded-lg shadow-md">
             <h3 class="text-xl font-semibold mb-2">SMA Plus Al Ghifari</h3>
-            <p class="text-gray-700">Web : <a href="https://smaplusalghifari.sch.id/" class="text-blue-500">Link</a></p>
+            <p class="text-gray-700">
+              Web :
+              <a href="https://smaplusalghifari.sch.id/" class="text-blue-500"
+                >Link</a
+              >
+            </p>
           </div>
-         
+
           <div class="bg-gray-200 p-4 rounded-lg shadow-md">
             <h3 class="text-xl font-semibold mb-2">Pinewoodpwk</h3>
-            <p class="text-gray-700">Web : <a href="https://pinewoodpwk.com/" class="text-blue-500">Link</a></p>
-         </div>
+            <p class="text-gray-700">
+              Web :
+              <a href="https://pinewoodpwk.com/" class="text-blue-500">Link</a>
+            </p>
+          </div>
 
           <div class="bg-gray-200 p-4 rounded-lg shadow-md">
             <h3 class="text-xl font-semibold mb-2">Tentang Loker</h3>
-            <p class="text-gray-700">Web : <a href="https://tentangloker.com" class="text-blue-500">Link</a></p>
+            <p class="text-gray-700">
+              Web :
+              <a href="https://tentangloker.com" class="text-blue-500">Link</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio" class="md:pt-20 pb-8 px-4">
+      <div class="max-w-4xl mx-auto bg-white shadow-md rounded-lg p-6">
+        <h2 class="text-2xl font-bold mb-4">EgoCraft</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
+          <div class="bg-gray-200 p-4 rounded-lg shadow-md">
+            <h3 class="text-xl font-semibold mb-2">HTK Faucet (Web3 dApp)</h3>
+            <p class="text-gray-700 my-2">Tech :</p>
+            <ul class="list-disc px-4">
+              <li>Smart Contract: Solidity (Hardhat, OpenZeppelin v5)</li>
+              <li>Frontend: Next.js 14</li>
+              <li>Blockchain: Ethereum (Hardhat Local, Sepolia Testnet)</li>
+              <li>REST API dengan Node JS</li>
+            </ul>
+            <p class="text-gray-700 my-2">Features :</p>
+            <div class="bg-white shadow-md rounded-2xl p-6 max-w-xl mx-auto">
+              <h2 class="text-xl font-bold mb-4">Token Details</h2>
+              <ul class="list-disc space-y-2 pl-5 text-gray-700">
+                <li>
+                  <span class="font-semibold">Total Supply:</span> 100,000,000
+                  HTK <span class="text-sm text-gray-500">(cap enforced)</span>
+                </li>
+                <li>
+                  <span class="font-semibold">Initial Supply:</span> 10,000,000
+                  HTK
+                  <span class="text-sm text-gray-500"
+                    >(minted to admin safe)</span
+                  >
+                </li>
+                <li>
+                  <span class="font-semibold">Burnable:</span> tokens can be
+                  destroyed by users
+                </li>
+                <li>
+                  <span class="font-semibold">Permit (EIP-2612):</span> approve
+                  without gas
+                  <span class="text-sm text-gray-500">(gasless approvals)</span>
+                </li>
+                <li>
+                  <span class="font-semibold">Pausable:</span> contract can be
+                  temporarily paused by the admin
+                </li>
+                <li>
+                  <span class="font-semibold">Role-based Access Control:</span>
+                  <ul class="list-disc pl-6 mt-2 space-y-1 text-gray-600">
+                    <li>
+                      <code class="bg-gray-100 px-2 py-1 rounded"
+                        >MINTER_ROLE</code
+                      >
+                      → Faucet Contract
+                    </li>
+                    <li>
+                      <code class="bg-gray-100 px-2 py-1 rounded"
+                        >PAUSER_ROLE</code
+                      >
+                      → Multisig Safe
+                    </li>
+                    <li>
+                      <code class="bg-gray-100 px-2 py-1 rounded"
+                        >DEFAULT_ADMIN_ROLE</code
+                      >
+                      → Multisig Safe
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Swiper -->
+            <div class="swiper-container stack-card-swiper mt-4">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img
+                    src="self-project/faucet/my-faucet-1.png"
+                    alt="Faucet 1"
+                    class="h-auto rounded-lg"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="self-project/faucet/my-faucet-2.png"
+                    alt="Faucet 2"
+                    class="h-auto rounded-lg"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="self-project/faucet/my-faucet-3.png"
+                    alt="Faucet 3"
+                    class="h-auto rounded-lg"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="self-project/faucet/my-faucet-4.png"
+                    alt="Faucet 4"
+                    class="h-auto rounded-lg"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="self-project/faucet/my-faucet-5.png"
+                    alt="Faucet 5"
+                    class="h-auto rounded-lg"
+                  />
+                </div>
+              </div>
+              <!-- Add Pagination -->
+              <div class="swiper-pagination"></div>
+              <!-- Add Navigation -->
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
           </div>
 
+          <div class="bg-gray-200 p-4 rounded-lg shadow-md">
+            <h3 class="text-xl font-semibold mb-2">My Note</h3>
+            <p class="text-gray-700">Flutter Version 3.29.2</p>
+            <p class="text-gray-700 my-2">Tech :</p>
+            <ul class="list-disc px-4">
+              <li>Flutter</li>
+              <li>Backend - SQlite</li>
+            </ul>
+            <p class="text-gray-700 my-2">Features :</p>
+            <ul class="list-disc px-4">
+              <li>
+                Integrate Cloudinary to save media such as images and videos
+              </li>
+              <li>Use WYSIWYG for content</li>
+              <li>Pin your content</li>
+              <li>Set Reminder</li>
+              <li>Search by Title</li>
+              <li>Authentication</li>
+            </ul>
+
+            <!-- Swiper -->
+            <div class="swiper-container stack-card-swiper mt-4">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img
+                    src="self-project/mynote/my-note-1.png"
+                    alt="My Note 1"
+                    class="h-auto rounded-lg"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="self-project/mynote/my-note-2.png"
+                    alt="My Note 2"
+                    class="h-auto rounded-lg"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="self-project/mynote/my-note-3.png"
+                    alt="My Note 3"
+                    class="h-auto rounded-lg"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="self-project/mynote/my-note-4.png"
+                    alt="My Note 4"
+                    class="h-auto rounded-lg"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="self-project/mynote/my-note-5.png"
+                    alt="My Note 5"
+                    class="h-auto rounded-lg"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="self-project/mynote/my-note-6.png"
+                    alt="My Note 6"
+                    class="h-auto rounded-lg"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="self-project/mynote/my-note-7.png"
+                    alt="My Note 7"
+                    class="h-auto rounded-lg"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="self-project/mynote/my-note-8.png"
+                    alt="My Note 8"
+                    class="h-auto rounded-lg"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="self-project/mynote/my-note-9.png"
+                    alt="My Note 9"
+                    class="h-auto rounded-lg"
+                  />
+                </div>
+              </div>
+              <!-- Add Pagination -->
+              <div class="swiper-pagination"></div>
+              <!-- Add Navigation -->
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+
+          <div class="bg-gray-200 p-4 rounded-lg shadow-md">
+            <h3 class="text-xl font-semibold mb-2">Chat</h3>
+            <p class="text-gray-700">Flutter Version 3.29.2</p>
+            <p class="text-gray-700">DDD-based Architecture</p>
+            <p class="text-gray-700 my-2">Tech :</p>
+            <ul class="list-disc px-4">
+              <li>Flutter</li>
+              <li>Backend - Node JS</li>
+              <li>MySQL</li>
+              <li>Socket IO</li>
+            </ul>
+            <p class="text-gray-700 my-2">Features :</p>
+            <ul class="list-disc px-4">
+              <li>Permission Notification</li>
+              <li>User Online Activity</li>
+              <li>Reply via notification</li>
+              <li>Unread Message Badge in Chats</li>
+              <li>Set Last Active when the user leaves</li>
+              <li>Mark as read and unread with color</li>
+              <li>Indicator showing when the user is typing</li>
+              <li>Animate to the latest chat when clicking on the detail</li>
+              <li>Type only text in the message</li>
+              <li>Dark Mode</li>
+            </ul>
+
+            <!-- Swiper -->
+            <div class="swiper-container stack-card-swiper mt-4">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img
+                    src="self-project/chat/chat-1.png"
+                    alt="Chat 1"
+                    class="h-auto rounded-lg"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="self-project/chat/chat-2.png"
+                    alt="Chat 2"
+                    class="h-auto rounded-lg"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="self-project/chat/chat-3.png"
+                    alt="Chat 3"
+                    class="h-auto rounded-lg"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="self-project/chat/chat-4.png"
+                    alt="Chat 4"
+                    class="h-auto rounded-lg"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="self-project/chat/chat-5.png"
+                    alt="Chat 5"
+                    class="h-auto rounded-lg"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="self-project/chat/chat-6.png"
+                    alt="Chat 6"
+                    class="h-auto rounded-lg"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="self-project/chat/chat-7.png"
+                    alt="Chat 7"
+                    class="h-auto rounded-lg"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="self-project/chat/chat-8.png"
+                    alt="Chat 8"
+                    class="h-auto rounded-lg"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="self-project/chat/chat-9.png"
+                    alt="Chat 9"
+                    class="h-auto rounded-lg"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="self-project/chat/chat-10.png"
+                    alt="Chat 10"
+                    class="h-auto rounded-lg"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="self-project/chat/chat-11.png"
+                    alt="Chat 11"
+                    class="h-auto rounded-lg"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="self-project/chat/chat-12.png"
+                    alt="Chat 12"
+                    class="h-auto rounded-lg"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="self-project/chat/chat-13.png"
+                    alt="Chat 13"
+                    class="h-auto rounded-lg"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="self-project/chat/chat-14.png"
+                    alt="Chat 14"
+                    class="h-auto rounded-lg"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="self-project/chat/chat-15.png"
+                    alt="Chat 15"
+                    class="h-auto rounded-lg"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="self-project/chat/chat-16.png"
+                    alt="Chat 16"
+                    class="h-auto rounded-lg"
+                  />
+                </div>
+              </div>
+              <!-- Add Pagination -->
+              <div class="swiper-pagination"></div>
+              <!-- Add Navigation -->
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+
+          <div class="bg-gray-200 p-4 rounded-lg shadow-md">
+            <h3 class="text-xl font-semibold mb-2">My Event</h3>
+            <p class="text-gray-700">Flutter Version 3.29.2</p>
+            <p class="text-gray-700">DDD-based Architecture</p>
+            <p class="text-gray-700 my-2">Tech :</p>
+            <ul class="list-disc px-4">
+              <li>Flutter</li>
+              <li>Backend - Go Lang</li>
+              <li>MySQL</li>
+            </ul>
+            <p class="text-gray-700 my-2">Features :</p>
+            <ul class="list-disc px-4">
+              <li>Event Range Schedule</li>
+              <li>Use WYSIWYG for content</li>
+              <li>Multiple Image Banner</li>
+            </ul>
+
+            <!-- Swiper -->
+            <div class="swiper-container stack-card-swiper mt-4">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img
+                    src="self-project/myevent/my-event-1.png"
+                    alt="My Event 1"
+                    class="h-auto rounded-lg"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="self-project/myevent/my-event-2.png"
+                    alt="My Event 2"
+                    class="h-auto rounded-lg"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="self-project/myevent/my-event-3.png"
+                    alt="My Event 3"
+                    class="h-auto rounded-lg"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="self-project/myevent/my-event-4.png"
+                    alt="My Event 4"
+                    class="h-auto rounded-lg"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="self-project/myevent/my-event-5.png"
+                    alt="My Event 5"
+                    class="h-auto rounded-lg"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="self-project/myevent/my-event-6.png"
+                    alt="My Event 6"
+                    class="h-auto rounded-lg"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="self-project/myevent/my-event-7.png"
+                    alt="My Event 7"
+                    class="h-auto rounded-lg"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="self-project/myevent/my-event-8.png"
+                    alt="My Event 8"
+                    class="h-auto rounded-lg"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="self-project/myevent/my-event-9.png"
+                    alt="My Event 9"
+                    class="h-auto rounded-lg"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="self-project/myevent/my-event-10.png"
+                    alt="My Event 10"
+                    class="h-auto rounded-lg"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="self-project/myevent/my-event-11.png"
+                    alt="My Event 11"
+                    class="h-auto rounded-lg"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="self-project/myevent/my-event-12.png"
+                    alt="My Event 12"
+                    class="h-auto rounded-lg"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="self-project/myevent/my-event-13.png"
+                    alt="My Event 13"
+                    class="h-auto rounded-lg"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="self-project/myevent/my-event-14.png"
+                    alt="My Event 14"
+                    class="h-auto rounded-lg"
+                  />
+                </div>
+              </div>
+              <!-- Add Pagination -->
+              <div class="swiper-pagination"></div>
+              <!-- Add Navigation -->
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
         </div>
-        
-    </div>
-  </section>
+      </div>
+    </section>
 
-  <!-- Footer -->
-  <footer class="bg-black flex justify-center text-white p-4 items-center text-center">
-    <div>
-      <img src="gmail.png" width="16" alt="ic-email">
-    </div>
-    <div>
-      <a href="mailto:reihanagam7@gmail.com" class="inline-block ml-2" target="_blank"> reihanagam7@gmail.com</a>
-    </div>
-  </footer>
+    <!-- Footer -->
+    <footer
+      class="bg-black flex justify-center text-white p-4 items-center text-center"
+    >
+      <div>
+        <img src="gmail.png" width="16" alt="ic-email" />
+      </div>
+      <div>
+        <a
+          href="mailto:reihanagam7@gmail.com"
+          class="inline-block ml-2"
+          target="_blank"
+        >
+          reihanagam7@gmail.com</a
+        >
+      </div>
+    </footer>
 
-  <script>
-    var swiper = new Swiper('.stack-card-swiper', {
-      slidesPerView: 1,
-      spaceBetween: 10,
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-    });
-  </script>
-
-</body>
+    <script>
+      var swiper = new Swiper(".stack-card-swiper", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>
+  </body>
 </html>
