@@ -19,6 +19,19 @@
         font-family: 'Times New Roman', serif;
       }
 
+      /* ✅ Background merah (winter vibe) */
+      body {
+        background: #b90b0b !important;
+      }
+
+      /* ❄️ Snow canvas overlay (PASTI kelihatan) */
+      #snow-canvas {
+        position: fixed;
+        inset: 0;
+        z-index: 2147483647; /* paling atas */
+        pointer-events: none; /* gak ganggu klik */
+      }
+
       /* Custom CSS for stack card effect */
       .swiper-container.stack-card-swiper {
         position: relative;
@@ -74,7 +87,12 @@
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   </head>
+
+  <!-- NOTE: konten tidak diubah -->
   <body class="bg-gray-100 font-sans leading-normal tracking-normal">
+    <!-- ❄️ Canvas salju (ditambahin doang) -->
+    <canvas id="snow-canvas"></canvas>
+
     <section id="bio" class="py-8 px-4">
       <div class="max-w-4xl mx-auto bg-white shadow-md rounded-lg p-6">
         <p class="text-gray-700">
@@ -263,7 +281,7 @@
             <p class="text-gray-700">
               Android :
               <a
-                href="https://play.google.com/store/apps/details?id=com.inovatif78.sma_4_medan"
+                href="https://play.google.com/store/apps/details?id=com.inovatiftujuh8.sma_4_medan"
                 class="text-blue-500"
                 >Link</a
               >
@@ -275,7 +293,7 @@
             <p class="text-gray-700">
               Android :
               <a
-                href="https://play.google.com/store/apps/details?id=com.inovatif78.hp3ki"
+                href="https://play.google.com/store/apps/details?id=com.inovatiftujuh8.hp3ki"
                 class="text-blue-500"
                 >Link</a
               >
@@ -347,7 +365,7 @@
             <p class="text-gray-700">
               Android :
               <a
-                href="https://play.google.com/store/apps/details?id=com.inovatif78.chtc"
+                href="https://play.google.com/store/apps/details?id=com.inovatiftujuh8.chtc"
                 class="text-blue-500"
                 >Link</a
               >
@@ -841,6 +859,7 @@
     </footer>
 
     <script>
+      // ✅ Swiper init (punya kamu)
       var swiper = new Swiper('.stack-card-swiper', {
         slidesPerView: 1,
         spaceBetween: 10,
@@ -853,6 +872,83 @@
           clickable: true,
         },
       });
+
+      // ❄️ Snow (Canvas) - PASTI jalan kalau JS tidak diblok
+      (function () {
+        const canvas = document.getElementById('snow-canvas');
+        if (!canvas) return;
+
+        const ctx = canvas.getContext('2d');
+        if (!ctx) return;
+
+        let w = 0;
+        let h = 0;
+        let dpr = Math.max(1, window.devicePixelRatio || 1);
+
+        function resize() {
+          w = window.innerWidth;
+          h = window.innerHeight;
+          dpr = Math.max(1, window.devicePixelRatio || 1);
+
+          canvas.width = Math.floor(w * dpr);
+          canvas.height = Math.floor(h * dpr);
+          canvas.style.width = w + 'px';
+          canvas.style.height = h + 'px';
+          ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        }
+
+        resize();
+        window.addEventListener('resize', resize);
+
+        const rand = (min, max) => min + Math.random() * (max - min);
+
+        const COUNT = 180; // banyak salju
+        const flakes = Array.from({ length: COUNT }).map(() => ({
+          x: rand(0, w),
+          y: rand(-h, h),
+          r: rand(1, 4),
+          vy: rand(0.8, 2.2),
+          vx: rand(-0.6, 0.6),
+          drift: rand(0.002, 0.01),
+          alpha: rand(0.5, 1),
+        }));
+
+        let t = 0;
+
+        function tick() {
+          t += 1;
+          ctx.clearRect(0, 0, w, h);
+
+          // salju putih + glow biar jelas di merah
+          ctx.fillStyle = '#fff';
+          ctx.shadowColor = 'rgba(255,255,255,0.6)';
+          ctx.shadowBlur = 6;
+
+          for (const f of flakes) {
+            f.y += f.vy;
+            f.x += f.vx + Math.sin(t * f.drift + f.y * 0.01) * 0.6;
+
+            if (f.y > h + 10) {
+              f.y = -10;
+              f.x = rand(0, w);
+            }
+            if (f.x < -10) f.x = w + 10;
+            if (f.x > w + 10) f.x = -10;
+
+            ctx.globalAlpha = f.alpha;
+            ctx.beginPath();
+            ctx.arc(f.x, f.y, f.r, 0, Math.PI * 2);
+            ctx.fill();
+          }
+
+          ctx.globalAlpha = 1;
+          ctx.shadowBlur = 0;
+
+          requestAnimationFrame(tick);
+        }
+
+        requestAnimationFrame(tick);
+      })();
     </script>
   </body>
 </html>
