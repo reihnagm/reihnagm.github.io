@@ -1041,20 +1041,30 @@
         },
       };
 
+      function applyMap(raw, map) {
+        let out = raw;
+        Object.entries(map || {}).forEach(([from, to]) => {
+          if (out.includes(from)) out = out.split(from).join(to);
+        });
+        return out;
+      }
+
       function applyTokenTranslations(lang) {
-        const map = TOKEN_MAP[lang] || {};
+        const idMap = TOKEN_MAP.id || {};
+        const reverseToEn = Object.fromEntries(Object.entries(idMap).map(([en, id]) => [id, en]));
+        const targetMap = TOKEN_MAP[lang] || {};
+
         const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
         const nodes = [];
         while (walker.nextNode()) nodes.push(walker.currentNode);
+
         nodes.forEach((node) => {
-          let raw = node.nodeValue;
+          const raw = node.nodeValue;
           if (!raw) return;
-          Object.entries(map).forEach(([from, to]) => {
-            if (raw.includes(from)) {
-              raw = raw.split(from).join(to);
-            }
-          });
-          node.nodeValue = raw;
+          // normalize first so toggling works both directions without refresh
+          const normalized = applyMap(raw, reverseToEn);
+          const translated = lang === 'id' ? applyMap(normalized, targetMap) : normalized;
+          node.nodeValue = translated;
         });
       }
 
