@@ -75,9 +75,16 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   </head>
   <body class="bg-gray-100 font-sans leading-normal tracking-normal">
+    <div
+      id="lang-switcher"
+      class="sticky top-0 z-50 flex justify-end gap-2 bg-white/80 px-4 py-2 backdrop-blur"
+    >
+      <button onclick="setLang('en')" class="rounded border px-3 py-1 text-sm">EN</button>
+      <button onclick="setLang('id')" class="rounded border px-3 py-1 text-sm">ID</button>
+    </div>
     <section id="bio" class="py-8 px-4">
       <div class="max-w-4xl mx-auto bg-white shadow-md rounded-lg p-6">
-        <p class="text-gray-700">
+        <p class="text-gray-700" data-i18n="bio_intro">
           Hello! My name is Reihan Agam. I am a <b>Mobile Developer</b> specializing in Flutter,
           with experience as a <b>Fullstack Developer</b> using technologies such as Node.js,
           NestJS, and Go for backend development, and CodeIgniter 4 or Next.js for frontend
@@ -90,8 +97,8 @@
 
     <section id="bio" class="py-4 px-4">
       <div class="max-w-4xl mx-auto bg-white shadow-md rounded-lg p-6">
-        <h2 class="text-2xl font-bold mb-4">Resume</h2>
-        <p class="text-gray-700">
+        <h2 class="text-2xl font-bold mb-4" data-i18n="resume_title">Resume</h2>
+        <p class="text-gray-700" data-i18n="resume_body">
           In 2020, I began my career as a software developer, using
           <b> CodeIgniter 3 </b> and <b> Laravel 6 </b> to create a tax website for BPRD, including
           both the back office and user interface. I was guided by my senior and had a 9-month
@@ -109,7 +116,9 @@
     <!-- Certificate Section -->
     <section id="certificates" class="pb-20 pb-8 px-4">
       <div class="max-w-4xl mx-auto bg-white shadow-md rounded-lg p-6">
-        <h2 class="text-2xl font-bold mb-4 text-center md:text-left">Certificates</h2>
+        <h2 class="text-2xl font-bold mb-4 text-center md:text-left" data-i18n="certificates_title">
+          Certificates
+        </h2>
 
         <!-- <div class="border p-4 rounded-lg shadow-md mt-4">
         <h3 class="text-lg md:text-xl font-semibold mb-2">Flutter & Dart - The Complete Guide [2020 - Edition]</h3>
@@ -180,7 +189,7 @@
 
     <section id="portfolio" class="py-8 px-4">
       <div class="max-w-4xl mx-auto bg-white shadow-md rounded-lg p-6">
-        <h2 class="text-2xl font-bold mb-4">Portfolios</h2>
+        <h2 class="text-2xl font-bold mb-4" data-i18n="portfolio_title">Portfolios</h2>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           <div class="bg-gray-200 p-4 rounded-lg shadow-md">
@@ -409,8 +418,60 @@
 
     <section id="portfolio" class="pb-8 px-4">
       <div class="max-w-4xl mx-auto bg-white shadow-md rounded-lg p-6">
-        <h2 class="text-2xl font-bold mb-4">Personal Project</h2>
+        <h2 class="text-2xl font-bold mb-4" data-i18n="personal_title">Personal Project</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
+          <div class="bg-gray-200 p-4 rounded-lg shadow-md">
+            <h3 class="text-xl font-semibold mb-2" data-i18n="pos_title">POS Platform v1.3</h3>
+            <p class="text-gray-700 my-2">Tech :</p>
+            <ul class="list-disc px-4">
+              <li class="text-gray-700" data-i18n="pos_stack_backend">Backend: Go (Gin + GORM)</li>
+              <li class="text-gray-700" data-i18n="pos_stack_frontend">Frontend: Next.js 16</li>
+            </ul>
+            <p class="text-gray-700 my-2" data-i18n="features">Features:</p>
+            <ul class="list-disc px-4">
+              <li data-i18n="pos_feature_1">Outlet tax/promo pricing engine</li>
+              <li data-i18n="pos_feature_2">Inventory valuation + COGS report</li>
+              <li data-i18n="pos_feature_3">Purchasing partial receive + AP aging</li>
+              <li data-i18n="pos_feature_4">Thermal receipt + barcode cashier flow</li>
+              <li data-i18n="pos_feature_5">Bilingual UI (EN/ID) across POS dashboard modules</li>
+            </ul>
+            <!-- <p class="text-gray-700 mt-2" data-i18n="case_study">
+              Case Study :
+              <a href="content/projects/pos-v1-3-case-study.md" class="text-blue-500">Link</a>
+            </p> -->
+            <div class="swiper-container stack-card-swiper mt-4">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img
+                    src="self-project/pos/pos-dummy.svg"
+                    alt="POS dummy 1"
+                    class="h-auto rounded-lg"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="self-project/pos/pos-dummy-2.svg"
+                    alt="POS dummy 2"
+                    class="h-auto rounded-lg"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="self-project/pos/pos-dummy-3.svg"
+                    alt="POS dummy 3"
+                    class="h-auto rounded-lg"
+                  />
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+            <p class="mt-1 text-xs text-gray-500" data-i18n="dummy_note">
+              Dummy preview images (replace manually)
+            </p>
+          </div>
+
           <div class="bg-gray-200 p-4 rounded-lg shadow-md">
             <h3 class="text-xl font-semibold mb-2">My Event</h3>
             <p class="text-gray-700">Flutter Version 3.41.1</p>
@@ -498,7 +559,7 @@
           </div>
 
           <div class="bg-gray-200 p-4 rounded-lg shadow-md">
-            <h3 class="text-xl font-semibold mb-2">HTK Faucet (Web3 dApp)</h3>
+            <h3 class="text-xl font-semibold mb-2" data-i18n="htk_title">HTK Faucet (Web3 dApp)</h3>
             <p class="text-gray-700 my-2">Tech :</p>
             <ul class="list-disc px-4">
               <li>Smart Contract: Solidity (Hardhat, OpenZeppelin v5)</li>
@@ -526,8 +587,10 @@
                   <span class="text-sm text-gray-500">(gasless approvals)</span>
                 </li>
                 <li>
-                  <span class="font-semibold">Pausable:</span> contract can be temporarily paused by
-                  the admin
+                  <span class="font-semibold">Pausable:</span>
+                  <span data-i18n="htk_pausable_desc"
+                    >contract can be temporarily paused by the admin</span
+                  >
                 </li>
                 <li>
                   <span class="font-semibold">Role-based Access Control:</span>
@@ -830,6 +893,181 @@
           clickable: true,
         },
       });
+    </script>
+
+    <script>
+      const I18N = {
+        en: {
+          resume_title: 'Resume',
+          portfolio_title: 'Portfolios',
+          personal_title: 'Personal Project',
+          pos_title: 'POS Platform v1.3',
+          pos_stack_frontend: 'Next.js 16',
+          pos_stack_backend: 'Backend - Go (Gin + GORM)',
+          features: 'Features :',
+          case_study: 'Case Study :',
+          certificates_title: 'Certificates',
+          bio_intro:
+            'Hello! My name is Reihan Agam. I am a Mobile Developer specializing in Flutter, with experience as a Fullstack Developer using technologies such as Node.js, NestJS, and Go for backend development, and CodeIgniter 4 or Next.js for frontend applications. I also work in the DevOps domain, managing infrastructure, CI/CD pipelines, and database reliability, including implementing MySQL high availability and redundancy using ProxySQL and Orchestrator.',
+          resume_body:
+            'In 2020, I began my career as a software developer, using CodeIgniter 3 and Laravel 6 to create a tax website for BPRD, including both the back office and user interface. I was guided by my senior and had a 9-month contract. After that, I attended a bootcamp at Arkademy (Pijar Camp) for a total of 1 month. During this bootcamp, I developed a job portal website and API using React JS and Node JS, employing the Scrum methodology. After the bootcamp, I worked at a software house for over 4 years as a full-stack developer, creating website and mobile applications, as well as APIs. I also have experience using third-party services such as Midtrans, Xendit, OY, Raja Biller, Raja Ongkir, Finnet, and Qontak.',
+          pos_feature_1: 'Outlet tax/promo pricing engine',
+          pos_feature_2: 'Inventory valuation + COGS report',
+          pos_feature_3: 'Purchasing partial receive + AP aging',
+          pos_feature_4: 'Thermal receipt + barcode cashier flow',
+          pos_feature_5: 'Bilingual UI (EN/ID) across POS dashboard modules',
+          dummy_note: 'Dummy preview images (replace manually)',
+          htk_title: 'HTK Faucet (Web3 dApp)',
+          htk_pausable_desc: 'contract can be temporarily paused by the admin',
+        },
+        id: {
+          resume_title: 'Ringkasan Pengalaman',
+          portfolio_title: 'Portofolio',
+          personal_title: 'Proyek Pribadi',
+          pos_title: 'Platform POS v1.3',
+          pos_stack_frontend: 'Next.js 16',
+          pos_stack_backend: 'Backend - Go (Gin + GORM)',
+          features: 'Fitur :',
+          case_study: 'Studi Kasus :',
+          certificates_title: 'Sertifikat',
+          bio_intro:
+            'Halo! Nama saya Reihan Agam. Saya seorang Mobile Developer spesialis Flutter, dengan pengalaman sebagai Fullstack Developer menggunakan teknologi seperti Node.js, NestJS, dan Go untuk backend, serta CodeIgniter 4 atau Next.js untuk frontend. Saya juga bekerja di domain DevOps, mengelola infrastruktur, pipeline CI/CD, dan keandalan database, termasuk implementasi high availability dan redundancy MySQL menggunakan ProxySQL dan Orchestrator.',
+          resume_body:
+            'Pada tahun 2020, saya memulai karier sebagai software developer menggunakan CodeIgniter 3 dan Laravel 6 untuk membangun website pajak BPRD, termasuk back office dan antarmuka pengguna. Saya dibimbing oleh senior dan menjalani kontrak 9 bulan. Setelah itu, saya mengikuti bootcamp Arkademy (Pijar Camp) selama 1 bulan. Di bootcamp ini, saya membangun website job portal dan API menggunakan React JS dan Node JS dengan metodologi Scrum. Setelah bootcamp, saya bekerja lebih dari 4 tahun di software house sebagai full-stack developer, membangun aplikasi web, mobile, dan API. Saya juga berpengalaman mengintegrasikan layanan pihak ketiga seperti Midtrans, Xendit, OY, Raja Biller, Raja Ongkir, Finnet, dan Qontak.',
+          pos_feature_1: 'Pricing engine pajak/promo per outlet',
+          pos_feature_2: 'Valuasi inventory + laporan COGS',
+          pos_feature_3: 'Purchasing partial receive + AP aging',
+          pos_feature_4: 'Thermal receipt + barcode flow kasir',
+          pos_feature_5: 'UI bilingual (EN/ID) di seluruh modul dashboard POS',
+          dummy_note: 'Gambar preview dummy (ganti manual)',
+          htk_title: 'HTK Faucet (Web3 dApp)',
+          htk_pausable_desc: 'kontrak bisa di-pause sementara oleh admin',
+        },
+      };
+
+      const TOKEN_MAP = {
+        en: {
+          'Web :': 'Web :',
+          'Android :': 'Android :',
+          'Ios :': 'iOS :',
+          'Tech :': 'Tech :',
+          'Features :': 'Features :',
+          'DDD-based Architecture': 'DDD-based Architecture',
+          'Flutter Version': 'Flutter Version',
+          'Use WYSIWYG for content': 'Use WYSIWYG for content',
+          'Dark Mode': 'Dark Mode',
+          'Event Range Schedule': 'Event Range Schedule',
+          Location: 'Location',
+          'Multiple Image Banner': 'Multiple Image Banner',
+          'Token Details': 'Token Details',
+          'Total Supply:': 'Total Supply:',
+          'Initial Supply:': 'Initial Supply:',
+          'Burnable:': 'Burnable:',
+          'Permit (EIP-2612):': 'Permit (EIP-2612):',
+          'Pausable:': 'Pausable:',
+          'Role-based Access Control:': 'Role-based Access Control:',
+          MINTER_ROLE: 'MINTER_ROLE',
+          PAUSER_ROLE: 'PAUSER_ROLE',
+          DEFAULT_ADMIN_ROLE: 'DEFAULT_ADMIN_ROLE',
+          'Faucet Contract': 'Faucet Contract',
+          'Multisig Safe': 'Multisig Safe',
+          'POS Demo Product Image': 'POS Demo Product Image',
+
+          'Personal Project': 'Personal Project',
+          Portfolios: 'Portfolios',
+          Certificates: 'Certificates',
+        },
+        id: {
+          'Web :': 'Web :',
+          'Android :': 'Android :',
+          'Ios :': 'iOS :',
+          'Tech :': 'Teknologi :',
+          'Features :': 'Fitur :',
+          'DDD-based Architecture': 'Arsitektur berbasis DDD',
+          'Flutter Version': 'Versi Flutter',
+          'Use WYSIWYG for content': 'Menggunakan WYSIWYG untuk konten',
+          'Dark Mode': 'Mode Gelap',
+          'Permission Notification': 'Izin Notifikasi',
+          'User Online Activity': 'Aktivitas Online Pengguna',
+          'Reply via notification': 'Balas lewat notifikasi',
+          'Unread Message Badge in Chats': 'Badge pesan belum dibaca di chat',
+          'Set Last Active when the user leaves': 'Set Last Active saat pengguna keluar',
+          'Mark as read and unread with color': 'Tandai sudah/belum dibaca dengan warna',
+          'Indicator showing when the user is typing': 'Indikator saat pengguna sedang mengetik',
+          'Animate to the latest chat when clicking on the detail':
+            'Animasi ke chat terbaru saat buka detail',
+          'Type only text in the message': 'Kirim pesan teks',
+          'Pin your content': 'Pin konten',
+          'Set Reminder': 'Set Pengingat',
+          'Search by Title': 'Cari berdasarkan judul',
+          Authentication: 'Autentikasi',
+          'Integrate Cloudinary to save media such as images and videos':
+            'Integrasi Cloudinary untuk simpan media (gambar/video)',
+          'Event Range Schedule': 'Jadwal Event Rentang Waktu',
+          Location: 'Lokasi',
+          'Multiple Image Banner': 'Banner Multi Gambar',
+          'Token Details': 'Detail Token',
+          'Total Supply:': 'Total Supply:',
+          'Initial Supply:': 'Initial Supply:',
+          'Burnable:': 'Burnable:',
+          'Permit (EIP-2612):': 'Permit (EIP-2612):',
+          'Pausable:': 'Pausable:',
+          'Role-based Access Control:': 'Kontrol Akses Berbasis Role:',
+          'Faucet Contract': 'Kontrak Faucet',
+          'Multisig Safe': 'Multisig Safe',
+          'POS Demo Product Image': 'Gambar Demo Produk POS',
+          'Create sale/hold': 'Buat transaksi/hold',
+          'Checkout hold sale': 'Checkout transaksi hold',
+
+          'Smart Contract: Solidity (Hardhat, OpenZeppelin v5)':
+            'Smart Contract: Solidity (Hardhat, OpenZeppelin v5)',
+          'Frontend: Next.js 14': 'Frontend: Next.js 14',
+          'Blockchain: Ethereum (Hardhat Local, Sepolia Testnet)':
+            'Blockchain: Ethereum (Hardhat Local, Sepolia Testnet)',
+          'REST API with Node JS': 'REST API dengan Node JS',
+          '(cap enforced)': '(batas supply diterapkan)',
+          '(minted to admin safe)': '(mint awal ke admin safe)',
+          'tokens can be destroyed by users': 'token bisa dibakar oleh pengguna',
+          'approve without gas': 'approve tanpa gas',
+          '(gasless approvals)': '(approve tanpa biaya gas)',
+          'contract can be temporarily paused by the admin':
+            'kontrak bisa di-pause sementara oleh admin',
+          '→ Faucet Contract': '→ Kontrak Faucet',
+          '→ Multisig Safe': '→ Multisig Safe',
+
+          'Personal Project': 'Proyek Pribadi',
+          Portfolios: 'Portofolio',
+          Certificates: 'Sertifikat',
+        },
+      };
+
+      function applyTokenTranslations(lang) {
+        const map = TOKEN_MAP[lang] || {};
+        const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+        const nodes = [];
+        while (walker.nextNode()) nodes.push(walker.currentNode);
+        nodes.forEach((node) => {
+          let raw = node.nodeValue;
+          if (!raw) return;
+          Object.entries(map).forEach(([from, to]) => {
+            if (raw.includes(from)) {
+              raw = raw.split(from).join(to);
+            }
+          });
+          node.nodeValue = raw;
+        });
+      }
+
+      function setLang(lang) {
+        localStorage.setItem('portfolio_lang', lang);
+        document.querySelectorAll('[data-i18n]').forEach((el) => {
+          const key = el.getAttribute('data-i18n');
+          if (I18N[lang] && I18N[lang][key]) el.textContent = I18N[lang][key];
+        });
+        applyTokenTranslations(lang);
+      }
+
+      setLang(localStorage.getItem('portfolio_lang') || 'en');
     </script>
   </body>
 </html>
