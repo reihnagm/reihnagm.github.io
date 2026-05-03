@@ -15,8 +15,172 @@
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 
     <style>
+      :root {
+        --p5-red: #ef233c;
+        --p5-black: #111111;
+        --p5-white: #ffffff;
+        --p5-ink: #0a0a0a;
+      }
+
       body {
-        font-family: 'Times New Roman', serif;
+        font-family: 'Arial Black', 'Inter', system-ui, sans-serif;
+        background:
+          radial-gradient(circle at 10% 20%, #ffffff 0 3px, transparent 3px) 0 0/26px 26px,
+          radial-gradient(circle at 80% 70%, #ffffff 0 2px, transparent 2px) 0 0/18px 18px,
+          linear-gradient(160deg, #f5f5f5 0%, #ececec 100%);
+      }
+
+      body::after {
+        content: '';
+        position: fixed;
+        inset: 0;
+        background-image: url('https://en.wikipedia.org/wiki/Special:FilePath/Joker_Persona.png');
+        background-repeat: no-repeat;
+        background-position: right -60px bottom 0;
+        background-size: min(42vw, 520px);
+        background-attachment: fixed;
+        opacity: 0.11;
+        pointer-events: none;
+        z-index: -2;
+        filter: grayscale(100%) contrast(120%);
+      }
+
+      @media (max-width: 768px) {
+        body::after {
+          background-position: right -40px bottom -10px;
+          background-size: 58vw;
+          opacity: 0.08;
+        }
+      }
+
+      #lang-switcher {
+        border-bottom: 3px solid var(--p5-ink);
+        box-shadow: 0 6px 0 var(--p5-ink);
+      }
+
+      #lang-switcher button {
+        background: var(--p5-white);
+        border: 2px solid var(--p5-ink);
+        font-weight: 900;
+        text-transform: uppercase;
+      }
+
+      #lang-switcher button:hover {
+        background: var(--p5-red);
+        color: var(--p5-white);
+        transform: translateY(-2px);
+      }
+
+      #lang-switcher button.is-active {
+        background: var(--p5-ink);
+        color: var(--p5-white);
+        box-shadow: 0 0 0 2px var(--p5-red) inset;
+      }
+
+      .max-w-4xl.mx-auto.bg-white {
+        border: 4px solid var(--p5-ink);
+        border-radius: 20px;
+        box-shadow: 10px 10px 0 var(--p5-ink);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .max-w-4xl.mx-auto.bg-white::before {
+        content: '';
+        position: absolute;
+        right: -52px;
+        top: -52px;
+        width: 120px;
+        height: 120px;
+        background: var(--p5-red);
+        transform: rotate(25deg);
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      .max-w-4xl.mx-auto.bg-white > * {
+        position: relative;
+        z-index: 1;
+      }
+
+      h2 {
+        color: var(--p5-ink);
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        display: inline-block;
+        padding: 4px 10px;
+        background: #fff;
+        border: 3px solid var(--p5-ink);
+        box-shadow: 5px 5px 0 var(--p5-ink);
+      }
+
+      a.text-blue-500 {
+        color: #0059ff !important;
+        font-weight: 900;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      a.text-blue-500:hover {
+        color: var(--p5-red) !important;
+      }
+
+      .bg-gray-200.p-4.rounded-lg.shadow-md {
+        border: 3px solid var(--p5-ink);
+        border-radius: 14px;
+        background: #fff !important;
+        box-shadow: 6px 6px 0 var(--p5-ink);
+      }
+
+      .bg-gray-200.p-4.rounded-lg.shadow-md:hover {
+        transform: translate(-2px, -2px);
+        box-shadow: 8px 8px 0 var(--p5-red);
+      }
+
+      /* Persona 5 vibes */
+      body::before {
+        content: '';
+        position: fixed;
+        inset: 0;
+        background:
+          linear-gradient(120deg, transparent 0 70%, rgba(239,35,60,.10) 70% 76%, transparent 76% 100%),
+          linear-gradient(-12deg, transparent 0 18%, rgba(0,0,0,.06) 18% 22%, transparent 22% 100%);
+        pointer-events: none;
+        z-index: -1;
+      }
+
+      section {
+        position: relative;
+      }
+
+      section::after {
+        content: '';
+        position: absolute;
+        left: 10px;
+        top: 12px;
+        width: 38px;
+        height: 8px;
+        background: var(--p5-red);
+        transform: rotate(-12deg);
+        border: 2px solid var(--p5-ink);
+      }
+
+      h3 {
+        text-transform: uppercase;
+        letter-spacing: .03em;
+      }
+
+      .bg-gray-200.p-4.rounded-lg.shadow-md {
+        transform: skewX(-1.2deg);
+        transition: .2s ease;
+      }
+
+      .bg-gray-200.p-4.rounded-lg.shadow-md > * {
+        transform: skewX(1.2deg);
+      }
+
+      .bg-gray-200.p-4.rounded-lg.shadow-md:hover {
+        transform: skewX(-1.2deg) translate(-3px, -3px) rotate(-.4deg);
       }
 
       /* Custom CSS for stack card effect */
@@ -55,12 +219,58 @@
 
       /* Optional: Pagination and navigation styles */
       .swiper-pagination {
+        --swiper-theme-color: var(--p5-ink);
         bottom: 10px;
+      }
+
+      .swiper-pagination-bullet {
+        width: 12px;
+        height: 12px;
+        background: var(--p5-white);
+        opacity: 1;
+        border: 2px solid var(--p5-ink);
+        border-radius: 999px;
+        box-shadow: 2px 2px 0 var(--p5-ink);
+      }
+
+      .swiper-pagination-bullet-active {
+        background: var(--p5-red);
+        border-color: var(--p5-ink);
+        transform: scale(1.15) rotate(-8deg);
+        box-shadow: 2px 2px 0 var(--p5-red);
       }
 
       .swiper-button-next,
       .swiper-button-prev {
-        color: #000;
+        --swiper-navigation-color: var(--p5-ink);
+        width: 46px;
+        height: 46px;
+        border: 3px solid var(--p5-ink);
+        border-radius: 999px;
+        background: var(--p5-white);
+        color: var(--p5-ink);
+        box-shadow: 4px 4px 0 var(--p5-ink);
+        transition: all 0.2s ease;
+      }
+
+      .swiper-button-next::after,
+      .swiper-button-prev::after {
+        font-size: 18px;
+        font-weight: 900;
+      }
+
+      .swiper-button-next:hover,
+      .swiper-button-prev:hover {
+        background: var(--p5-red);
+        color: var(--p5-white);
+        box-shadow: 4px 4px 0 var(--p5-red);
+        transform: translate(-1px, -1px) rotate(-4deg);
+      }
+
+      .swiper-button-next:active,
+      .swiper-button-prev:active {
+        transform: translate(1px, 1px);
+        box-shadow: 2px 2px 0 var(--p5-ink);
       }
 
       @media (max-width: 768px) {
@@ -79,8 +289,8 @@
       id="lang-switcher"
       class="sticky top-0 z-50 flex justify-end gap-2 bg-white/80 px-4 py-2 backdrop-blur"
     >
-      <button onclick="setLang('en')" class="rounded border px-3 py-1 text-sm">EN</button>
-      <button onclick="setLang('id')" class="rounded border px-3 py-1 text-sm">ID</button>
+      <button data-lang="en" onclick="setLang('en')" class="rounded border px-3 py-1 text-sm">EN</button>
+      <button data-lang="id" onclick="setLang('id')" class="rounded border px-3 py-1 text-sm">ID</button>
     </div>
     <section id="bio" class="py-8 px-4">
       <div class="max-w-4xl mx-auto bg-white shadow-md rounded-lg p-6">
@@ -1139,6 +1349,13 @@
           const key = el.getAttribute('data-i18n');
           if (I18N[lang] && I18N[lang][key]) el.textContent = I18N[lang][key];
         });
+
+        document.querySelectorAll('#lang-switcher button[data-lang]').forEach((btn) => {
+          const isActive = btn.getAttribute('data-lang') === lang;
+          btn.classList.toggle('is-active', isActive);
+          btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+        });
+
         applyTokenTranslations(lang);
       }
 
