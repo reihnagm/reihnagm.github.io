@@ -85,19 +85,6 @@
         overflow: hidden;
       }
 
-      .max-w-4xl.mx-auto.bg-white::before {
-        content: '';
-        position: absolute;
-        right: -52px;
-        top: -52px;
-        width: 120px;
-        height: 120px;
-        background: var(--p5-red);
-        transform: rotate(25deg);
-        pointer-events: none;
-        z-index: 0;
-      }
-
       .max-w-4xl.mx-auto.bg-white > * {
         position: relative;
         z-index: 1;
@@ -143,8 +130,18 @@
         position: fixed;
         inset: 0;
         background:
-          linear-gradient(120deg, transparent 0 70%, rgba(239,35,60,.10) 70% 76%, transparent 76% 100%),
-          linear-gradient(-12deg, transparent 0 18%, rgba(0,0,0,.06) 18% 22%, transparent 22% 100%);
+          linear-gradient(
+            120deg,
+            transparent 0 70%,
+            rgba(239, 35, 60, 0.1) 70% 76%,
+            transparent 76% 100%
+          ),
+          linear-gradient(
+            -12deg,
+            transparent 0 18%,
+            rgba(0, 0, 0, 0.06) 18% 22%,
+            transparent 22% 100%
+          );
         pointer-events: none;
         z-index: -1;
       }
@@ -167,12 +164,12 @@
 
       h3 {
         text-transform: uppercase;
-        letter-spacing: .03em;
+        letter-spacing: 0.03em;
       }
 
       .bg-gray-200.p-4.rounded-lg.shadow-md {
         transform: skewX(-1.2deg);
-        transition: .2s ease;
+        transition: 0.2s ease;
       }
 
       .bg-gray-200.p-4.rounded-lg.shadow-md > * {
@@ -180,7 +177,7 @@
       }
 
       .bg-gray-200.p-4.rounded-lg.shadow-md:hover {
-        transform: skewX(-1.2deg) translate(-3px, -3px) rotate(-.4deg);
+        transform: skewX(-1.2deg) translate(-3px, -3px) rotate(-0.4deg);
       }
 
       /* Custom CSS for stack card effect */
@@ -289,8 +286,12 @@
       id="lang-switcher"
       class="sticky top-0 z-50 flex justify-end gap-2 bg-white/80 px-4 py-2 backdrop-blur"
     >
-      <button data-lang="en" onclick="setLang('en')" class="rounded border px-3 py-1 text-sm">EN</button>
-      <button data-lang="id" onclick="setLang('id')" class="rounded border px-3 py-1 text-sm">ID</button>
+      <button data-lang="en" onclick="setLang('en')" class="rounded border px-3 py-1 text-sm">
+        EN
+      </button>
+      <button data-lang="id" onclick="setLang('id')" class="rounded border px-3 py-1 text-sm">
+        ID
+      </button>
     </div>
     <section id="bio" class="py-8 px-4">
       <div class="max-w-4xl mx-auto bg-white shadow-md rounded-lg p-6">
