@@ -16,71 +16,68 @@
 
     <style>
       :root {
-        --p5-red: #ef233c;
-        --p5-black: #111111;
-        --p5-white: #ffffff;
-        --p5-ink: #0a0a0a;
+        --bg: #f6f6f3;
+        --surface: rgba(255, 255, 255, 0.82);
+        --surface-strong: #ffffff;
+        --line: rgba(15, 23, 42, 0.1);
+        --text: #111827;
+        --muted: #6b7280;
+        --accent: #111827;
       }
 
       body {
-        font-family: 'Arial Black', 'Inter', system-ui, sans-serif;
+        font-family:
+          'Inter', 'SF Pro Display', 'Helvetica Neue', 'Segoe UI', system-ui, -apple-system,
+          sans-serif;
         background:
-          radial-gradient(circle at 10% 20%, #ffffff 0 3px, transparent 3px) 0 0/26px 26px,
-          radial-gradient(circle at 80% 70%, #ffffff 0 2px, transparent 2px) 0 0/18px 18px,
-          linear-gradient(160deg, #f5f5f5 0%, #ececec 100%);
+          radial-gradient(circle at top left, rgba(17, 24, 39, 0.04), transparent 30%),
+          linear-gradient(180deg, #fafaf9 0%, var(--bg) 100%);
+        color: var(--text);
+        line-height: 1.7;
       }
 
       body::after {
-        content: '';
-        position: fixed;
-        inset: 0;
-        background-image: url('https://en.wikipedia.org/wiki/Special:FilePath/Joker_Persona.png');
-        background-repeat: no-repeat;
-        background-position: right -60px bottom 0;
-        background-size: min(42vw, 520px);
-        background-attachment: fixed;
-        opacity: 0.11;
-        pointer-events: none;
-        z-index: -2;
-        filter: grayscale(100%) contrast(120%);
-      }
-
-      @media (max-width: 768px) {
-        body::after {
-          background-position: right -10px bottom 8px;
-          background-size: 72vw;
-          opacity: 0.14;
-        }
+        content: none;
       }
 
       #lang-switcher {
-        border-bottom: 3px solid var(--p5-ink);
-        box-shadow: 0 6px 0 var(--p5-ink);
+        border-bottom: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.88);
       }
 
       #lang-switcher button {
-        background: var(--p5-white);
-        border: 2px solid var(--p5-ink);
-        font-weight: 900;
+        background: transparent;
+        border: 1px solid var(--line);
+        color: var(--muted);
+        font-weight: 600;
         text-transform: uppercase;
+        letter-spacing: 0.12em;
+        transition:
+          background-color 0.2s ease,
+          color 0.2s ease,
+          border-color 0.2s ease,
+          transform 0.2s ease;
       }
 
       #lang-switcher button:hover {
-        background: var(--p5-red);
-        color: var(--p5-white);
-        transform: translateY(-2px);
+        background: #111827;
+        border-color: #111827;
+        color: #ffffff;
+        transform: translateY(-1px);
       }
 
       #lang-switcher button.is-active {
-        background: var(--p5-ink);
-        color: var(--p5-white);
-        box-shadow: 0 0 0 2px var(--p5-red) inset;
+        background: #111827;
+        color: #ffffff;
+        border-color: #111827;
       }
 
       .max-w-4xl.mx-auto.bg-white {
-        border: 4px solid var(--p5-ink);
-        border-radius: 20px;
-        box-shadow: 10px 10px 0 var(--p5-ink);
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        box-shadow: 0 24px 60px rgba(15, 23, 42, 0.05);
+        background: var(--surface);
+        backdrop-filter: blur(14px);
         position: relative;
         overflow: hidden;
       }
@@ -91,57 +88,44 @@
       }
 
       h2 {
-        color: var(--p5-ink);
-        text-transform: uppercase;
-        letter-spacing: 0.04em;
+        color: var(--text);
+        text-transform: none;
+        letter-spacing: -0.02em;
+        font-size: clamp(1.35rem, 2vw, 1.75rem);
+        font-weight: 700;
         display: inline-block;
-        padding: 4px 10px;
-        background: #fff;
-        border: 3px solid var(--p5-ink);
-        box-shadow: 5px 5px 0 var(--p5-ink);
+        padding: 0;
+        background: transparent;
+        border: 0;
+        box-shadow: none;
       }
 
       a.text-blue-500 {
-        color: #0059ff !important;
-        font-weight: 900;
+        color: var(--accent) !important;
+        font-weight: 600;
         text-decoration: underline;
+        text-decoration-color: rgba(17, 24, 39, 0.25);
         text-underline-offset: 3px;
       }
 
       a.text-blue-500:hover {
-        color: var(--p5-red) !important;
+        color: #000000 !important;
+        text-decoration-color: rgba(17, 24, 39, 0.6);
       }
 
-      .bg-gray-200.p-4.rounded-lg.shadow-md {
-        border: 3px solid var(--p5-ink);
-        border-radius: 14px;
-        background: #fff !important;
-        box-shadow: 6px 6px 0 var(--p5-ink);
+      .bg-gray-200.p-4.rounded-lg.shadow-md,
+      .bg-gray-200.p-4.rounded-2xl.shadow-md {
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        background: var(--surface-strong) !important;
+        box-shadow: 0 12px 30px rgba(15, 23, 42, 0.04);
       }
 
-      .bg-gray-200.p-4.rounded-lg.shadow-md:hover {
-        transform: translate(-2px, -2px);
-        box-shadow: 8px 8px 0 var(--p5-red);
-      }
-
-      /* Persona 5 vibes */
       body::before {
         content: '';
         position: fixed;
         inset: 0;
-        background:
-          linear-gradient(
-            120deg,
-            transparent 0 70%,
-            rgba(239, 35, 60, 0.1) 70% 76%,
-            transparent 76% 100%
-          ),
-          linear-gradient(
-            -12deg,
-            transparent 0 18%,
-            rgba(0, 0, 0, 0.06) 18% 22%,
-            transparent 22% 100%
-          );
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.55), transparent 20%);
         pointer-events: none;
         z-index: -1;
       }
@@ -151,33 +135,26 @@
       }
 
       section::after {
-        content: '';
-        position: absolute;
-        left: 10px;
-        top: 12px;
-        width: 38px;
-        height: 8px;
-        background: var(--p5-red);
-        transform: rotate(-12deg);
-        border: 2px solid var(--p5-ink);
+        content: none;
       }
 
       h3 {
-        text-transform: uppercase;
-        letter-spacing: 0.03em;
+        text-transform: none;
+        letter-spacing: -0.01em;
       }
 
-      .bg-gray-200.p-4.rounded-lg.shadow-md {
-        transform: skewX(-1.2deg);
-        transition: 0.2s ease;
+      .bg-gray-200.p-4.rounded-lg.shadow-md,
+      .bg-gray-200.p-4.rounded-2xl.shadow-md {
+        transform: none;
+        transition:
+          border-color 0.2s ease,
+          transform 0.2s ease,
+          box-shadow 0.2s ease;
       }
 
-      .bg-gray-200.p-4.rounded-lg.shadow-md > * {
-        transform: skewX(1.2deg);
-      }
-
-      .bg-gray-200.p-4.rounded-lg.shadow-md:hover {
-        transform: skewX(-1.2deg) translate(-3px, -3px) rotate(-0.4deg);
+      .bg-gray-200.p-4.rounded-lg.shadow-md > *,
+      .bg-gray-200.p-4.rounded-2xl.shadow-md > * {
+        transform: none;
       }
 
       /* Custom CSS for stack card effect */
@@ -204,8 +181,8 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        border-radius: 12px; /* Adjust as needed */
-        max-width: 100%; /* Ensure images scale down */
+        border-radius: 14px;
+        max-width: 100%;
       }
 
       /* Create the stacked card effect */
@@ -216,37 +193,34 @@
 
       /* Optional: Pagination and navigation styles */
       .swiper-pagination {
-        --swiper-theme-color: var(--p5-ink);
+        --swiper-theme-color: var(--accent);
         bottom: 10px;
       }
 
       .swiper-pagination-bullet {
-        width: 12px;
-        height: 12px;
-        background: var(--p5-white);
+        width: 10px;
+        height: 10px;
+        background: rgba(17, 24, 39, 0.18);
         opacity: 1;
-        border: 2px solid var(--p5-ink);
+        border: 0;
         border-radius: 999px;
-        box-shadow: 2px 2px 0 var(--p5-ink);
       }
 
       .swiper-pagination-bullet-active {
-        background: var(--p5-red);
-        border-color: var(--p5-ink);
-        transform: scale(1.15) rotate(-8deg);
-        box-shadow: 2px 2px 0 var(--p5-red);
+        background: #111827;
+        transform: scale(1.1);
       }
 
       .swiper-button-next,
       .swiper-button-prev {
-        --swiper-navigation-color: var(--p5-ink);
-        width: 46px;
-        height: 46px;
-        border: 3px solid var(--p5-ink);
+        --swiper-navigation-color: var(--accent);
+        width: 42px;
+        height: 42px;
+        border: 1px solid var(--line);
         border-radius: 999px;
-        background: var(--p5-white);
-        color: var(--p5-ink);
-        box-shadow: 4px 4px 0 var(--p5-ink);
+        background: rgba(255, 255, 255, 0.92);
+        color: var(--accent);
+        box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
         transition: all 0.2s ease;
       }
 
@@ -258,22 +232,21 @@
 
       .swiper-button-next:hover,
       .swiper-button-prev:hover {
-        background: var(--p5-red);
-        color: var(--p5-white);
-        box-shadow: 4px 4px 0 var(--p5-red);
-        transform: translate(-1px, -1px) rotate(-4deg);
+        background: #111827;
+        color: #ffffff;
+        box-shadow: 0 10px 22px rgba(17, 24, 39, 0.14);
+        transform: translateY(-1px);
       }
 
       .swiper-button-next:active,
       .swiper-button-prev:active {
-        transform: translate(1px, 1px);
-        box-shadow: 2px 2px 0 var(--p5-ink);
+        transform: translateY(0);
+        box-shadow: 0 6px 14px rgba(15, 23, 42, 0.08);
       }
 
       @media (max-width: 768px) {
-        /* Adjust Swiper on smaller screens */
         .swiper-slide img {
-          object-fit: contain; /* Ensure the image fits within the container */
+          object-fit: contain;
         }
       }
     </style>
@@ -281,20 +254,20 @@
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   </head>
-  <body class="bg-gray-100 font-sans leading-normal tracking-normal">
+  <body class="font-sans leading-normal tracking-normal">
     <div
       id="lang-switcher"
-      class="sticky top-0 z-50 flex justify-end gap-2 bg-white/80 px-4 py-2 backdrop-blur"
+      class="sticky top-0 z-50 flex justify-end gap-2 px-4 py-3 backdrop-blur"
     >
-      <button data-lang="en" onclick="setLang('en')" class="rounded border px-3 py-1 text-sm">
+      <button data-lang="en" onclick="setLang('en')" class="rounded-full px-3 py-1 text-sm">
         EN
       </button>
-      <button data-lang="id" onclick="setLang('id')" class="rounded border px-3 py-1 text-sm">
+      <button data-lang="id" onclick="setLang('id')" class="rounded-full px-3 py-1 text-sm">
         ID
       </button>
     </div>
     <section id="bio" class="py-8 px-4">
-      <div class="max-w-4xl mx-auto bg-white shadow-md rounded-lg p-6">
+      <div class="max-w-4xl mx-auto bg-white p-6 md:p-8">
         <p class="text-gray-700" data-i18n="bio_intro">
           Hello! My name is Reihan Agam. I am a <b>Mobile Developer</b> specializing in Flutter,
           with experience as a <b>Fullstack Developer</b> using technologies such as Node.js,
@@ -307,7 +280,7 @@
     </section>
 
     <section id="bio" class="py-4 px-4">
-      <div class="max-w-4xl mx-auto bg-white shadow-md rounded-lg p-6">
+      <div class="max-w-4xl mx-auto bg-white p-6 md:p-8">
         <h2 class="text-2xl font-bold mb-4" data-i18n="resume_title">Resume</h2>
         <p class="text-gray-700" data-i18n="resume_body">
           In 2020, I began my career as a software developer, using
@@ -326,7 +299,7 @@
 
     <!-- Certificate Section -->
     <section id="certificates" class="pb-20 pb-8 px-4">
-      <div class="max-w-4xl mx-auto bg-white shadow-md rounded-lg p-6">
+      <div class="max-w-4xl mx-auto bg-white p-6 md:p-8">
         <h2 class="text-2xl font-bold mb-4 text-center md:text-left" data-i18n="certificates_title">
           Certificates
         </h2>
@@ -348,7 +321,7 @@
     <section class="relative h-[300px] w-full hidden md:flex justify-center items-start">
       <div class="relative flex justify-center items-center w-full max-w-3xl">
         <figure
-          class="absolute top-0 left-10 bg-white p-3 pb-4 shadow-lg rounded-lg transform -rotate-6 hover:rotate-0 transition-all duration-300 border border-gray-300 max-w-xs w-fit"
+          class="absolute top-0 left-10 bg-white p-3 pb-4 rounded-2xl transform -rotate-2 hover:rotate-0 transition-all duration-300 border border-gray-200 max-w-xs w-fit shadow-sm"
         >
           <img src="me.png" alt="First Job" class="w-55 h-auto rounded-md mx-auto" />
           <!-- <figcaption class="text-center text-gray-700 mt-2 font-semibold">
@@ -357,7 +330,7 @@
         </figure>
 
         <figure
-          class="absolute top-10 left-70 bg-white p-3 pb-4 shadow-lg rounded-lg transform rotate-3 hover:rotate-0 transition-all duration-300 border border-gray-300 max-w-xs w-fit"
+          class="absolute top-10 left-70 bg-white p-3 pb-4 rounded-2xl transform rotate-1 hover:rotate-0 transition-all duration-300 border border-gray-200 max-w-xs w-fit shadow-sm"
         >
           <img src="vacation.jpg" alt="Second Job" class="w-40 h-auto rounded-md mx-auto" />
           <!-- <figcaption class="text-center text-gray-700 mt-2 font-semibold">
@@ -366,7 +339,7 @@
         </figure>
 
         <figure
-          class="absolute top-20 left-110 bg-white p-3 pb-4 shadow-lg rounded-lg transform -rotate-6 hover:rotate-0 transition-all duration-300 border border-gray-300 max-w-xs w-fit"
+          class="absolute top-20 left-110 bg-white p-3 pb-4 rounded-2xl transform -rotate-2 hover:rotate-0 transition-all duration-300 border border-gray-200 max-w-xs w-fit shadow-sm"
         >
           <img src="vacation-2.jpeg" alt="Third Job" class="w-70 h-auto rounded-md mx-auto" />
           <!-- <figcaption class="text-center text-gray-700 mt-2 font-semibold">
@@ -379,19 +352,19 @@
     <section class="relative h-[300px] w-full flex flex-col md:hidden justify-center items-start">
       <div class="relative flex flex-col justify-center items-center w-full max-w-3xl">
         <figure
-          class="absolute top-[-200px] bg-white p-3 pb-4 shadow-lg rounded-lg transform -rotate-6 hover:rotate-0 transition-all duration-300 border border-gray-300 max-w-xs w-fit"
+          class="absolute top-[-200px] bg-white p-3 pb-4 rounded-2xl transform -rotate-2 hover:rotate-0 transition-all duration-300 border border-gray-200 max-w-xs w-fit shadow-sm"
         >
           <img src="me.png" alt="First Job" class="w-35 h-auto rounded-md mx-auto" />
         </figure>
 
         <figure
-          class="absolute top-[-80px] right-8 bg-white p-3 pb-4 shadow-lg rounded-lg transform rotate-3 hover:rotate-0 transition-all duration-300 border border-gray-300 max-w-xs w-fit"
+          class="absolute top-[-80px] right-8 bg-white p-3 pb-4 rounded-2xl transform rotate-1 hover:rotate-0 transition-all duration-300 border border-gray-200 max-w-xs w-fit shadow-sm"
         >
           <img src="vacation.jpg" alt="Second Job" class="w-30 h-auto rounded-md mx-auto" />
         </figure>
 
         <figure
-          class="absolute top-[-20px] right-45 bg-white p-3 pb-4 shadow-lg rounded-lg transform -rotate-6 hover:rotate-0 transition-all duration-300 border border-gray-300 max-w-xs w-fit"
+          class="absolute top-[-20px] right-45 bg-white p-3 pb-4 rounded-2xl transform -rotate-2 hover:rotate-0 transition-all duration-300 border border-gray-200 max-w-xs w-fit shadow-sm"
         >
           <img src="farewell.jpg" alt="Third Job" class="w-35 h-auto rounded-md mx-auto" />
         </figure>
@@ -399,11 +372,11 @@
     </section>
 
     <section id="portfolio" class="py-8 px-4">
-      <div class="max-w-4xl mx-auto bg-white shadow-md rounded-lg p-6">
+      <div class="max-w-4xl mx-auto bg-white p-6 md:p-8">
         <h2 class="text-2xl font-bold mb-4" data-i18n="portfolio_title">Portfolios</h2>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          <div class="bg-gray-200 p-4 rounded-lg shadow-md">
+          <div class="bg-gray-200 p-4 rounded-2xl shadow-md">
             <h3 class="text-xl font-semibold mb-2">IAG2026</h3>
             <p class="text-gray-700">
               Web :
@@ -411,7 +384,7 @@
             </p>
           </div>
 
-          <div class="bg-gray-200 p-4 rounded-lg shadow-md">
+          <div class="bg-gray-200 p-4 rounded-2xl shadow-md">
             <h3 class="text-xl font-semibold mb-2">Viniela Property</h3>
             <p class="text-gray-700">
               Web :
@@ -419,7 +392,7 @@
             </p>
           </div>
 
-          <div class="bg-gray-200 p-4 rounded-lg shadow-md">
+          <div class="bg-gray-200 p-4 rounded-2xl shadow-md">
             <h3 class="text-xl font-semibold mb-2">Viniela</h3>
             <p class="text-gray-700">
               Web :
@@ -427,7 +400,7 @@
             </p>
           </div>
 
-          <div class="bg-gray-200 p-4 rounded-lg shadow-md">
+          <div class="bg-gray-200 p-4 rounded-2xl shadow-md">
             <h3 class="text-xl font-semibold mb-2">Homeservice Viniela</h3>
             <p class="text-gray-700">
               Web :
@@ -435,7 +408,7 @@
             </p>
           </div>
 
-          <div class="bg-gray-200 p-4 rounded-lg shadow-md">
+          <div class="bg-gray-200 p-4 rounded-2xl shadow-md">
             <h3 class="text-xl font-semibold mb-2">Marlinda</h3>
             <p class="text-gray-700">
               Android :
@@ -447,7 +420,7 @@
             </p>
           </div>
 
-          <div class="bg-gray-200 p-4 rounded-lg shadow-md">
+          <div class="bg-gray-200 p-4 rounded-2xl shadow-md">
             <h3 class="text-xl font-semibold mb-2">Fspmi</h3>
             <p class="text-gray-700">
               Android :
@@ -465,7 +438,7 @@
             </p>
           </div>
 
-          <div class="bg-gray-200 p-4 rounded-lg shadow-md">
+          <div class="bg-gray-200 p-4 rounded-2xl shadow-md">
             <h3 class="text-xl font-semibold mb-2">Saka</h3>
             <p class="text-gray-700">
               Android :
@@ -486,7 +459,7 @@
             </p>
           </div>
 
-          <div class="bg-gray-200 p-4 rounded-lg shadow-md">
+          <div class="bg-gray-200 p-4 rounded-2xl shadow-md">
             <h3 class="text-xl font-semibold mb-2">Fasi</h3>
             <p class="text-gray-700">
               Android :
@@ -504,7 +477,7 @@
             </p>
           </div>
 
-          <div class="bg-gray-200 p-4 rounded-lg shadow-md">
+          <div class="bg-gray-200 p-4 rounded-2xl shadow-md">
             <h3 class="text-xl font-semibold mb-2">SMA 4 MEDAN</h3>
             <p class="text-gray-700">
               Android :
@@ -516,7 +489,7 @@
             </p>
           </div>
 
-          <div class="bg-gray-200 p-4 rounded-lg shadow-md">
+          <div class="bg-gray-200 p-4 rounded-2xl shadow-md">
             <h3 class="text-xl font-semibold mb-2">HP3KI</h3>
             <p class="text-gray-700">
               Android :
@@ -528,7 +501,7 @@
             </p>
           </div>
 
-          <div class="bg-gray-200 p-4 rounded-lg shadow-md">
+          <div class="bg-gray-200 p-4 rounded-2xl shadow-md">
             <h3 class="text-xl font-semibold mb-2">Starlet</h3>
             <p class="text-gray-700">
               Android :
@@ -549,7 +522,7 @@
             </p>
           </div>
 
-          <div class="bg-gray-200 p-4 rounded-lg shadow-md">
+          <div class="bg-gray-200 p-4 rounded-2xl shadow-md">
             <h3 class="text-xl font-semibold mb-2">HOG</h3>
             <p class="text-gray-700">
               Android :
@@ -568,7 +541,7 @@
             </p>
           </div>
 
-          <div class="bg-gray-200 p-4 rounded-lg shadow-md">
+          <div class="bg-gray-200 p-4 rounded-2xl shadow-md">
             <h3 class="text-xl font-semibold mb-2">MB W204 CLUB INA</h3>
             <p class="text-gray-700">
               Android :
@@ -588,7 +561,7 @@
             </p>
           </div>
 
-          <div class="bg-gray-200 p-4 rounded-lg shadow-md">
+          <div class="bg-gray-200 p-4 rounded-2xl shadow-md">
             <h3 class="text-xl font-semibold mb-2">CHTC</h3>
             <p class="text-gray-700">
               Android :
@@ -600,7 +573,7 @@
             </p>
           </div>
 
-          <div class="bg-gray-200 p-4 rounded-lg shadow-md">
+          <div class="bg-gray-200 p-4 rounded-2xl shadow-md">
             <h3 class="text-xl font-semibold mb-2">Bank Al Barokah</h3>
             <p class="text-gray-700">
               Web :
@@ -608,7 +581,7 @@
             </p>
           </div>
 
-          <div class="bg-gray-200 p-4 rounded-lg shadow-md">
+          <div class="bg-gray-200 p-4 rounded-2xl shadow-md">
             <h3 class="text-xl font-semibold mb-2">SMA Plus Al Ghifari</h3>
             <p class="text-gray-700">
               Web :
@@ -616,7 +589,7 @@
             </p>
           </div>
 
-          <div class="bg-gray-200 p-4 rounded-lg shadow-md">
+          <div class="bg-gray-200 p-4 rounded-2xl shadow-md">
             <h3 class="text-xl font-semibold mb-2">Pinewoodpwk</h3>
             <p class="text-gray-700">
               Web :
@@ -624,7 +597,7 @@
             </p>
           </div>
 
-          <div class="bg-gray-200 p-4 rounded-lg shadow-md">
+          <div class="bg-gray-200 p-4 rounded-2xl shadow-md">
             <h3 class="text-xl font-semibold mb-2">Tentang Loker</h3>
             <p class="text-gray-700">
               Web :
@@ -636,10 +609,10 @@
     </section>
 
     <section id="portfolio" class="pb-8 px-4">
-      <div class="max-w-4xl mx-auto bg-white shadow-md rounded-lg p-6">
+      <div class="max-w-4xl mx-auto bg-white p-6 md:p-8">
         <h2 class="text-2xl font-bold mb-4" data-i18n="personal_title">Personal Project</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
-          <div class="bg-gray-200 p-4 rounded-lg shadow-md">
+          <div class="bg-gray-200 p-4 rounded-2xl shadow-md">
             <h3 class="text-xl font-semibold mb-2" data-i18n="pos_title">POS Platform v1.3</h3>
             <p class="text-gray-700 my-2">Tech :</p>
             <ul class="list-disc px-4">
@@ -732,7 +705,7 @@
             </div>
           </div>
 
-          <div class="bg-gray-200 p-4 rounded-lg shadow-md">
+          <div class="bg-gray-200 p-4 rounded-2xl shadow-md">
             <h3 class="text-xl font-semibold mb-2" data-i18n="myevent_title">My Event</h3>
             <p class="text-gray-700" data-i18n="myevent_flutter">Flutter Version 3.41.1</p>
             <p class="text-gray-700" data-i18n="myevent_ddd">DDD-based Architecture</p>
@@ -919,7 +892,7 @@
             </div> -->
           <!-- </div>  -->
 
-          <div class="bg-gray-200 p-4 rounded-lg shadow-md">
+          <div class="bg-gray-200 p-4 rounded-2xl shadow-md">
             <h3 class="text-xl font-semibold mb-2">My Note</h3>
             <p class="text-gray-700">Flutter Version 3.38.7</p>
             <p class="text-gray-700 my-2">Tech :</p>
@@ -1012,7 +985,7 @@
             </div>
           </div>
 
-          <div class="bg-gray-200 p-4 rounded-lg shadow-md">
+          <div class="bg-gray-200 p-4 rounded-2xl shadow-md">
             <h3 class="text-xl font-semibold mb-2">Chat</h3>
             <p class="text-gray-700">Flutter Version 3.29.2</p>
             <p class="text-gray-700" data-i18n="myevent_ddd">DDD-based Architecture</p>
