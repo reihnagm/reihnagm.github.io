@@ -986,22 +986,16 @@
           </div>
 
           <div class="bg-gray-200 p-4 rounded-2xl shadow-md">
-            <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+            <div class="mb-2">
               <h3 class="text-xl font-semibold">Reliable Realtime Chat</h3>
-              <span
-                class="inline-flex rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold text-emerald-800"
-                data-i18n="chat_status"
-              >
-                Production-ready architecture candidate
-              </span>
             </div>
             <p class="text-gray-700" data-i18n="chat_summary">
-              A resilient Flutter and Node.js chat platform built around durable delivery,
-              offline recovery, horizontal realtime scaling, and observable operations.
+              A realtime chat app built with Flutter and Node.js, with reliable message
+              delivery and offline support.
             </p>
             <p class="text-gray-700 mt-2">Flutter / Dart 3.7+</p>
             <p class="text-gray-700" data-i18n="chat_architecture">
-              Clean layered architecture (data, domain, and presentation)
+              Clean architecture for the mobile app and a reusable REST/Socket.IO backend
             </p>
             <p class="text-gray-700 my-2">Tech :</p>
             <ul class="flex flex-wrap gap-2 text-sm">
@@ -1014,73 +1008,22 @@
               <li class="rounded-full bg-gray-100 px-3 py-1">Docker Compose</li>
             </ul>
 
-            <div class="grid md:grid-cols-2 gap-4 mt-4">
-              <div class="rounded-xl border border-gray-200 bg-gray-50 p-4">
-                <p class="font-semibold text-gray-900 mb-2" data-i18n="chat_client_features">
-                  Mobile experience
-                </p>
-                <ul class="list-disc px-4 text-gray-700 space-y-1">
-                  <li data-i18n="chat_feature_1">
-                    Realtime text and image messages with optimistic rendering
-                  </li>
-                  <li data-i18n="chat_feature_2">
-                    Sent, delivered, and read receipts
-                  </li>
-                  <li data-i18n="chat_feature_3">
-                    Presence, last active, typing indicator, and unread badges
-                  </li>
-                  <li data-i18n="chat_feature_4">
-                    Image preview, caption, upload progress, failure, and retry
-                  </li>
-                  <li data-i18n="chat_feature_5">
-                    Reply metadata and Android notification quick replies
-                  </li>
-                  <li data-i18n="chat_feature_6">
-                    Offline queue, reconnect backoff, and automatic message sync
-                  </li>
-                  <li data-i18n="chat_feature_7">Dark mode and typed Socket.IO events</li>
-                </ul>
-              </div>
-
-              <div class="rounded-xl border border-gray-200 bg-gray-50 p-4">
-                <p class="font-semibold text-gray-900 mb-2" data-i18n="chat_backend_features">
-                  Backend reliability
-                </p>
-                <ul class="list-disc px-4 text-gray-700 space-y-1">
-                  <li data-i18n="chat_feature_8">
-                    Verified JWT access tokens and rotating refresh tokens
-                  </li>
-                  <li data-i18n="chat_feature_9">
-                    Durable MySQL outbox with RabbitMQ publisher confirms
-                  </li>
-                  <li data-i18n="chat_feature_10">
-                    Bounded retry, DLQ redrive, and idempotent event processing
-                  </li>
-                  <li data-i18n="chat_feature_11">
-                    Redis adapter for multi-instance rooms and presence
-                  </li>
-                  <li data-i18n="chat_feature_12">
-                    Upload signature validation and replaceable storage adapter
-                  </li>
-                  <li data-i18n="chat_feature_13">
-                    Health/readiness probes, structured logs, metrics, and graceful shutdown
-                  </li>
-                  <li data-i18n="chat_feature_14">
-                    Docker quick start, migration, test, E2E, and load tooling
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="rounded-xl border border-gray-200 bg-white p-4 mt-4">
-              <p class="font-semibold text-gray-900" data-i18n="chat_verification">
-                Latest local verification
+            <div class="rounded-xl border border-gray-200 bg-gray-50 p-4 mt-4">
+              <p class="font-semibold text-gray-900 mb-2" data-i18n="chat_features">
+                Key features
               </p>
-              <p class="text-sm text-gray-700 mt-1" data-i18n="chat_verification_result">
-                Backend 19/19 tests, Flutter 6/6 tests, zero known production dependency
-                vulnerabilities, RabbitMQ/Redis smoke tests passed, and 500-request HTTP load
-                smoke completed with zero failures and 12.24 ms p95.
-              </p>
+              <ul class="list-disc px-4 text-gray-700 space-y-1">
+                <li data-i18n="chat_feature_1">Realtime text and image messages</li>
+                <li data-i18n="chat_feature_2">Sent, delivered, and read status</li>
+                <li data-i18n="chat_feature_3">
+                  Online status, typing indicator, and unread count
+                </li>
+                <li data-i18n="chat_feature_4">Reply, image upload, and notification reply</li>
+                <li data-i18n="chat_feature_5">Offline queue and reconnect sync</li>
+                <li data-i18n="chat_feature_6">
+                  JWT authentication, RabbitMQ delivery, and Redis support
+                </li>
+              </ul>
             </div>
 
             <div class="flex flex-wrap gap-3 mt-4">
@@ -1254,30 +1197,17 @@
           myevent_feature_2: 'Location',
           myevent_feature_3: 'Use WYSIWYG for content',
           myevent_feature_4: 'Multiple Image Banner',
-          chat_status: 'Production-ready architecture candidate',
           chat_summary:
-            'A resilient Flutter and Node.js chat platform built around durable delivery, offline recovery, horizontal realtime scaling, and observable operations.',
-          chat_architecture: 'Clean layered architecture (data, domain, and presentation)',
-          chat_client_features: 'Mobile experience',
-          chat_backend_features: 'Backend reliability',
-          chat_feature_1: 'Realtime text and image messages with optimistic rendering',
-          chat_feature_2: 'Sent, delivered, and read receipts',
-          chat_feature_3: 'Presence, last active, typing indicator, and unread badges',
-          chat_feature_4: 'Image preview, caption, upload progress, failure, and retry',
-          chat_feature_5: 'Reply metadata and Android notification quick replies',
-          chat_feature_6: 'Offline queue, reconnect backoff, and automatic message sync',
-          chat_feature_7: 'Dark mode and typed Socket.IO events',
-          chat_feature_8: 'Verified JWT access tokens and rotating refresh tokens',
-          chat_feature_9: 'Durable MySQL outbox with RabbitMQ publisher confirms',
-          chat_feature_10: 'Bounded retry, DLQ redrive, and idempotent event processing',
-          chat_feature_11: 'Redis adapter for multi-instance rooms and presence',
-          chat_feature_12: 'Upload signature validation and replaceable storage adapter',
-          chat_feature_13:
-            'Health/readiness probes, structured logs, metrics, and graceful shutdown',
-          chat_feature_14: 'Docker quick start, migration, test, E2E, and load tooling',
-          chat_verification: 'Latest local verification',
-          chat_verification_result:
-            'Backend 19/19 tests, Flutter 6/6 tests, zero known production dependency vulnerabilities, RabbitMQ/Redis smoke tests passed, and 500-request HTTP load smoke completed with zero failures and 12.24 ms p95.',
+            'A realtime chat app built with Flutter and Node.js, with reliable message delivery and offline support.',
+          chat_architecture:
+            'Clean architecture for the mobile app and a reusable REST/Socket.IO backend',
+          chat_features: 'Key features',
+          chat_feature_1: 'Realtime text and image messages',
+          chat_feature_2: 'Sent, delivered, and read status',
+          chat_feature_3: 'Online status, typing indicator, and unread count',
+          chat_feature_4: 'Reply, image upload, and notification reply',
+          chat_feature_5: 'Offline queue and reconnect sync',
+          chat_feature_6: 'JWT authentication, RabbitMQ delivery, and Redis support',
           chat_flutter_repo: 'Flutter repository',
           chat_backend_repo: 'Backend repository',
         },
@@ -1311,30 +1241,17 @@
           myevent_feature_2: 'Lokasi',
           myevent_feature_3: 'Menggunakan WYSIWYG untuk konten',
           myevent_feature_4: 'Banner Multi Gambar',
-          chat_status: 'Kandidat arsitektur siap produksi',
           chat_summary:
-            'Platform chat Flutter dan Node.js yang tangguh dengan pengiriman durable, pemulihan offline, scaling realtime horizontal, dan operasional yang dapat dipantau.',
-          chat_architecture: 'Arsitektur berlapis yang bersih (data, domain, dan presentation)',
-          chat_client_features: 'Pengalaman mobile',
-          chat_backend_features: 'Reliabilitas backend',
-          chat_feature_1: 'Pesan teks dan gambar realtime dengan optimistic rendering',
+            'Aplikasi chat realtime dengan Flutter dan Node.js, dilengkapi pengiriman pesan yang stabil dan dukungan offline.',
+          chat_architecture:
+            'Clean architecture pada aplikasi mobile dan backend REST/Socket.IO yang reusable',
+          chat_features: 'Fitur utama',
+          chat_feature_1: 'Pesan teks dan gambar secara realtime',
           chat_feature_2: 'Status terkirim, diterima, dan dibaca',
-          chat_feature_3: 'Presence, last active, indikator mengetik, dan badge belum dibaca',
-          chat_feature_4: 'Preview gambar, caption, progres upload, kegagalan, dan retry',
-          chat_feature_5: 'Metadata balasan dan quick reply notifikasi Android',
-          chat_feature_6: 'Antrean offline, reconnect backoff, dan sinkronisasi pesan otomatis',
-          chat_feature_7: 'Mode gelap dan event Socket.IO bertipe',
-          chat_feature_8: 'Access token JWT terverifikasi dan refresh token berotasi',
-          chat_feature_9: 'MySQL outbox durable dengan publisher confirm RabbitMQ',
-          chat_feature_10: 'Retry terbatas, redrive DLQ, dan pemrosesan event idempotent',
-          chat_feature_11: 'Redis adapter untuk room dan presence multi-instance',
-          chat_feature_12: 'Validasi signature upload dan storage adapter yang dapat diganti',
-          chat_feature_13:
-            'Health/readiness probe, structured log, metrics, dan graceful shutdown',
-          chat_feature_14: 'Docker quick start, migration, test, E2E, dan load tooling',
-          chat_verification: 'Verifikasi lokal terbaru',
-          chat_verification_result:
-            'Backend 19/19 test, Flutter 6/6 test, nol kerentanan dependency production yang diketahui, smoke test RabbitMQ/Redis lulus, dan load smoke HTTP 500 request selesai tanpa kegagalan dengan p95 12,24 ms.',
+          chat_feature_3: 'Status online, indikator mengetik, dan jumlah pesan belum dibaca',
+          chat_feature_4: 'Balas pesan, upload gambar, dan balas dari notifikasi',
+          chat_feature_5: 'Antrean offline dan sinkronisasi saat terhubung kembali',
+          chat_feature_6: 'Autentikasi JWT, pengiriman RabbitMQ, dan dukungan Redis',
           chat_flutter_repo: 'Repositori Flutter',
           chat_backend_repo: 'Repositori backend',
         },
