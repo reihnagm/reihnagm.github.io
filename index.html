@@ -27,7 +27,12 @@
 
       body {
         font-family:
-          'Inter', 'SF Pro Display', 'Helvetica Neue', 'Segoe UI', system-ui, -apple-system,
+          'Inter',
+          'SF Pro Display',
+          'Helvetica Neue',
+          'Segoe UI',
+          system-ui,
+          -apple-system,
           sans-serif;
         background:
           radial-gradient(circle at top left, rgba(17, 24, 39, 0.04), transparent 30%),
@@ -614,19 +619,32 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
           <div class="bg-gray-200 p-4 rounded-2xl shadow-md">
             <h3 class="text-xl font-semibold mb-2" data-i18n="pos_title">POS Platform v1.3</h3>
+            <p class="text-gray-700" data-i18n="pos_summary">
+              A fullstack POS platform for outlets, inventory, purchasing, and cashier workflows.
+            </p>
+            <p class="text-gray-700 mt-2">Go / Next.js 16</p>
             <p class="text-gray-700 my-2">Tech :</p>
-            <ul class="list-disc px-4">
-              <li class="text-gray-700" data-i18n="pos_stack_backend">Backend: Go (Gin + GORM)</li>
-              <li class="text-gray-700" data-i18n="pos_stack_frontend">Frontend: Next.js 16</li>
+            <ul class="flex flex-wrap gap-2 text-sm">
+              <li class="rounded-full bg-gray-100 px-3 py-1" data-i18n="pos_stack_backend">
+                Backend - Go (Gin + GORM)
+              </li>
+              <li class="rounded-full bg-gray-100 px-3 py-1" data-i18n="pos_stack_frontend">
+                Next.js 16
+              </li>
+              <li class="rounded-full bg-gray-100 px-3 py-1">MySQL</li>
+              <li class="rounded-full bg-gray-100 px-3 py-1">RBAC</li>
             </ul>
-            <p class="text-gray-700 my-2" data-i18n="features">Features:</p>
-            <ul class="list-disc px-4">
-              <li data-i18n="pos_feature_1">Outlet tax/promo pricing engine</li>
-              <li data-i18n="pos_feature_2">Inventory valuation + COGS report</li>
-              <li data-i18n="pos_feature_3">Purchasing partial receive + AP aging</li>
-              <li data-i18n="pos_feature_4">Thermal receipt + barcode cashier flow</li>
-              <li data-i18n="pos_feature_5">Bilingual UI (EN/ID) across POS dashboard modules</li>
-            </ul>
+
+            <div class="rounded-xl border border-gray-200 bg-gray-50 p-4 mt-4">
+              <p class="font-semibold text-gray-900 mb-2" data-i18n="features">Features :</p>
+              <ul class="list-disc px-4 text-gray-700 space-y-1">
+                <li data-i18n="pos_feature_1">Outlet tax/promo pricing engine</li>
+                <li data-i18n="pos_feature_2">Inventory valuation + COGS report</li>
+                <li data-i18n="pos_feature_3">Purchasing partial receive + AP aging</li>
+                <li data-i18n="pos_feature_4">Thermal receipt + barcode cashier flow</li>
+                <li data-i18n="pos_feature_5">Bilingual UI (EN/ID) across POS dashboard modules</li>
+              </ul>
+            </div>
             <!-- <p class="text-gray-700 mt-2" data-i18n="case_study">
               Case Study :
               <a href="content/projects/pos-v1-3-case-study.md" class="text-blue-500">Link</a>
@@ -707,21 +725,30 @@
 
           <div class="bg-gray-200 p-4 rounded-2xl shadow-md">
             <h3 class="text-xl font-semibold mb-2" data-i18n="myevent_title">My Event</h3>
-            <p class="text-gray-700" data-i18n="myevent_flutter">Flutter Version 3.41.1</p>
+            <p class="text-gray-700" data-i18n="myevent_summary">
+              A mobile event app with schedule management, location details, and dynamic content.
+            </p>
+            <p class="text-gray-700 mt-2" data-i18n="myevent_flutter">Flutter Version 3.41.1</p>
             <p class="text-gray-700" data-i18n="myevent_ddd">DDD-based Architecture</p>
             <p class="text-gray-700 my-2">Tech :</p>
-            <ul class="list-disc px-4">
-              <li>Flutter</li>
-              <li data-i18n="myevent_backend">Backend - Go Lang</li>
-              <li>MySQL</li>
+            <ul class="flex flex-wrap gap-2 text-sm">
+              <li class="rounded-full bg-gray-100 px-3 py-1">Flutter</li>
+              <li class="rounded-full bg-gray-100 px-3 py-1" data-i18n="myevent_backend">
+                Backend - Go Lang
+              </li>
+              <li class="rounded-full bg-gray-100 px-3 py-1">MySQL</li>
+              <li class="rounded-full bg-gray-100 px-3 py-1">DDD</li>
             </ul>
-            <p class="text-gray-700 my-2">Features :</p>
-            <ul class="list-disc px-4">
-              <li data-i18n="myevent_feature_1">Event Range Schedule</li>
-              <li data-i18n="myevent_feature_2">Location</li>
-              <li data-i18n="myevent_feature_3">Use WYSIWYG for content</li>
-              <li data-i18n="myevent_feature_4">Multiple Image Banner</li>
-            </ul>
+
+            <div class="rounded-xl border border-gray-200 bg-gray-50 p-4 mt-4">
+              <p class="font-semibold text-gray-900 mb-2" data-i18n="features">Features :</p>
+              <ul class="list-disc px-4 text-gray-700 space-y-1">
+                <li data-i18n="myevent_feature_1">Event Range Schedule</li>
+                <li data-i18n="myevent_feature_2">Location</li>
+                <li data-i18n="myevent_feature_3">Use WYSIWYG for content</li>
+                <li data-i18n="myevent_feature_4">Multiple Image Banner</li>
+              </ul>
+            </div>
 
             <!-- Swiper -->
             <div class="swiper-container stack-card-swiper mt-4">
@@ -894,21 +921,29 @@
 
           <div class="bg-gray-200 p-4 rounded-2xl shadow-md">
             <h3 class="text-xl font-semibold mb-2">My Note</h3>
-            <p class="text-gray-700">Flutter Version 3.38.7</p>
+            <p class="text-gray-700" data-i18n="mynote_summary">
+              A Flutter note-taking app for rich content, reminders, pinned notes, and media.
+            </p>
+            <p class="text-gray-700 mt-2">Flutter Version 3.38.7</p>
             <p class="text-gray-700 my-2">Tech :</p>
-            <ul class="list-disc px-4">
-              <li>Flutter</li>
-              <li>Backend - SQlite</li>
+            <ul class="flex flex-wrap gap-2 text-sm">
+              <li class="rounded-full bg-gray-100 px-3 py-1">Flutter</li>
+              <li class="rounded-full bg-gray-100 px-3 py-1">SQLite</li>
+              <li class="rounded-full bg-gray-100 px-3 py-1">Cloudinary</li>
+              <li class="rounded-full bg-gray-100 px-3 py-1">Authentication</li>
             </ul>
-            <p class="text-gray-700 my-2">Features :</p>
-            <ul class="list-disc px-4">
-              <li>Integrate Cloudinary to save media such as images and videos</li>
-              <li data-i18n="myevent_feature_3">Use WYSIWYG for content</li>
-              <li>Pin your content</li>
-              <li>Set Reminder</li>
-              <li>Search by Title</li>
-              <li>Authentication</li>
-            </ul>
+
+            <div class="rounded-xl border border-gray-200 bg-gray-50 p-4 mt-4">
+              <p class="font-semibold text-gray-900 mb-2" data-i18n="features">Features :</p>
+              <ul class="list-disc px-4 text-gray-700 space-y-1">
+                <li>Integrate Cloudinary to save media such as images and videos</li>
+                <li data-i18n="myevent_feature_3">Use WYSIWYG for content</li>
+                <li>Pin your content</li>
+                <li>Set Reminder</li>
+                <li>Search by Title</li>
+                <li>Authentication</li>
+              </ul>
+            </div>
 
             <!-- Swiper -->
             <div class="swiper-container stack-card-swiper mt-4">
@@ -990,8 +1025,8 @@
               <h3 class="text-xl font-semibold">My Chat</h3>
             </div>
             <p class="text-gray-700" data-i18n="chat_summary">
-              A realtime chat app built with Flutter and Node.js, with reliable message
-              delivery and offline support.
+              A realtime chat app built with Flutter and Node.js, with reliable message delivery and
+              offline support.
             </p>
             <p class="text-gray-700 mt-2">Flutter / Dart 3.7+</p>
             <p class="text-gray-700" data-i18n="chat_architecture">
@@ -1009,9 +1044,7 @@
             </ul>
 
             <div class="rounded-xl border border-gray-200 bg-gray-50 p-4 mt-4">
-              <p class="font-semibold text-gray-900 mb-2" data-i18n="chat_features">
-                Key features
-              </p>
+              <p class="font-semibold text-gray-900 mb-2" data-i18n="chat_features">Features :</p>
               <ul class="list-disc px-4 text-gray-700 space-y-1">
                 <li data-i18n="chat_feature_1">Realtime text and image messages</li>
                 <li data-i18n="chat_feature_2">Sent, delivered, and read status</li>
@@ -1024,27 +1057,6 @@
                   JWT authentication, RabbitMQ delivery, and Redis support
                 </li>
               </ul>
-            </div>
-
-            <div class="flex flex-wrap gap-3 mt-4">
-              <a
-                href="https://github.com/reihnagm/flutter_chat_socketio"
-                target="_blank"
-                rel="noreferrer"
-                class="inline-flex items-center rounded-lg bg-gray-900 px-4 py-2 text-sm font-semibold text-white hover:bg-black"
-                data-i18n="chat_flutter_repo"
-              >
-                Flutter repository
-              </a>
-              <a
-                href="https://github.com/reihnagm/chat_api_socketio"
-                target="_blank"
-                rel="noreferrer"
-                class="inline-flex items-center rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm font-semibold text-gray-900 hover:bg-gray-50"
-                data-i18n="chat_backend_repo"
-              >
-                Backend repository
-              </a>
             </div>
 
             <!-- Swiper -->
@@ -1174,6 +1186,8 @@
           pos_title: 'POS Platform v1.3',
           pos_stack_frontend: 'Next.js 16',
           pos_stack_backend: 'Backend - Go (Gin + GORM)',
+          pos_summary:
+            'A fullstack POS platform for outlets, inventory, purchasing, and cashier workflows.',
           features: 'Features :',
           case_study: 'Case Study :',
           certificates_title: 'Certificates',
@@ -1190,6 +1204,8 @@
           htk_title: 'HTK Faucet (Web3 dApp)',
           htk_pausable_desc: 'contract can be temporarily paused by the admin',
           myevent_title: 'My Event',
+          myevent_summary:
+            'A mobile event app with schedule management, location details, and dynamic content.',
           myevent_flutter: 'Flutter Version 3.41.1',
           myevent_ddd: 'DDD-based Architecture',
           myevent_backend: 'Backend - Go Lang',
@@ -1197,6 +1213,8 @@
           myevent_feature_2: 'Location',
           myevent_feature_3: 'Use WYSIWYG for content',
           myevent_feature_4: 'Multiple Image Banner',
+          mynote_summary:
+            'A Flutter note-taking app for rich content, reminders, pinned notes, and media.',
           chat_summary:
             'A realtime chat app built with Flutter and Node.js, with reliable message delivery and offline support.',
           chat_architecture:
@@ -1218,6 +1236,8 @@
           pos_title: 'Platform POS v1.3',
           pos_stack_frontend: 'Next.js 16',
           pos_stack_backend: 'Backend - Go (Gin + GORM)',
+          pos_summary:
+            'Platform POS fullstack untuk outlet, inventory, purchasing, dan alur kasir.',
           features: 'Fitur :',
           case_study: 'Studi Kasus :',
           certificates_title: 'Sertifikat',
@@ -1234,6 +1254,8 @@
           htk_title: 'HTK Faucet (Web3 dApp)',
           htk_pausable_desc: 'kontrak bisa di-pause sementara oleh admin',
           myevent_title: 'My Event',
+          myevent_summary:
+            'Aplikasi event mobile dengan jadwal, detail lokasi, dan konten dinamis.',
           myevent_flutter: 'Versi Flutter 3.41.1',
           myevent_ddd: 'Arsitektur berbasis DDD',
           myevent_backend: 'Backend - Go Lang',
@@ -1241,6 +1263,8 @@
           myevent_feature_2: 'Lokasi',
           myevent_feature_3: 'Menggunakan WYSIWYG untuk konten',
           myevent_feature_4: 'Banner Multi Gambar',
+          mynote_summary:
+            'Aplikasi catatan Flutter untuk rich content, pengingat, pin catatan, dan media.',
           chat_summary:
             'Aplikasi chat realtime dengan Flutter dan Node.js, dilengkapi pengiriman pesan yang stabil dan dukungan offline.',
           chat_architecture:
