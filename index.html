@@ -254,6 +254,11 @@
           object-fit: contain;
         }
       }
+
+      .swiper-slide img.screenshot-contain {
+        object-fit: contain;
+        background: #f8fafc;
+      }
     </style>
 
     <!-- Swiper CSS -->
@@ -617,6 +622,130 @@
       <div class="max-w-4xl mx-auto bg-white p-6 md:p-8">
         <h2 class="text-2xl font-bold mb-4" data-i18n="personal_title">Personal Project</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
+          <div class="bg-gray-200 p-4 rounded-2xl shadow-md">
+            <h3 class="text-xl font-semibold mb-2" data-i18n="ai_helpdesk_title">
+              AI Helpdesk Platform
+            </h3>
+            <p class="text-gray-700" data-i18n="ai_helpdesk_summary">
+              A customer support platform with admin ticket operations, realtime chat, knowledge
+              base, and Flutter mobile customer app.
+            </p>
+            <p class="text-gray-700 mt-2">NestJS / Next.js / Flutter</p>
+            <p class="text-gray-700 my-2">Tech :</p>
+            <ul class="flex flex-wrap gap-2 text-sm">
+              <li class="rounded-full bg-gray-100 px-3 py-1">NestJS</li>
+              <li class="rounded-full bg-gray-100 px-3 py-1">Next.js</li>
+              <li class="rounded-full bg-gray-100 px-3 py-1">Flutter</li>
+              <li class="rounded-full bg-gray-100 px-3 py-1">Socket.IO</li>
+              <li class="rounded-full bg-gray-100 px-3 py-1">PostgreSQL</li>
+              <li class="rounded-full bg-gray-100 px-3 py-1">Docker</li>
+            </ul>
+
+            <div class="rounded-xl border border-gray-200 bg-gray-50 p-4 mt-4">
+              <p class="font-semibold text-gray-900 mb-2" data-i18n="features">Features :</p>
+              <ul class="list-disc px-4 text-gray-700 space-y-1">
+                <li data-i18n="ai_helpdesk_feature_1">Admin dashboard and ticket queue</li>
+                <li data-i18n="ai_helpdesk_feature_2">Realtime ticket chat with read activity</li>
+                <li data-i18n="ai_helpdesk_feature_3">Global notifications for support activity</li>
+                <li data-i18n="ai_helpdesk_feature_4">Knowledge base with WYSIWYG article editor</li>
+                <li data-i18n="ai_helpdesk_feature_5">Agent/user management and settings</li>
+                <li data-i18n="ai_helpdesk_feature_6">Flutter mobile app for login and ticket flow</li>
+              </ul>
+            </div>
+
+            <div class="swiper-container stack-card-swiper mt-4">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img
+                    src="self-project/ai-helpdesk/dashboard.png"
+                    alt="AI Helpdesk admin dashboard"
+                    class="h-auto rounded-lg"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="self-project/ai-helpdesk/tickets.png"
+                    alt="AI Helpdesk ticket queue"
+                    class="h-auto rounded-lg"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="self-project/ai-helpdesk/ticket-detail-chat.png"
+                    alt="AI Helpdesk ticket detail chat"
+                    class="h-auto rounded-lg"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="self-project/ai-helpdesk/notifications.png"
+                    alt="AI Helpdesk notifications"
+                    class="h-auto rounded-lg"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="self-project/ai-helpdesk/knowledge-base.png"
+                    alt="AI Helpdesk knowledge base"
+                    class="h-auto rounded-lg"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="self-project/ai-helpdesk/agents-user-management.png"
+                    alt="AI Helpdesk agents and user management"
+                    class="h-auto rounded-lg"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="self-project/ai-helpdesk/settings.png"
+                    alt="AI Helpdesk settings"
+                    class="h-auto rounded-lg"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="self-project/ai-helpdesk/admin-login.png"
+                    alt="AI Helpdesk admin login"
+                    class="h-auto rounded-lg"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="self-project/ai-helpdesk/mobile-login.png"
+                    alt="AI Helpdesk mobile login"
+                    class="h-auto rounded-lg screenshot-contain"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="self-project/ai-helpdesk/mobile-home.png"
+                    alt="AI Helpdesk mobile home"
+                    class="h-auto rounded-lg screenshot-contain"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="self-project/ai-helpdesk/mobile-create-ticket.png"
+                    alt="AI Helpdesk mobile create ticket"
+                    class="h-auto rounded-lg screenshot-contain"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="self-project/ai-helpdesk/mobile-ticket-detail.png"
+                    alt="AI Helpdesk mobile ticket detail"
+                    class="h-auto rounded-lg screenshot-contain"
+                  />
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+
           <div class="bg-gray-200 p-4 rounded-2xl shadow-md">
             <h3 class="text-xl font-semibold mb-2" data-i18n="pos_title">POS Platform v1.3</h3>
             <p class="text-gray-700" data-i18n="pos_summary">
@@ -1183,6 +1312,15 @@
           resume_title: 'Resume',
           portfolio_title: 'Portfolios',
           personal_title: 'Personal Project',
+          ai_helpdesk_title: 'AI Helpdesk Platform',
+          ai_helpdesk_summary:
+            'A customer support platform with admin ticket operations, realtime chat, knowledge base, and Flutter mobile customer app.',
+          ai_helpdesk_feature_1: 'Admin dashboard and ticket queue',
+          ai_helpdesk_feature_2: 'Realtime ticket chat with read activity',
+          ai_helpdesk_feature_3: 'Global notifications for support activity',
+          ai_helpdesk_feature_4: 'Knowledge base with WYSIWYG article editor',
+          ai_helpdesk_feature_5: 'Agent/user management and settings',
+          ai_helpdesk_feature_6: 'Flutter mobile app for login and ticket flow',
           pos_title: 'POS Platform v1.3',
           pos_stack_frontend: 'Next.js 16',
           pos_stack_backend: 'Backend - Go (Gin + GORM)',
@@ -1233,6 +1371,15 @@
           resume_title: 'Ringkasan Pengalaman',
           portfolio_title: 'Portofolio',
           personal_title: 'Proyek Pribadi',
+          ai_helpdesk_title: 'Platform AI Helpdesk',
+          ai_helpdesk_summary:
+            'Platform customer support dengan operasional tiket admin, chat realtime, knowledge base, dan aplikasi mobile customer berbasis Flutter.',
+          ai_helpdesk_feature_1: 'Dashboard admin dan antrean tiket',
+          ai_helpdesk_feature_2: 'Chat tiket realtime dengan aktivitas baca',
+          ai_helpdesk_feature_3: 'Notifikasi global untuk aktivitas support',
+          ai_helpdesk_feature_4: 'Knowledge base dengan editor artikel WYSIWYG',
+          ai_helpdesk_feature_5: 'Manajemen agent/user dan settings',
+          ai_helpdesk_feature_6: 'Aplikasi mobile Flutter untuk login dan alur tiket',
           pos_title: 'Platform POS v1.3',
           pos_stack_frontend: 'Next.js 16',
           pos_stack_backend: 'Backend - Go (Gin + GORM)',
