@@ -627,8 +627,9 @@
               AI Helpdesk Platform
             </h3>
             <p class="text-gray-700" data-i18n="ai_helpdesk_summary">
-              A customer support platform with admin ticket operations, realtime chat, knowledge
-              base, and Flutter mobile customer app.
+              A fullstack AI-powered ticketing platform for customer support operations, covering
+              mobile ticket creation, admin/agent workflows, realtime chat, AI triage, knowledge
+              base context, and role-based operations.
             </p>
             <p class="text-gray-700 mt-2">NestJS / Next.js / Flutter</p>
             <p class="text-gray-700 my-2">Tech :</p>
@@ -636,20 +637,54 @@
               <li class="rounded-full bg-gray-100 px-3 py-1">NestJS</li>
               <li class="rounded-full bg-gray-100 px-3 py-1">Next.js</li>
               <li class="rounded-full bg-gray-100 px-3 py-1">Flutter</li>
+              <li class="rounded-full bg-gray-100 px-3 py-1">TypeScript</li>
               <li class="rounded-full bg-gray-100 px-3 py-1">Socket.IO</li>
+              <li class="rounded-full bg-gray-100 px-3 py-1">Prisma</li>
               <li class="rounded-full bg-gray-100 px-3 py-1">PostgreSQL</li>
+              <li class="rounded-full bg-gray-100 px-3 py-1">JWT / RBAC</li>
+              <li class="rounded-full bg-gray-100 px-3 py-1">Gemini / OpenAI</li>
+              <li class="rounded-full bg-gray-100 px-3 py-1">Cloudinary</li>
               <li class="rounded-full bg-gray-100 px-3 py-1">Docker</li>
             </ul>
 
             <div class="rounded-xl border border-gray-200 bg-gray-50 p-4 mt-4">
               <p class="font-semibold text-gray-900 mb-2" data-i18n="features">Features :</p>
               <ul class="list-disc px-4 text-gray-700 space-y-1">
-                <li data-i18n="ai_helpdesk_feature_1">Admin dashboard and ticket queue</li>
-                <li data-i18n="ai_helpdesk_feature_2">Realtime ticket chat with read activity</li>
-                <li data-i18n="ai_helpdesk_feature_3">Global notifications for support activity</li>
-                <li data-i18n="ai_helpdesk_feature_4">Knowledge base with WYSIWYG article editor</li>
-                <li data-i18n="ai_helpdesk_feature_5">Agent/user management and settings</li>
-                <li data-i18n="ai_helpdesk_feature_6">Flutter mobile app for login and ticket flow</li>
+                <li data-i18n="ai_helpdesk_feature_1">
+                  Flutter customer app for auth, ticket list, ticket creation, attachments, and
+                  message history
+                </li>
+                <li data-i18n="ai_helpdesk_feature_2">
+                  Admin/agent dashboard with ticket KPIs, queue search, pagination, and status,
+                  priority, category, read/unread filters
+                </li>
+                <li data-i18n="ai_helpdesk_feature_3">
+                  Ticket detail workspace for assignment, status/priority updates, attachments,
+                  AI summary, and suggested reply
+                </li>
+                <li data-i18n="ai_helpdesk_feature_4">
+                  Realtime Socket.IO chat with typing indicator, read/unread state, support inbox
+                  broadcasts, and mobile sound alerts
+                </li>
+                <li data-i18n="ai_helpdesk_feature_5">
+                  AI triage and suggested replies using mock, OpenAI, or Gemini providers with
+                  knowledge base context
+                </li>
+                <li data-i18n="ai_helpdesk_feature_6">
+                  Knowledge base CRUD/search with WYSIWYG article editor
+                </li>
+                <li data-i18n="ai_helpdesk_feature_7">
+                  Notification center, unread badges, and support activity updates
+                </li>
+                <li data-i18n="ai_helpdesk_feature_8">
+                  JWT authentication and role-based access for USER, AGENT, and ADMIN
+                </li>
+                <li data-i18n="ai_helpdesk_feature_9">
+                  Cloudinary upload support with local attachment fallback
+                </li>
+                <li data-i18n="ai_helpdesk_feature_10">
+                  Docker-ready monorepo with NestJS API, Next.js admin web, and Flutter mobile app
+                </li>
               </ul>
             </div>
 
@@ -1314,13 +1349,24 @@
           personal_title: 'Personal Project',
           ai_helpdesk_title: 'AI Helpdesk Platform',
           ai_helpdesk_summary:
-            'A customer support platform with admin ticket operations, realtime chat, knowledge base, and Flutter mobile customer app.',
-          ai_helpdesk_feature_1: 'Admin dashboard and ticket queue',
-          ai_helpdesk_feature_2: 'Realtime ticket chat with read activity',
-          ai_helpdesk_feature_3: 'Global notifications for support activity',
-          ai_helpdesk_feature_4: 'Knowledge base with WYSIWYG article editor',
-          ai_helpdesk_feature_5: 'Agent/user management and settings',
-          ai_helpdesk_feature_6: 'Flutter mobile app for login and ticket flow',
+            'A fullstack AI-powered ticketing platform for customer support operations, covering mobile ticket creation, admin/agent workflows, realtime chat, AI triage, knowledge base context, and role-based operations.',
+          ai_helpdesk_feature_1:
+            'Flutter customer app for auth, ticket list, ticket creation, attachments, and message history',
+          ai_helpdesk_feature_2:
+            'Admin/agent dashboard with ticket KPIs, queue search, pagination, and status, priority, category, read/unread filters',
+          ai_helpdesk_feature_3:
+            'Ticket detail workspace for assignment, status/priority updates, attachments, AI summary, and suggested reply',
+          ai_helpdesk_feature_4:
+            'Realtime Socket.IO chat with typing indicator, read/unread state, support inbox broadcasts, and mobile sound alerts',
+          ai_helpdesk_feature_5:
+            'AI triage and suggested replies using mock, OpenAI, or Gemini providers with knowledge base context',
+          ai_helpdesk_feature_6: 'Knowledge base CRUD/search with WYSIWYG article editor',
+          ai_helpdesk_feature_7: 'Notification center, unread badges, and support activity updates',
+          ai_helpdesk_feature_8:
+            'JWT authentication and role-based access for USER, AGENT, and ADMIN',
+          ai_helpdesk_feature_9: 'Cloudinary upload support with local attachment fallback',
+          ai_helpdesk_feature_10:
+            'Docker-ready monorepo with NestJS API, Next.js admin web, and Flutter mobile app',
           pos_title: 'POS Platform v1.3',
           pos_stack_frontend: 'Next.js 16',
           pos_stack_backend: 'Backend - Go (Gin + GORM)',
@@ -1373,13 +1419,23 @@
           personal_title: 'Proyek Pribadi',
           ai_helpdesk_title: 'Platform AI Helpdesk',
           ai_helpdesk_summary:
-            'Platform customer support dengan operasional tiket admin, chat realtime, knowledge base, dan aplikasi mobile customer berbasis Flutter.',
-          ai_helpdesk_feature_1: 'Dashboard admin dan antrean tiket',
-          ai_helpdesk_feature_2: 'Chat tiket realtime dengan aktivitas baca',
-          ai_helpdesk_feature_3: 'Notifikasi global untuk aktivitas support',
-          ai_helpdesk_feature_4: 'Knowledge base dengan editor artikel WYSIWYG',
-          ai_helpdesk_feature_5: 'Manajemen agent/user dan settings',
-          ai_helpdesk_feature_6: 'Aplikasi mobile Flutter untuk login dan alur tiket',
+            'Platform ticketing fullstack bertenaga AI untuk operasional customer support, mencakup pembuatan tiket mobile, workflow admin/agent, chat realtime, AI triage, konteks knowledge base, dan operasional berbasis role.',
+          ai_helpdesk_feature_1:
+            'Aplikasi customer Flutter untuk auth, daftar tiket, pembuatan tiket, attachment, dan riwayat pesan',
+          ai_helpdesk_feature_2:
+            'Dashboard admin/agent dengan KPI tiket, pencarian antrean, pagination, dan filter status, priority, kategori, read/unread',
+          ai_helpdesk_feature_3:
+            'Workspace detail tiket untuk assignment, update status/priority, attachment, AI summary, dan suggested reply',
+          ai_helpdesk_feature_4:
+            'Chat realtime Socket.IO dengan typing indicator, read/unread state, broadcast inbox support, dan sound alert mobile',
+          ai_helpdesk_feature_5:
+            'AI triage dan suggested reply memakai provider mock, OpenAI, atau Gemini dengan konteks knowledge base',
+          ai_helpdesk_feature_6: 'Knowledge base CRUD/search dengan editor artikel WYSIWYG',
+          ai_helpdesk_feature_7: 'Notification center, unread badge, dan update aktivitas support',
+          ai_helpdesk_feature_8: 'JWT authentication dan akses berbasis role untuk USER, AGENT, ADMIN',
+          ai_helpdesk_feature_9: 'Upload Cloudinary dengan fallback attachment lokal',
+          ai_helpdesk_feature_10:
+            'Monorepo siap Docker dengan NestJS API, Next.js admin web, dan aplikasi mobile Flutter',
           pos_title: 'Platform POS v1.3',
           pos_stack_frontend: 'Next.js 16',
           pos_stack_backend: 'Backend - Go (Gin + GORM)',
