@@ -623,6 +623,157 @@
         <h2 class="text-2xl font-bold mb-4" data-i18n="personal_title">Personal Project</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
           <div class="bg-gray-200 p-4 rounded-2xl shadow-md">
+            <h3 class="text-xl font-semibold mb-2" data-i18n="ktp_title">
+              KTP OCR &amp; Digital Onboarding
+            </h3>
+            <p class="text-gray-700" data-i18n="ktp_summary">
+              A production-oriented identity onboarding platform with guided KTP capture, OCR,
+              data confirmation, reviewer workflows, and a complete audit trail across Flutter
+              mobile and a Next.js admin dashboard.
+            </p>
+            <p class="text-gray-700 mt-2">FastAPI / Next.js 16 / Flutter</p>
+            <p class="text-gray-700 mt-2">
+              Repository :
+              <a
+                href="https://github.com/reihnagm/ktp-ocr-onboarding"
+                class="text-blue-500"
+                target="_blank"
+                rel="noreferrer"
+                >GitHub</a
+              >
+            </p>
+            <p class="text-gray-700 my-2">Tech :</p>
+            <ul class="flex flex-wrap gap-2 text-sm">
+              <li class="rounded-full bg-gray-100 px-3 py-1">Flutter</li>
+              <li class="rounded-full bg-gray-100 px-3 py-1">Riverpod</li>
+              <li class="rounded-full bg-gray-100 px-3 py-1">ML Kit</li>
+              <li class="rounded-full bg-gray-100 px-3 py-1">OpenCV</li>
+              <li class="rounded-full bg-gray-100 px-3 py-1">FastAPI</li>
+              <li class="rounded-full bg-gray-100 px-3 py-1">SQLAlchemy</li>
+              <li class="rounded-full bg-gray-100 px-3 py-1">PostgreSQL</li>
+              <li class="rounded-full bg-gray-100 px-3 py-1">Next.js 16</li>
+              <li class="rounded-full bg-gray-100 px-3 py-1">React Query</li>
+              <li class="rounded-full bg-gray-100 px-3 py-1">JWT / RBAC</li>
+              <li class="rounded-full bg-gray-100 px-3 py-1">Docker</li>
+            </ul>
+
+            <div class="rounded-xl border border-gray-200 bg-gray-50 p-4 mt-4">
+              <p class="font-semibold text-gray-900 mb-2" data-i18n="features">Features :</p>
+              <ul class="list-disc px-4 text-gray-700 space-y-1">
+                <li data-i18n="ktp_feature_1">
+                  Custom KTP camera with placeholder-based framing, object-presence debounce,
+                  focus and lighting gates, label detection, and automatic capture
+                </li>
+                <li data-i18n="ktp_feature_2">
+                  Image crop, quality validation, Indonesian KTP OCR, field normalization, and
+                  editable user confirmation
+                </li>
+                <li data-i18n="ktp_feature_3">
+                  Consent-first onboarding flow, reusable single draft, progress tracking, and
+                  secure mobile authentication
+                </li>
+                <li data-i18n="ktp_feature_4">
+                  Admin/reviewer dashboard with KPI summaries, search, filters, assignment, review,
+                  approval, and rejection workflows
+                </li>
+                <li data-i18n="ktp_feature_5">
+                  Image quality scores, status timeline, reviewer notes, export history, and
+                  auditable role-based operations
+                </li>
+                <li data-i18n="ktp_feature_6">
+                  Docker-ready architecture with FastAPI, PostgreSQL, Next.js admin, and Flutter
+                  mobile applications
+                </li>
+              </ul>
+            </div>
+
+            <div class="swiper-container stack-card-swiper mt-4">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img
+                    src="self-project/ktp-onboarding/admin-dashboard.png"
+                    alt="KTP onboarding admin dashboard"
+                    class="h-auto rounded-lg"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="self-project/ktp-onboarding/admin-onboarding-list.png"
+                    alt="KTP onboarding admin list"
+                    class="h-auto rounded-lg"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="self-project/ktp-onboarding/admin-review-detail.png"
+                    alt="KTP onboarding review detail"
+                    class="h-auto rounded-lg"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="self-project/ktp-onboarding/admin-export-history.png"
+                    alt="KTP onboarding export history"
+                    class="h-auto rounded-lg"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="self-project/ktp-onboarding/admin-login.png"
+                    alt="KTP onboarding admin login"
+                    class="h-auto rounded-lg"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="self-project/ktp-onboarding/mobile-login.png"
+                    alt="KTP onboarding mobile login"
+                    class="h-auto rounded-lg screenshot-contain"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="self-project/ktp-onboarding/mobile-home.png"
+                    alt="KTP onboarding mobile dashboard"
+                    class="h-auto rounded-lg screenshot-contain"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="self-project/ktp-onboarding/mobile-consent.png"
+                    alt="KTP onboarding mobile consent"
+                    class="h-auto rounded-lg screenshot-contain"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="self-project/ktp-onboarding/mobile-ktp-scanner.png"
+                    alt="KTP onboarding custom camera scanner"
+                    class="h-auto rounded-lg screenshot-contain"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="self-project/ktp-onboarding/mobile-onboarding-detail.png"
+                    alt="KTP onboarding mobile detail"
+                    class="h-auto rounded-lg screenshot-contain"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="self-project/ktp-onboarding/mobile-profile.png"
+                    alt="KTP onboarding mobile profile"
+                    class="h-auto rounded-lg screenshot-contain"
+                  />
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+
+          <div class="bg-gray-200 p-4 rounded-2xl shadow-md">
             <h3 class="text-xl font-semibold mb-2" data-i18n="ai_helpdesk_title">
               AI Helpdesk Platform
             </h3>
@@ -1347,6 +1498,21 @@
           resume_title: 'Resume',
           portfolio_title: 'Portfolios',
           personal_title: 'Personal Project',
+          ktp_title: 'KTP OCR & Digital Onboarding',
+          ktp_summary:
+            'A production-oriented identity onboarding platform with guided KTP capture, OCR, data confirmation, reviewer workflows, and a complete audit trail across Flutter mobile and a Next.js admin dashboard.',
+          ktp_feature_1:
+            'Custom KTP camera with placeholder-based framing, object-presence debounce, focus and lighting gates, label detection, and automatic capture',
+          ktp_feature_2:
+            'Image crop, quality validation, Indonesian KTP OCR, field normalization, and editable user confirmation',
+          ktp_feature_3:
+            'Consent-first onboarding flow, reusable single draft, progress tracking, and secure mobile authentication',
+          ktp_feature_4:
+            'Admin/reviewer dashboard with KPI summaries, search, filters, assignment, review, approval, and rejection workflows',
+          ktp_feature_5:
+            'Image quality scores, status timeline, reviewer notes, export history, and auditable role-based operations',
+          ktp_feature_6:
+            'Docker-ready architecture with FastAPI, PostgreSQL, Next.js admin, and Flutter mobile applications',
           ai_helpdesk_title: 'AI Helpdesk Platform',
           ai_helpdesk_summary:
             'A fullstack AI-powered ticketing platform for customer support operations, covering mobile ticket creation, admin/agent workflows, realtime chat, AI triage, knowledge base context, and role-based operations.',
@@ -1417,6 +1583,21 @@
           resume_title: 'Ringkasan Pengalaman',
           portfolio_title: 'Portofolio',
           personal_title: 'Proyek Pribadi',
+          ktp_title: 'OCR KTP & Onboarding Digital',
+          ktp_summary:
+            'Platform onboarding identitas berorientasi produksi dengan panduan pengambilan KTP, OCR, konfirmasi data, workflow reviewer, dan audit trail lengkap melalui aplikasi mobile Flutter serta dashboard admin Next.js.',
+          ktp_feature_1:
+            'Kamera KTP custom dengan framing berbasis placeholder, debounce keberadaan objek, validasi fokus dan cahaya, deteksi label, serta pengambilan otomatis',
+          ktp_feature_2:
+            'Crop gambar, validasi kualitas, OCR KTP Indonesia, normalisasi field, dan konfirmasi data yang dapat diedit pengguna',
+          ktp_feature_3:
+            'Alur onboarding berbasis persetujuan, satu draft yang dapat digunakan kembali, pelacakan progres, dan autentikasi mobile yang aman',
+          ktp_feature_4:
+            'Dashboard admin/reviewer dengan ringkasan KPI, pencarian, filter, assignment, review, approval, dan rejection',
+          ktp_feature_5:
+            'Skor kualitas gambar, timeline status, catatan reviewer, riwayat export, dan operasi berbasis role yang dapat diaudit',
+          ktp_feature_6:
+            'Arsitektur siap Docker dengan FastAPI, PostgreSQL, admin Next.js, dan aplikasi mobile Flutter',
           ai_helpdesk_title: 'Platform AI Helpdesk',
           ai_helpdesk_summary:
             'Platform ticketing fullstack bertenaga AI untuk operasional customer support, mencakup pembuatan tiket mobile, workflow admin/agent, chat realtime, AI triage, konteks knowledge base, dan operasional berbasis role.',
