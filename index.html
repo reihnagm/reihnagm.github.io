@@ -1,0 +1,803 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reihan Agam — Mobile & Fullstack Developer</title>
+    <meta
+      name="description"
+      content="Reihan Agam portfolio — Mobile Developer, Fullstack Developer, and DevOps practitioner."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" type="image/x-icon" href="favicon.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="noise-overlay" aria-hidden="true"></div>
+
+    <header class="nav" id="nav">
+      <div class="nav-inner">
+        <a href="#top" class="status-pill">
+          <span class="dot"></span> Mobile & Fullstack Developer
+        </a>
+
+        <nav class="nav-links" aria-label="Primary">
+          <a href="#work">Work <span class="count">[23]</span></a>
+          <a href="#service">Service <span class="count">[3]</span></a>
+          <a href="#certificates">Certificates <span class="count">[2]</span></a>
+          <a href="#experience">Experience <span class="count">[2020+]</span></a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <a href="#contact" class="btn btn-dark nav-cta">Contact Me <span class="arrow">↗</span></a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+      <nav class="nav-mobile" id="navMobile" aria-label="Mobile">
+        <a href="#work">Work</a>
+        <a href="#service">Service</a>
+        <a href="#certificates">Certificates</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" id="hero">
+        <h1 class="hero-name">
+          <span class="outline reveal" style="--d: 0s">REIHAN</span>
+          <span class="filled reveal" style="--d: 0.08s">AGAM</span>
+        </h1>
+
+        <div class="hero-photo reveal" style="--d: 0.16s">
+          <div class="photo-frame">
+            <img src="assets/profile.jpg" alt="Reihan Agam" />
+          </div>
+        </div>
+
+        <div class="hero-bottom">
+          <div class="hero-intro reveal" style="--d: 0.24s">
+            <p class="eyebrow">Mobile Developer / Fullstack Developer</p>
+            <p class="hero-desc">
+              Flutter-focused mobile developer with backend experience in Node.js, NestJS, Go,
+              CodeIgniter, and Next.js, plus DevOps work around CI/CD and database reliability.
+            </p>
+            <a href="#contact" class="btn btn-dark"
+              >Let's collaborate <span class="arrow">↗</span></a
+            >
+          </div>
+
+          <ul class="hero-social reveal" style="--d: 0.32s">
+            <li>
+              <a href="https://instagram.com/reihn.agm" target="_blank" rel="noopener">Instagram</a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/reihan-agam-992b95199"
+                target="_blank"
+                rel="noopener"
+                >LinkedIn</a
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="work" id="work">
+        <div class="section-head">
+          <h2 class="ghost-heading" data-ghost="PORTFOLIO">
+            <span class="section-label">/Portfolios</span>
+          </h2>
+
+          <div class="work-controls">
+            <div class="filter-tabs" role="tablist" aria-label="Filter work">
+              <button class="tab is-active" role="tab" aria-selected="true" data-filter="all">
+                All
+              </button>
+              <button class="tab" role="tab" aria-selected="false" data-filter="client">
+                Client Work
+              </button>
+              <button class="tab" role="tab" aria-selected="false" data-filter="personal">
+                Personal Project
+              </button>
+            </div>
+            <a href="#contact" class="pill-link">Discuss a Project <span class="arrow">↗</span></a>
+          </div>
+        </div>
+
+        <div class="work-grid" id="workGrid">
+          <article class="work-card" data-cat="personal">
+            <div class="work-thumb work-gallery my-gallery" aria-label="KTP OCR & Digital Onboarding screenshots">
+              <img
+                class="is-active"
+                src="assets/portfolio/ktp-onboarding/mobile-home.png"
+                alt="KTP OCR mobile home screen"
+              />
+              <img src="assets/portfolio/ktp-onboarding/mobile-login.png" alt="KTP OCR mobile login screen" />
+              <img src="assets/portfolio/ktp-onboarding/mobile-consent.png" alt="KTP OCR consent screen" />
+              <img src="assets/portfolio/ktp-onboarding/mobile-ktp-scanner.png" alt="KTP OCR scanner screen" />
+              <img src="assets/portfolio/ktp-onboarding/mobile-onboarding-detail.png" alt="KTP OCR onboarding detail screen" />
+              <img src="assets/portfolio/ktp-onboarding/mobile-profile.png" alt="KTP OCR mobile profile screen" />
+              <img src="assets/portfolio/ktp-onboarding/admin-login.png" alt="KTP OCR admin login screen" />
+              <img src="assets/portfolio/ktp-onboarding/admin-dashboard.png" alt="KTP OCR admin dashboard" />
+              <img src="assets/portfolio/ktp-onboarding/admin-onboarding-list.png" alt="KTP OCR admin onboarding list" />
+              <img src="assets/portfolio/ktp-onboarding/admin-review-detail.png" alt="KTP OCR admin review detail" />
+              <img src="assets/portfolio/ktp-onboarding/admin-export-history.png" alt="KTP OCR admin export history" />
+              <button
+                class="gallery-arrow gallery-arrow-prev"
+                type="button"
+                aria-label="Previous KTP OCR screenshot"
+              >
+                &larr;
+              </button>
+              <button
+                class="gallery-arrow gallery-arrow-next"
+                type="button"
+                aria-label="Next KTP OCR screenshot"
+              >
+                &rarr;
+              </button>
+              <div class="gallery-dots" aria-hidden="true"></div>
+            </div>
+            <h3>KTP OCR & Digital Onboarding</h3>
+            <div class="tags">
+              <span>FastAPI</span><span>Next.js 16</span><span>Flutter</span><span>OCR</span>
+            </div>
+          </article>
+
+          <article class="work-card" data-cat="personal">
+            <div class="work-thumb work-gallery my-gallery" aria-label="AI Helpdesk Platform screenshots">
+              <img
+                class="is-active"
+                src="assets/portfolio/ai-helpdesk/dashboard.png"
+                alt="AI Helpdesk dashboard"
+              />
+              <img src="assets/portfolio/ai-helpdesk/tickets.png" alt="AI Helpdesk tickets screen" />
+              <img src="assets/portfolio/ai-helpdesk/ticket-detail-chat.png" alt="AI Helpdesk ticket detail chat" />
+              <img src="assets/portfolio/ai-helpdesk/agents-user-management.png" alt="AI Helpdesk agents and user management" />
+              <img src="assets/portfolio/ai-helpdesk/knowledge-base.png" alt="AI Helpdesk knowledge base" />
+              <img src="assets/portfolio/ai-helpdesk/settings.png" alt="AI Helpdesk settings screen" />
+              <img src="assets/portfolio/ai-helpdesk/admin-login.png" alt="AI Helpdesk admin login screen" />
+              <img src="assets/portfolio/ai-helpdesk/mobile-login.png" alt="AI Helpdesk mobile login screen" />
+              <img src="assets/portfolio/ai-helpdesk/mobile-home.png" alt="AI Helpdesk mobile home screen" />
+              <img src="assets/portfolio/ai-helpdesk/mobile-create-ticket.png" alt="AI Helpdesk mobile create ticket screen" />
+              <img src="assets/portfolio/ai-helpdesk/mobile-ticket-detail.png" alt="AI Helpdesk mobile ticket detail screen" />
+              <img src="assets/portfolio/ai-helpdesk/notifications.png" alt="AI Helpdesk notifications screen" />
+              <button
+                class="gallery-arrow gallery-arrow-prev"
+                type="button"
+                aria-label="Previous AI Helpdesk screenshot"
+              >
+                &larr;
+              </button>
+              <button
+                class="gallery-arrow gallery-arrow-next"
+                type="button"
+                aria-label="Next AI Helpdesk screenshot"
+              >
+                &rarr;
+              </button>
+              <div class="gallery-dots" aria-hidden="true"></div>
+            </div>
+            <h3>AI Helpdesk Platform</h3>
+            <div class="tags">
+              <span>NestJS</span><span>Next.js</span><span>Flutter</span><span>AI Triage</span>
+            </div>
+          </article>
+
+          <article class="work-card" data-cat="personal">
+            <div class="work-thumb work-gallery my-gallery" aria-label="POS Platform v1.3 screenshots">
+              <img
+                class="is-active"
+                src="assets/portfolio/pos/dashboard.png"
+                alt="POS Platform dashboard"
+              />
+              <img src="assets/portfolio/pos/sales.png" alt="POS Platform sales screen" />
+              <img src="assets/portfolio/pos/products.png" alt="POS Platform products screen" />
+              <img src="assets/portfolio/pos/categories.png" alt="POS Platform categories screen" />
+              <img src="assets/portfolio/pos/inventory.png" alt="POS Platform inventory screen" />
+              <img src="assets/portfolio/pos/purchasing.png" alt="POS Platform purchasing screen" />
+              <img src="assets/portfolio/pos/outlets.png" alt="POS Platform outlets screen" />
+              <img src="assets/portfolio/pos/users.png" alt="POS Platform users screen" />
+              <img src="assets/portfolio/pos/rbac.png" alt="POS Platform RBAC screen" />
+              <img src="assets/portfolio/pos/reports.png" alt="POS Platform reports screen" />
+              <img src="assets/portfolio/pos/audit-logs.png" alt="POS Platform audit logs screen" />
+              <button
+                class="gallery-arrow gallery-arrow-prev"
+                type="button"
+                aria-label="Previous POS Platform screenshot"
+              >
+                &larr;
+              </button>
+              <button
+                class="gallery-arrow gallery-arrow-next"
+                type="button"
+                aria-label="Next POS Platform screenshot"
+              >
+                &rarr;
+              </button>
+              <div class="gallery-dots" aria-hidden="true"></div>
+            </div>
+            <h3>POS Platform v1.3</h3>
+            <div class="tags">
+              <span>Go</span><span>Gin</span><span>GORM</span><span>Next.js 16</span
+              ><a href="content/projects/pos-v1-3-case-study.md" target="_blank" rel="noopener"
+                ><span>Case Study</span></a
+              >
+            </div>
+          </article>
+
+          <article class="work-card" data-cat="personal">
+            <div class="work-thumb work-gallery my-gallery" aria-label="My Chat screenshots">
+              <img
+                class="is-active"
+                src="assets/portfolio/my-chat/my-chat-login.jpg"
+                alt="My Chat login screen"
+              />
+              <img src="assets/portfolio/my-chat/my-chat-list.jpg" alt="My Chat list screen" />
+              <img src="assets/portfolio/my-chat/my-chat-chat.jpg" alt="My Chat conversation screen" />
+              <img src="assets/portfolio/my-chat/my-chat-rabbitmq.jpg" alt="My Chat RabbitMQ screen" />
+              <button
+                class="gallery-arrow gallery-arrow-prev"
+                type="button"
+                aria-label="Previous My Chat screenshot"
+              >
+                &larr;
+              </button>
+              <button
+                class="gallery-arrow gallery-arrow-next"
+                type="button"
+                aria-label="Next My Chat screenshot"
+              >
+                &rarr;
+              </button>
+              <div class="gallery-dots" aria-hidden="true">
+                <span class="is-active"></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <h3>My Chat</h3>
+            <div class="tags">
+              <span>Flutter</span><span>Node.js</span><span>Socket.IO</span><span>Redis</span>
+            </div>
+          </article>
+
+          <article class="work-card" data-cat="personal">
+            <div class="work-thumb work-gallery my-gallery" aria-label="My Event screenshots">
+              <img
+                class="is-active"
+                src="assets/portfolio/my-event/my-event-1.png"
+                alt="My Event screen 1"
+              />
+              <img src="assets/portfolio/my-event/my-event-2.png" alt="My Event screen 2" />
+              <img src="assets/portfolio/my-event/my-event-3.png" alt="My Event screen 3" />
+              <img src="assets/portfolio/my-event/my-event-4.png" alt="My Event screen 4" />
+              <img src="assets/portfolio/my-event/my-event-5-1.png" alt="My Event screen 5.1" />
+              <img src="assets/portfolio/my-event/my-event-5-2.png" alt="My Event screen 5.2" />
+              <img src="assets/portfolio/my-event/my-event-6.png" alt="My Event screen 6" />
+              <img src="assets/portfolio/my-event/my-event-7.png" alt="My Event screen 7" />
+              <button
+                class="gallery-arrow gallery-arrow-prev"
+                type="button"
+                aria-label="Previous My Event screenshot"
+              >
+                &larr;
+              </button>
+              <button
+                class="gallery-arrow gallery-arrow-next"
+                type="button"
+                aria-label="Next My Event screenshot"
+              >
+                &rarr;
+              </button>
+              <div class="gallery-dots" aria-hidden="true">
+                <span class="is-active"></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <h3>My Event</h3>
+            <div class="tags">
+              <span>Flutter</span><span>Go</span><span>MySQL</span><span>DDD</span>
+            </div>
+          </article>
+
+          <article class="work-card" data-cat="personal">
+            <div class="work-thumb work-gallery my-gallery" aria-label="My Note screenshots">
+              <img class="is-active" src="assets/portfolio/my-note/my-note-1.png" alt="My Note screen 1" />
+              <img src="assets/portfolio/my-note/my-note-2.png" alt="My Note screen 2" />
+              <img src="assets/portfolio/my-note/my-note-3.png" alt="My Note screen 3" />
+              <img src="assets/portfolio/my-note/my-note-4.png" alt="My Note screen 4" />
+              <img src="assets/portfolio/my-note/my-note-5.png" alt="My Note screen 5" />
+              <img src="assets/portfolio/my-note/my-note-6.png" alt="My Note screen 6" />
+              <img src="assets/portfolio/my-note/my-note-7.png" alt="My Note screen 7" />
+              <img src="assets/portfolio/my-note/my-note-8.png" alt="My Note screen 8" />
+              <img src="assets/portfolio/my-note/my-note-9.png" alt="My Note screen 9" />
+              <button
+                class="gallery-arrow gallery-arrow-prev"
+                type="button"
+                aria-label="Previous My Note screenshot"
+              >
+                &larr;
+              </button>
+              <button
+                class="gallery-arrow gallery-arrow-next"
+                type="button"
+                aria-label="Next My Note screenshot"
+              >
+                &rarr;
+              </button>
+              <div class="gallery-dots" aria-hidden="true">
+                <span class="is-active"></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <h3>My Note</h3>
+            <div class="tags">
+              <span>Flutter</span><span>SQLite</span><span>Cloudinary</span
+              ><span>Authentication</span>
+            </div>
+          </article>
+
+          <article class="work-card" data-cat="client">
+            <div class="work-thumb project-icon project-web" aria-hidden="true"></div>
+            <h3>Viniela Property</h3>
+            <div class="tags">
+              <span>Web</span
+              ><a href="https://vinielaproperty.id" target="_blank" rel="noopener"
+                ><span>vinielaproperty.id</span></a
+              >
+            </div>
+          </article>
+
+          <article class="work-card" data-cat="client">
+            <div class="work-thumb project-icon project-web" aria-hidden="true"></div>
+            <h3>Viniela</h3>
+            <div class="tags">
+              <span>Web</span
+              ><a href="https://viniela.id" target="_blank" rel="noopener"
+                ><span>viniela.id</span></a
+              >
+            </div>
+          </article>
+
+          <article class="work-card" data-cat="client">
+            <div class="work-thumb project-icon project-web" aria-hidden="true"></div>
+            <h3>Homeservice Viniela</h3>
+            <div class="tags">
+              <span>Web</span
+              ><a href="https://homeservice.viniela.id" target="_blank" rel="noopener"
+                ><span>homeservice.viniela.id</span></a
+              >
+            </div>
+          </article>
+
+          <article class="work-card" data-cat="client">
+            <div class="work-thumb project-icon project-mobile" aria-hidden="true"></div>
+            <h3>Marlinda</h3>
+            <div class="tags">
+              <span>Mobile App</span
+              ><a
+                href="https://play.google.com/store/apps/details?id=com.inovatiftujuh8.rakhsa"
+                target="_blank"
+                rel="noopener"
+                ><span>Android</span></a
+              >
+            </div>
+          </article>
+
+          <article class="work-card" data-cat="client">
+            <div class="work-thumb project-icon project-mobile" aria-hidden="true"></div>
+            <h3>FSPMI</h3>
+            <div class="tags">
+              <span>Mobile App</span
+              ><a
+                href="https://play.google.com/store/apps/details?id=com.inovatif78.fspmi"
+                target="_blank"
+                rel="noopener"
+                ><span>Android</span></a
+              ><a href="https://apps.apple.com/id/app/fspmi/id1639982534" target="_blank" rel="noopener"
+                ><span>iOS</span></a
+              >
+            </div>
+          </article>
+
+          <article class="work-card" data-cat="client">
+            <div class="work-thumb project-icon project-mobile" aria-hidden="true"></div>
+            <h3>Saka Dirgantara</h3>
+            <div class="tags">
+              <span>Mobile App</span
+              ><a
+                href="https://play.google.com/store/apps/details?id=com.inovasi78.saka"
+                target="_blank"
+                rel="noopener"
+                ><span>Android</span></a
+              ><a
+                href="https://apps.apple.com/id/app/saka-dirgantara/id1625616956"
+                target="_blank"
+                rel="noopener"
+                ><span>iOS</span></a
+              >
+            </div>
+          </article>
+
+          <article class="work-card" data-cat="client">
+            <div class="work-thumb project-icon project-mobile" aria-hidden="true"></div>
+            <h3>Fasi</h3>
+            <div class="tags">
+              <span>Mobile App</span
+              ><a
+                href="https://play.google.com/store/apps/details?id=com.inovasi78.fasi"
+                target="_blank"
+                rel="noopener"
+                ><span>Android</span></a
+              ><a href="https://apps.apple.com/id/app/fasi/id1625680381" target="_blank" rel="noopener"
+                ><span>iOS</span></a
+              >
+            </div>
+          </article>
+
+          <article class="work-card" data-cat="client">
+            <div class="work-thumb project-icon project-mobile" aria-hidden="true"></div>
+            <h3>SMA 4 Medan</h3>
+            <div class="tags">
+              <span>Mobile App</span
+              ><a
+                href="https://play.google.com/store/apps/details?id=com.inovatif78.sma_4_medan"
+                target="_blank"
+                rel="noopener"
+                ><span>Android</span></a
+              >
+            </div>
+          </article>
+
+          <article class="work-card" data-cat="client">
+            <div class="work-thumb project-icon project-mobile" aria-hidden="true"></div>
+            <h3>HP3KI</h3>
+            <div class="tags">
+              <span>Mobile App</span
+              ><a
+                href="https://play.google.com/store/apps/details?id=com.inovatif78.hp3ki"
+                target="_blank"
+                rel="noopener"
+                ><span>Android</span></a
+              >
+            </div>
+          </article>
+
+          <article class="work-card" data-cat="client">
+            <div class="work-thumb project-icon project-mobile" aria-hidden="true"></div>
+            <h3>Starlet</h3>
+            <div class="tags">
+              <span>Mobile App</span
+              ><a
+                href="https://play.google.com/store/apps/details?id=com.inovasi78.starlet"
+                target="_blank"
+                rel="noopener"
+                ><span>Android</span></a
+              ><a
+                href="https://apps.apple.com/id/app/isc-mobile-21/id1624831544"
+                target="_blank"
+                rel="noopener"
+                ><span>iOS</span></a
+              >
+            </div>
+          </article>
+
+          <article class="work-card" data-cat="client">
+            <div class="work-thumb project-icon project-mobile" aria-hidden="true"></div>
+            <h3>HOG</h3>
+            <div class="tags">
+              <span>Mobile App</span
+              ><a
+                href="https://play.google.com/store/apps/details?id=com.inovasi78.hog"
+                target="_blank"
+                rel="noopener"
+                ><span>Android</span></a
+              ><a href="https://apps.apple.com/id/app/hog-ae/id1620813377" target="_blank" rel="noopener"
+                ><span>iOS</span></a
+              >
+            </div>
+          </article>
+
+          <article class="work-card" data-cat="client">
+            <div class="work-thumb project-icon project-mobile" aria-hidden="true"></div>
+            <h3>MB W204 Club INA</h3>
+            <div class="tags">
+              <span>Mobile App</span
+              ><a
+                href="https://play.google.com/store/apps/details?id=com.inovasi78.mb_w204_club_ina"
+                target="_blank"
+                rel="noopener"
+                ><span>Android</span></a
+              ><a
+                href="https://apps.apple.com/id/app/mb-w204-club-ina/id1623624077"
+                target="_blank"
+                rel="noopener"
+                ><span>iOS</span></a
+              >
+            </div>
+          </article>
+
+          <article class="work-card" data-cat="client">
+            <div class="work-thumb project-icon project-mobile" aria-hidden="true"></div>
+            <h3>CHTC</h3>
+            <div class="tags">
+              <span>Mobile App</span
+              ><a
+                href="https://play.google.com/store/apps/details?id=com.inovatif78.chtc"
+                target="_blank"
+                rel="noopener"
+                ><span>Android</span></a
+              >
+            </div>
+          </article>
+
+          <article class="work-card" data-cat="client">
+            <div class="work-thumb project-icon project-web" aria-hidden="true"></div>
+            <h3>Bank Al Barokah</h3>
+            <div class="tags">
+              <span>Web</span
+              ><a href="https://bankalbarokah.id" target="_blank" rel="noopener"
+                ><span>bankalbarokah.id</span></a
+              >
+            </div>
+          </article>
+
+          <article class="work-card" data-cat="client">
+            <div class="work-thumb project-icon project-web" aria-hidden="true"></div>
+            <h3>SMA Plus Al Ghifari</h3>
+            <div class="tags">
+              <span>Web</span
+              ><a href="https://smaplusalghifari.sch.id/" target="_blank" rel="noopener"
+                ><span>smaplusalghifari.sch.id</span></a
+              >
+            </div>
+          </article>
+
+          <article class="work-card" data-cat="client">
+            <div class="work-thumb project-icon project-web" aria-hidden="true"></div>
+            <h3>Pinewoodpwk</h3>
+            <div class="tags">
+              <span>Web</span
+              ><a href="https://pinewoodpwk.com/" target="_blank" rel="noopener"
+                ><span>pinewoodpwk.com</span></a
+              >
+            </div>
+          </article>
+
+          <article class="work-card" data-cat="client">
+            <div class="work-thumb project-icon project-web" aria-hidden="true"></div>
+            <h3>Tentang Loker</h3>
+            <div class="tags">
+              <span>Web</span
+              ><a href="https://tentangloker.com" target="_blank" rel="noopener"
+                ><span>tentangloker.com</span></a
+              >
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="service" id="service">
+        <h2 class="ghost-heading" data-ghost="SERVICE">
+          <span class="section-label">/Service</span>
+        </h2>
+
+        <ul class="service-list">
+          <li>
+            <a href="#contact">
+              <span>Mobile App Development with Flutter</span>
+              <span class="arrow">↗</span>
+            </a>
+          </li>
+          <li>
+            <a href="#contact">
+              <span>Fullstack Web & API Development</span>
+              <span class="arrow">↗</span>
+            </a>
+          </li>
+          <li>
+            <a href="#contact">
+              <span>DevOps, CI/CD & Database Reliability</span>
+              <span class="arrow">↗</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="work" id="certificates">
+        <div class="section-head">
+          <h2 class="ghost-heading" data-ghost="CERTIFICATE">
+            <span class="section-label">/Certificates</span>
+          </h2>
+        </div>
+
+        <div class="work-grid">
+          <article class="work-card">
+            <a
+              class="work-thumb certificate-preview"
+              href="assets/portfolio/certificate/arkademy.pdf"
+              target="_blank"
+              rel="noopener"
+              aria-label="Open Fullstack Software Developer Certificate PDF"
+            >
+              <img
+                src="assets/portfolio/certificate/arkademy.pdf.png"
+                alt="Fullstack Software Developer Certificate preview"
+              />
+            </a>
+            <h3>Fullstack Software Developer Certificate</h3>
+            <div class="tags">
+              <a href="assets/portfolio/certificate/arkademy.pdf" target="_blank" rel="noopener"
+                ><span>Arkademy / Pijar Camp</span></a
+              >
+            </div>
+          </article>
+
+          <article class="work-card">
+            <a
+              class="work-thumb certificate-preview"
+              href="assets/portfolio/certificate/flutter-2020.pdf"
+              target="_blank"
+              rel="noopener"
+              aria-label="Open Flutter Certificate PDF"
+            >
+              <img
+                src="assets/portfolio/certificate/flutter-2020.pdf.png"
+                alt="Flutter Certificate preview"
+              />
+            </a>
+            <h3>Flutter Certificate</h3>
+            <div class="tags">
+              <a href="assets/portfolio/certificate/flutter-2020.pdf" target="_blank" rel="noopener"
+                ><span>Flutter Indonesia</span></a
+              >
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="experience" id="experience">
+        <div class="section-head">
+          <h2 class="ghost-heading light" data-ghost="EXPERIENCE">
+            <span class="section-label">/Resume</span>
+          </h2>
+          <p class="exp-years">Software developer since 2020</p>
+        </div>
+
+        <ul class="experience-list">
+          <li>
+            <div>
+              <p class="exp-company">BPRD Tax Website Project</p>
+              <p class="exp-role">CodeIgniter 3 and Laravel 6 for back office and user interface</p>
+            </div>
+            <p class="exp-date">2020</p>
+          </li>
+          <li>
+            <div>
+              <p class="exp-company">Arkademy / Pijar Camp</p>
+              <p class="exp-role">React JS and Node JS job portal website and API using Scrum</p>
+            </div>
+            <p class="exp-date">2020</p>
+          </li>
+          <li>
+            <div>
+              <p class="exp-company">Software House</p>
+              <p class="exp-role">Fullstack developer building web apps, mobile apps, and APIs</p>
+            </div>
+            <p class="exp-date">4+ years</p>
+          </li>
+          <li>
+            <div>
+              <p class="exp-company">Third-party Integrations</p>
+              <p class="exp-role">
+                Midtrans, Xendit, OY, Raja Biller, Raja Ongkir, Finnet, and Qontak
+              </p>
+            </div>
+            <p class="exp-date">Production</p>
+          </li>
+          <li>
+            <div>
+              <p class="exp-company">DevOps & Database Reliability</p>
+              <p class="exp-role">
+                Infrastructure, CI/CD, MySQL high availability, ProxySQL, and Orchestrator
+              </p>
+            </div>
+            <p class="exp-date">Ongoing</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="contact" id="contact">
+        <a href="#top" class="status-pill"> <span class="dot"></span> Open to software projects </a>
+        <h2>Let's build something useful.</h2>
+        <p>
+          I build mobile applications, web dashboards, backend APIs, and supporting infrastructure
+          for practical product workflows.
+        </p>
+        <a
+          href="https://mail.google.com/mail/?view=cm&fs=1&to=reihanagam7@gmail.com"
+          class="btn btn-dark"
+          >Contact Me <span class="arrow">↗</span></a
+        >
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© <span id="year"></span> Reihan Agam. All rights reserved.</p>
+      <ul class="footer-social">
+        <li>
+          <a href="https://instagram.com/reihn.agm" target="_blank" rel="noopener">Instagram</a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/reihan-agam-992b95199" target="_blank" rel="noopener"
+            >LinkedIn</a
+          >
+        </li>
+      </ul>
+    </footer>
+
+    <div class="gallery-modal" id="galleryModal" aria-hidden="true">
+      <div class="gallery-modal__backdrop" data-gallery-close></div>
+      <div
+        class="gallery-modal__dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-label="My Chat full gallery"
+      >
+        <button
+          class="gallery-modal__close"
+          type="button"
+          aria-label="Close gallery"
+          data-gallery-close
+        >
+          &times;
+        </button>
+        <button
+          class="gallery-modal__arrow gallery-modal__arrow-prev"
+          type="button"
+          aria-label="Previous screenshot"
+        >
+          &larr;
+        </button>
+        <figure class="gallery-modal__figure">
+          <img src="assets/portfolio/my-chat/my-chat-chat.jpg" alt="My Chat conversation screen" />
+          <figcaption>My Chat conversation screen</figcaption>
+        </figure>
+        <button
+          class="gallery-modal__arrow gallery-modal__arrow-next"
+          type="button"
+          aria-label="Next screenshot"
+        >
+          &rarr;
+        </button>
+        <div class="gallery-modal__dots" aria-label="Choose screenshot"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
