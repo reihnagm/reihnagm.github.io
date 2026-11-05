@@ -25,6 +25,278 @@
     <link rel="icon" type="image/x-icon" href="favicon.png" />
 
     <link rel="stylesheet" href="style.css" />
+
+    <style>
+      /* High-visibility recruiter overview, directly after the hero. */
+      .portfolio-skills,
+      .portfolio-integrations {
+        padding: clamp(76px, 9vw, 136px) clamp(20px, 5vw, 80px);
+      }
+
+      .portfolio-skills {
+        background: #f6f6f2;
+        color: #181818;
+      }
+
+      .portfolio-integrations {
+        background: #181a1c;
+        color: #fff;
+      }
+
+      .portfolio-skills__inner,
+      .portfolio-integrations__inner {
+        width: min(100%, 1320px);
+        margin-inline: auto;
+      }
+
+      .portfolio-section__kicker {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin: 0 0 24px;
+        font:
+          700 12px/1.4 Inter,
+          sans-serif;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .portfolio-section__dot {
+        width: 9px;
+        height: 9px;
+        flex: 0 0 9px;
+        border-radius: 50%;
+        background: #638c74;
+      }
+
+      .portfolio-integrations .portfolio-section__dot {
+        background: #d5eeac;
+      }
+
+      .portfolio-section__heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        gap: 36px;
+        margin-bottom: clamp(32px, 4vw, 56px);
+      }
+
+      .portfolio-section__heading h2 {
+        flex: 1 1 auto;
+        margin: 0;
+        font:
+          700 clamp(48px, 6.5vw, 102px)/0.96 'Space Grotesk',
+          sans-serif;
+        letter-spacing: -0.065em;
+        overflow-wrap: anywhere;
+      }
+
+      .portfolio-section__heading h2 span {
+        opacity: 0.58;
+      }
+
+      .portfolio-skills__intro,
+      .portfolio-integrations__intro {
+        flex: 0 1 365px;
+        margin: 0;
+        font:
+          400 clamp(15px, 1.45vw, 18px)/1.7 Inter,
+          sans-serif;
+      }
+
+      .portfolio-skills__intro {
+        color: #5f625f;
+      }
+      .portfolio-integrations__intro {
+        color: #bfc2c2;
+      }
+
+      .portfolio-skills__spotlight {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 14px 24px;
+        margin-bottom: 18px;
+        padding: 22px 26px;
+        background: #202424;
+        border-radius: 16px;
+        color: white;
+      }
+
+      .portfolio-skills__spotlight-label {
+        color: #b8c4b9;
+        margin-right: auto;
+        font:
+          600 11px/1.4 Inter,
+          sans-serif;
+        letter-spacing: 0.12em;
+      }
+
+      .portfolio-skills__spotlight strong {
+        font:
+          600 clamp(14px, 1.4vw, 17px)/1.3 'Space Grotesk',
+          sans-serif;
+      }
+
+      .portfolio-skills__grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .portfolio-skills__card,
+      .portfolio-integrations__card {
+        min-width: 0;
+        padding: clamp(24px, 3vw, 36px);
+        border-radius: 17px;
+      }
+
+      .portfolio-skills__card {
+        border: 1px solid #e0e1dc;
+        background: #fff;
+      }
+
+      .portfolio-skills__card:first-child {
+        grid-column: span 2;
+        background: #e4ebe0;
+        border-color: #d4dfd0;
+      }
+
+      .portfolio-skills__number {
+        display: block;
+        margin-bottom: 34px;
+        color: #777d76;
+        font:
+          600 11px/1.3 Inter,
+          sans-serif;
+        letter-spacing: 0.12em;
+      }
+
+      .portfolio-skills__card h3,
+      .portfolio-integrations__card h3 {
+        margin: 0 0 20px;
+        font:
+          600 clamp(22px, 2.4vw, 29px)/1.2 'Space Grotesk',
+          sans-serif;
+        letter-spacing: -0.035em;
+      }
+
+      .portfolio-skills__card h3 {
+        color: #181818;
+      }
+      .portfolio-integrations__card h3 {
+        color: #fff;
+      }
+
+      .portfolio-skills__tags,
+      .portfolio-integrations__tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .portfolio-skills__tags span,
+      .portfolio-integrations__tags span {
+        display: inline-flex;
+        align-items: center;
+        padding: 10px 14px;
+        border: 1px solid;
+        border-radius: 100px;
+        font:
+          600 13px/1.25 Inter,
+          sans-serif;
+      }
+
+      .portfolio-skills__tags span {
+        background: #f8f9f6;
+        color: #2c342d;
+        border-color: #d9dfd6;
+      }
+
+      .portfolio-integrations__grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+      }
+
+      .portfolio-integrations__card {
+        border: 1px solid #484d4b;
+        background: #25292a;
+        padding: clamp(28px, 4vw, 50px);
+      }
+
+      .portfolio-integrations__type {
+        margin: 0 0 28px;
+        color: #cbe3af;
+        font:
+          700 12px/1.4 Inter,
+          sans-serif;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      .portfolio-integrations__description {
+        min-height: 46px;
+        margin: 0 0 26px;
+        color: #bec4c0;
+        font:
+          400 15px/1.65 Inter,
+          sans-serif;
+      }
+
+      .portfolio-integrations__tags span {
+        background: #373e3a;
+        border-color: #5c6a5f;
+        color: #e9f4df;
+        font-size: clamp(14px, 1.4vw, 17px);
+        padding: 12px 18px;
+      }
+
+      @media (max-width: 980px) {
+        .portfolio-section__heading {
+          align-items: start;
+          flex-direction: column;
+          gap: 20px;
+        }
+        .portfolio-skills__intro,
+        .portfolio-integrations__intro {
+          flex: unset;
+          max-width: 700px;
+        }
+        .portfolio-skills__grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 640px) {
+        .portfolio-skills,
+        .portfolio-integrations {
+          padding: 72px 20px;
+        }
+        .portfolio-section__heading h2 {
+          font-size: clamp(42px, 12vw, 62px);
+        }
+        .portfolio-skills__grid,
+        .portfolio-integrations__grid {
+          grid-template-columns: 1fr;
+        }
+        .portfolio-skills__card:first-child {
+          grid-column: auto;
+        }
+        .portfolio-skills__number {
+          margin-bottom: 24px;
+        }
+        .portfolio-skills__spotlight {
+          gap: 12px;
+        }
+        .portfolio-skills__spotlight-label {
+          flex-basis: 100%;
+        }
+        .portfolio-integrations__description {
+          min-height: 0;
+        }
+      }
+    </style>
   </head>
 
   <body>
@@ -37,6 +309,10 @@
         </a>
 
         <nav class="nav-links" aria-label="Primary">
+          <a href="#skills">Skills <span class="count">[5]</span></a>
+
+          <a href="#integrations">Integrations <span class="count">[5]</span></a>
+
           <a href="#work">Work <span class="count">[24]</span></a>
 
           <a href="#service">Service <span class="count">[3]</span></a>
@@ -56,6 +332,10 @@
       </div>
 
       <nav class="nav-mobile" id="navMobile" aria-label="Mobile">
+        <a href="#skills">Skills</a>
+
+        <a href="#integrations">Integrations</a>
+
         <a href="#work">Work</a>
 
         <a href="#service">Service</a>
@@ -86,14 +366,6 @@
           <div class="hero-intro reveal" style="--d: 0.24s">
             <p class="eyebrow">Mobile Developer / Fullstack Developer</p>
 
-            <p class="hero-desc">
-              Flutter-focused Mobile Developer with strong backend experience in Node.js, NestJS,
-              Go, CodeIgniter, and Next.js. Experienced in DevOps, CI/CD automation, database
-              reliability, and server infrastructure. Actively leveraging AI-assisted development
-              (Vibe Coding) to accelerate development workflows, improve code quality, optimize
-              productivity, and deliver scalable, maintainable applications.
-            </p>
-
             <a href="#contact" class="btn btn-dark"
               >Let's collaborate <span class="arrow">↗</span></a
             >
@@ -113,6 +385,113 @@
               >
             </li>
           </ul>
+        </div>
+      </section>
+
+      <!-- Main technical competencies are separate from external provider experience. -->
+      <section class="portfolio-skills" id="skills" aria-labelledby="skills-heading">
+        <div class="portfolio-skills__inner">
+          <p class="portfolio-section__kicker">
+            <span class="portfolio-section__dot" aria-hidden="true"></span> CORE COMPETENCIES / 01
+          </p>
+          <div class="portfolio-section__heading">
+            <h2 id="skills-heading">Main <span>Skills.</span></h2>
+            <p class="portfolio-skills__intro">
+              Flutter-focused mobile development, fullstack engineering, and production-ready
+              backend infrastructure.
+            </p>
+          </div>
+          <div class="portfolio-skills__spotlight" aria-label="Key expertise">
+            <span class="portfolio-skills__spotlight-label">HIGHLIGHTED EXPERTISE</span>
+            <strong>Flutter &amp; Dart</strong>
+            <strong>Backend APIs</strong>
+            <strong>DevOps &amp; CI/CD</strong>
+          </div>
+          <div class="portfolio-skills__grid">
+            <article class="portfolio-skills__card">
+              <span class="portfolio-skills__number">01 / MOBILE DEVELOPMENT</span>
+              <h3>Mobile Development</h3>
+              <div class="portfolio-skills__tags">
+                <span>Flutter</span><span>Dart</span><span>Firebase</span>
+              </div>
+            </article>
+            <article class="portfolio-skills__card">
+              <span class="portfolio-skills__number">02 / BACKEND DEVELOPMENT</span>
+              <h3>Backend Development</h3>
+              <div class="portfolio-skills__tags">
+                <span>Node.js</span><span>Express.js</span><span>NestJS</span> <span>Go</span
+                ><span>Java</span><span>Spring Boot</span>
+              </div>
+            </article>
+            <article class="portfolio-skills__card">
+              <span class="portfolio-skills__number">03 / WEB DEVELOPMENT</span>
+              <h3>Web Development</h3>
+              <div class="portfolio-skills__tags">
+                <span>React</span><span>Next.js</span><span>Vite</span> <span>CodeIgniter</span
+                ><span>Tailwind CSS</span>
+              </div>
+            </article>
+            <article class="portfolio-skills__card">
+              <span class="portfolio-skills__number">04 / DATABASE &amp; REALTIME</span>
+              <h3>Database &amp; Realtime</h3>
+              <div class="portfolio-skills__tags">
+                <span>MySQL 8</span><span>PostgreSQL</span><span>MongoDB</span> <span>Redis</span
+                ><span>RabbitMQ</span><span>Socket.IO</span>
+              </div>
+            </article>
+            <article class="portfolio-skills__card">
+              <span class="portfolio-skills__number">05 / DEVOPS &amp; TOOLS</span>
+              <h3>DevOps &amp; Tools</h3>
+              <div class="portfolio-skills__tags">
+                <span>Docker</span><span>Linux</span><span>Nginx</span> <span>GitHub Actions</span
+                ><span>CI/CD</span>
+                <span>AI-Assisted Development</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Providers personally integrated in PPOB and payment gateway projects. -->
+      <section
+        class="portfolio-integrations"
+        id="integrations"
+        aria-labelledby="integrations-heading"
+      >
+        <div class="portfolio-integrations__inner">
+          <p class="portfolio-section__kicker">
+            <span class="portfolio-section__dot" aria-hidden="true"></span> HANDS-ON INTEGRATION
+            EXPERIENCE / 02
+          </p>
+          <div class="portfolio-section__heading">
+            <h2 id="integrations-heading">Third-Party <span>Integrations.</span></h2>
+            <p class="portfolio-integrations__intro">
+              Real-world experience integrating PPOB providers and payment gateways into
+              applications.
+            </p>
+          </div>
+          <div class="portfolio-integrations__grid">
+            <article class="portfolio-integrations__card">
+              <p class="portfolio-integrations__type">PPOB</p>
+              <h3>PPOB Providers</h3>
+              <p class="portfolio-integrations__description">
+                Digital product and bill payment service integrations.
+              </p>
+              <div class="portfolio-integrations__tags">
+                <span>RajaBiller</span><span>Kiosbank</span><span>Finnet</span>
+              </div>
+            </article>
+            <article class="portfolio-integrations__card">
+              <p class="portfolio-integrations__type">Payment Gateway</p>
+              <h3>Online Payment Processing</h3>
+              <p class="portfolio-integrations__description">
+                Online payment integrations for transaction workflows.
+              </p>
+              <div class="portfolio-integrations__tags">
+                <span>Midtrans</span><span>Xendit</span>
+              </div>
+            </article>
+          </div>
         </div>
       </section>
 
@@ -1341,18 +1720,6 @@
 
           <li>
             <div>
-              <p class="exp-company">Third-party Integrations</p>
-
-              <p class="exp-role">
-                Midtrans, Xendit, OY, Raja Biller, KiosBank, Raja Ongkir, Finnet, and Qontak
-              </p>
-            </div>
-
-            <p class="exp-date">Production</p>
-          </li>
-
-          <li>
-            <div>
               <p class="exp-company">DevOps & Database Reliability</p>
 
               <p class="exp-role">
@@ -1370,12 +1737,6 @@
 
         <h2>Let's build something useful.</h2>
 
-        <p>
-          I build mobile applications, web dashboards, backend APIs, and scalable infrastructure for
-          real-world product workflows. I leverage AI-assisted development (Vibe Coding) to
-          accelerate development, streamline workflows, improve code quality, and deliver efficient,
-          reliable, and maintainable solutions.
-        </p>
         <a
           href="https://mail.google.com/mail/?view=cm&fs=1&to=reihanagam7@gmail.com"
           class="btn btn-dark"
